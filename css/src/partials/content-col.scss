@@ -77,6 +77,57 @@
 	@include break-text();
 }
 
+.posts .post {
+  clear: both;
+  font-size: 0.99em;
+  margin-bottom: 23px;
+  padding-bottom: 23px;
+  .entry-header {
+    @include grid-row();
+    margin: 0.913em 0;
+    .entry-title {
+      @include grid-column($columns:11, $push:1);
+      font: 400 1.2em/1.2em "ff-meta-web-pro";
+      a {
+        color: #B7A66D;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    .entry-meta {
+      @include grid-column($columns:1, $pull:11, $collapse:true);
+      clear: none;
+      margin-bottom: 0;
+      padding-top: 5px;
+      font: 900 1.1em "quatro-slab",serif;
+      text-align: center;
+      span {
+        display: block;
+        line-height: 1.2em;
+      }
+      .day {
+        font-size: 1.8em;
+        line-height: 0.75em;
+        height: 23px;
+      }
+    }
+  }
+  .entry-content {
+    @include grid-column($columns:11, $offset:1);
+    margin-bottom: 1.25em;
+    margin-top: 0;
+    p {
+      line-height: 1.25em;
+    }
+  }
+  img.alignleft {
+    margin: 0 15px 5px 0;
+  }
+  .entry-footer {
+    clear: both;
+  }
+}
 
 /* Entry Navigation
 --------------------------------------------- */
