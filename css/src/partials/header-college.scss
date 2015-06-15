@@ -62,9 +62,13 @@
   }
 
   .site-title {
+    font: 700 2.75rem "quatro-slab",serif;
     line-height: 1;
     text-align: center;
     margin: .5em;
+    color: #222;
+    font-style: normal;
+    text-rendering: optimizelegibility;
   }
 }
 

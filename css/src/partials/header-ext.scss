@@ -19,8 +19,13 @@
 
   .site-title {
       margin: 0;
-
       display: inline-block;
+      font: 100 2.75rem "proxima-nova",sans-serif;
+      line-height: 1.4;
+      color: #222;
+      font-style: normal;
+      text-rendering: optimizelegibility;
+      padding: 0;
 
       a {
         display: block;

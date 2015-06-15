@@ -50,6 +50,16 @@
     overflow: hidden;
   }
 
+  .site-title {
+    font: 500 2.75rem "minion-pro",sans-serif;
+    line-height: 1.4;
+    color: #222;
+    font-style: normal;
+    margin-bottom: 0.5rem;
+    margin-top: 0.2rem;
+    text-rendering: optimizelegibility;
+  }
+
 }
 
 .agency-bar {
