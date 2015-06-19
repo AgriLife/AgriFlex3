@@ -1,0 +1,36 @@
+box: wercker/nodejs
+# Build definition
+build:
+  # The steps that will be executed on build
+  steps:
+    # A step that executes `npm install` command
+    - npm-install
+    # A step that executes `npm test` command
+    # - npm-test
+    - bundle-install
+    - bundle-package
+    - grunt
+
+  after-steps:
+          - slack-notifier:
+            url: $SLACK_URL
+            channel: agriflex3deploy
+            username: werckerbot
+            notify_on: "failed"
+
+  #after-steps:
+  #  - hipchat-notify:
+  #    token: $HIPCHAT_TOKEN
+  #    room-id: $HIPCHAT_ROOM
+  #    passed-notify: true
+  #    failed-notify: true
+  #    on: always
+
+
+    # A custom script step, name value is used in the UI
+    # and the code value contains the command that gets executed
+#    - script:
+#        name: echo nodejs information
+#        code: |
+#          echo "node version $(node -v) running"
+#          echo "npm version $(npm -v) running"
