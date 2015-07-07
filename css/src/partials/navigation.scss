@@ -19,7 +19,7 @@
 
 			input[type="submit"] {
 				@include grid-column(4, $float: right);
-                @include button($padding: $button-tny, $bg: #666, $radius: 10px, $is-input: true);
+                @include button($padding: $button-tny, $bg: #666, $radius: 10px);
 			}
 		}
 	}
