@@ -8,8 +8,6 @@ class AgriFlex_ThemeCustomizer {
 
     add_action( 'wp_head', array( $this, 'agriflex_customize_background' ));
 
-    add_action( 'genesis_after', array( $this, 'agriflex_custom_backgroundimage' ));
-
   }
 
   // Add Customization Control
@@ -50,19 +48,14 @@ class AgriFlex_ThemeCustomizer {
   public function agriflex_customize_background() {
     if ( get_theme_mod('agriflex_background_image') != '' && 0 < count( strlen( ( $background_image_url = get_theme_mod( 'agriflex_background_image' ) ) ) ) ) { ?>
       <style type="text/css">
-        #bg-image-container {
-          background-image: url(<?php echo $background_image_url; ?>);
+        @media only screen and (min-width: 880px) {
+          body.home .site-container {
+            background-image: url(<?php echo $background_image_url; ?>) !important;
+          }
         }
       </style>
       <?php
     }
-  }
-
-  // Add HTML
-  public function agriflex_custom_backgroundimage() {
-  ?>
-    <div id="bg-image-container" data-src="<?php echo get_theme_mod( 'agriflex_background_image' ); ?>"></div>
-  <?php 
   }
   
 }
