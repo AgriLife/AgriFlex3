@@ -6,6 +6,7 @@
   .top-bar-section {
 
     .menu-primary {
+      position: relative;
       @include grid-column();
     }
 
@@ -77,7 +78,6 @@
       overflow: hidden;
 
       ul {
-
         &.menu-search-container {
           display: none;
         }
@@ -131,12 +131,14 @@
       background-color: #fff;
       ul {
         @include grid-column($columns: 7, $center:true);
+        float: none !important;
 
         li {
           & > a {
             font-size: rem-calc(19);
           }
-          a:not(.button) {
+          a:not(.button),
+          &.active:not(.has-form) a:not(.button) {
             line-height: 78px;
           }
           &.current-menu-item:after,
