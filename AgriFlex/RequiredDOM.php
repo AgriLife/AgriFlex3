@@ -117,7 +117,7 @@ class AgriFlex_RequiredDOM
     private function move_genesis_breadcrumbs()
     {
 
-        if('agrilife-extension' != AG_EXT_DIRNAME ) {
+        if('agrilife-extension' != AG_EXT_DIRNAME && 'agrilife-extension-unit' != AG_EXTUNIT_DIRNAME ) {
             remove_action( 'genesis_before_loop', 'genesis_do_breadcrumbs' );
             add_action( 'genesis_before_content', 'genesis_do_breadcrumbs' );
         }

@@ -1,0 +1,297 @@
+/* Setup grid dimensions
+--------------------------------------------- */
+$row-width: rem-calc(1140);
+$column-gutter: rem-calc(32);
+$total-columns: 12;
+
+/* Site Containers
+--------------------------------------------- */
+
+.site-container {
+	position: relative;
+  z-index: 100;
+}
+
+.site-inner {
+  @include grid-row();
+}
+header .wrap,
+.site-inner .wrap,
+footer .wrap {
+	//@include grid-row();
+}
+
+/* Header
+--------------------------------------------- */
+.site-header .title-area {
+	width: 190px;
+
+}
+
+/* Navigation
+--------------------------------------------- */
+
+/* Breadcrumbs
+--------------------------------------------- */
+.breadcrumb {
+  padding-top: 2em;
+  padding-bottom: 1em;
+}
+
+/* Content
+--------------------------------------------- */
+.content,
+.five-sixths,
+.four-fifths,
+.four-sixths,
+.one-fourth,
+.one-half,
+.one-fifth,
+.one-sixth,
+.one-third,
+.three-fifths,
+.three-fourths,
+.three-sixths,
+.two-fifths,
+.two-fourths,
+.two-sixths,
+.two-thirds,
+.sidebar-primary,
+.sidebar-secondary {
+	@include grid-column(12);
+}
+
+.full-width-content .content {
+	@include grid-column(12);
+}
+
+/* Sidebars
+--------------------------------------------- */
+.sidebar-primary,
+.sidebar-secondary {
+	@include grid-column(12);
+}
+
+
+@media #{$small-up} {
+
+}
+
+@media #{$small-only} {
+
+}
+
+@media #{$medium-up} {
+
+  .top-bar-wrapper {
+    clear: both;
+		width: 100%;
+    overflow: visible;
+    background: transparent;
+    margin: 1em 0;
+	}
+
+  .top-bar-wrapper {
+    height: 50px;
+    overflow: hidden;
+  }
+
+	.contain-to-grid {
+    .top-bar {
+      max-width: 71.25rem;
+      width: 100%;
+      overflow: visible;
+      margin: 0 auto;
+      background: $white;
+      li a:not(.button) {
+        background: $white;
+      }
+      .top-bar-section ul {
+        background: $white;
+        li > a {
+          background: $white;
+        }
+      }
+	  }
+  }
+  .content {
+    padding-top: 1em;
+  }
+
+  .sidebar-content-wrap .sidebar-primary {
+            @include grid-column($columns: 4, $float: right);
+            padding-left: 2em;
+            padding-right: 2em;
+            padding-top: 3em;
+            position: relative;
+            margin-top: 104px;
+          }
+
+  .sidebar-content-sidebar {
+    .site-inner {
+      .wrap {
+        @include grid-row();
+
+        .content-sidebar-wrap {
+          @include grid-column($columns: 10, $float: right, $collapse: true);
+
+          .content {
+            @include grid-column($columns: 8);
+            background-color: $content-bg-color;
+          }
+
+          .sidebar-primary {
+            @include grid-column($columns: 4, $float: left);
+            margin-top: 104px;
+          }
+
+        }
+
+        .sidebar-secondary {
+          @include grid-column($columns: 2);
+          margin-top: 104px;
+        }
+      }
+    }
+  }
+
+	.one-half,
+	.three-sixths,
+	.two-fourths,
+  .one-of-2,
+  .two-of-2 {
+		@include grid-column(6);
+	}
+	 
+	.one-third,
+	.two-sixths,
+  .one-of-3,
+  .two-of-3,
+  .three-of-3 {
+		@include grid-column(4);
+	}
+	 
+	.four-sixths,
+	.two-thirds {
+		@include grid-column(8);
+	}
+	 
+	.one-fourth {
+		@include grid-column(3);
+	}
+	 
+	.three-fourths {
+		@include grid-column(9);
+	}
+	 
+	.one-fifth {
+		width: 17.9487179487179488%;
+		float: left;
+	}
+	 
+	.two-fifths {
+		width: 38.4615384615384616%;
+		float: left;
+	}
+	 
+	.three-fifths {
+		width: 58.9743589743589744%;
+		float: left;
+	}
+	 
+	.four-fifths {
+		width: 79.4871794871794872%;
+		float: left;
+	}
+	 
+	.one-sixth {
+		@include grid-column(2);
+	}
+	 
+	.five-sixths {
+		@include grid-column(10);
+	}
+
+}
+
+@media #{$medium-up-common} {
+  .sidebar-content-sidebar {
+    .site-inner {
+      .wrap {
+        @include grid-row($behavior: nest-collapse);
+
+        .sidebar-secondary {
+          background-color: $sidebar-secondary-background;
+        }
+
+        .content-sidebar-wrap {
+
+          .content {
+            background-color: $content-bg-color;
+          }
+
+          .sidebar-primary {
+            margin-top: 104px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media #{$large-up}{
+
+  .sidebar-content-sidebar {
+    .site-inner {
+      .wrap {
+        @include grid-row($behavior: nest-collapse);
+
+        .sidebar-secondary {
+          position: relative;
+          background-color: $sidebar-secondary-background;
+          margin-top: 104px;
+          padding-left: 2em;
+          padding-right: 2em;
+        }
+
+        .content-sidebar-wrap {
+          position: relative;
+
+          .content {
+            padding-left: 2em;
+            padding-right: 2em;
+            padding-top: 2em;
+            position: relative;
+            background-color: $content-bg-color;
+          }
+
+        }
+
+      }
+    }
+
+
+  }
+
+
+}
+
+@media #{$large-only}{
+
+}
+
+@media #{$xlarge-up}{
+
+}
+
+@media #{$xlarge-only}{
+
+}
+
+@media #{$xxlarge-up}{
+
+}
+
+@media #{$xxlarge-only}{
+
+}

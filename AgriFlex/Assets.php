@@ -148,7 +148,7 @@ class AgriFlex_Assets {
      */
     public function add_typekit() {
 
-        if('agrilife-extension' == AG_EXT_DIRNAME ) {
+        if('agrilife-extension' == AG_EXT_DIRNAME || 'agrilife-extension-unit' == AG_EXTUNIT_DIRNAME ) {
             // For Extension
             $key = 'xox0blb';
         } elseif ('agrilife-college' == AG_COL_DIRNAME ) {

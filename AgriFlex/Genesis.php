@@ -190,15 +190,15 @@ class AgriFlex_Genesis {
 
 		genesis_unregister_layout( 'content-sidebar-sidebar' );
 		genesis_unregister_layout( 'sidebar-sidebar-content' );
-        if('agrilife-extension' !== AG_EXT_DIRNAME ) {
-          // Extension uses three column
-		  genesis_unregister_layout( 'sidebar-content-sidebar' );
-        }
-        if('agrilife-extension' == AG_EXT_DIRNAME ) {
-          // Extension does not use side-content or content-sidebar
-          //genesis_unregister_layout( 'content-sidebar' );
-          //genesis_unregister_layout( 'sidebar-content' );
-        }
+    if('agrilife-extension' !== AG_EXT_DIRNAME && 'agrilife-extension-unit' !== AG_EXTUNIT_DIRNAME ) {
+      // Extension uses three column
+  		genesis_unregister_layout( 'sidebar-content-sidebar' );
+    }
+    if('agrilife-extension' == AG_EXT_DIRNAME ) {
+      // Extension does not use side-content or content-sidebar
+      //genesis_unregister_layout( 'content-sidebar' );
+      //genesis_unregister_layout( 'sidebar-content' );
+    }
 
 	}
 
@@ -209,7 +209,7 @@ class AgriFlex_Genesis {
 	 */
 	private function remove_genesis_sidebars() {
 
-		if('agrilife-extension' !== AG_EXT_DIRNAME ) {
+		if('agrilife-extension' !== AG_EXT_DIRNAME && 'agrilife-extension-unit' !== AG_EXTUNIT_DIRNAME ) {
 			unregister_sidebar( 'sidebar-alt' );
 			unregister_sidebar( 'header-right' );
 		}

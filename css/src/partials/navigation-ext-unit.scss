@@ -1,0 +1,219 @@
+/* Primary Navigation
+--------------------------------------------- */
+
+.nav-primary {
+  background: transparent;
+
+  .top-bar-section {
+
+    ul {
+      @include grid-column($columns: 12, $center:true);
+      position: relative;
+      display: block;
+
+      &.menu {
+        background-color: $secondary-color;
+      }
+
+      &.menu-search-container {
+        clear: both;
+        padding: 0.5rem 1rem;
+      }
+
+      li {
+        a,
+        &.active:not(.has-form) a:not(.button) {
+          color: #fff;
+        }
+        &,
+        &:not(.has-form) a:not(.button),
+        &.active:not(.has-form) a:not(.button) {
+          background-color: transparent;
+        }
+        a:hover,
+        &.hover a,
+        &:not(.has-form) a:not(.button):hover {
+          color: #fff;
+          background-color: rgba(0,0,0,0.2);
+        }
+      }
+
+      .has-dropdown > a::after {
+        border-top-color: #fff;
+      }
+
+      li > a {
+        text-transform: uppercase;
+        font-size: rem-calc(14);
+      }
+    }
+  }
+
+	ul.menu-search-container {
+
+		.search li {
+			@include grid-row($behavior: collapse);
+
+			input[type="search"] {
+				@include grid-column(8);
+			}
+
+			input[type="submit"] {
+				@include grid-column($columns: 3, $offset: 1);
+			}
+		}
+	}
+	.wrap {
+	}
+
+}
+
+/* Secondary Navigation
+--------------------------------------------- */
+
+.nav-secondary {
+
+	.wrap {
+	}
+}
+
+@media #{$small-up} {
+
+}
+
+@media #{$small-only} {
+
+}
+
+@media #{$medium-up} {
+  .nav-primary {
+    .nav-arrow {
+      content: " ";
+      height: 0;
+      width: 0;
+      pointer-events: none;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-bottom: 10px solid #5c0025;
+      position: absolute;
+      top: 37px;
+      margin-left: -9px;
+      left: 50%;
+    }
+    .top-bar-section{
+      width: 100%;
+      max-width: 100%;
+
+      ul {
+        float: none !important;
+        min-height: 50px !important;
+
+        &.menu-search-container {
+          display: none;
+        }
+        li {
+          a:not(.button),
+          &.active:not(.has-form) a:not(.button) {
+            line-height: 50px;
+          }
+
+          &.current-menu-item:after,
+          &.browse:after,
+          &.news:after,
+          &.about:after,
+          &.contact:after {
+            top: 40px;
+          }
+
+          & > a {
+            font-size: rem-calc(18);
+          }
+        }
+
+        li a[title="home"],
+        li:not(.has-form) a[title="home"]:hover:not(.button),
+        li.active:not(.has-form) a[title="home"]{
+          width: 40px;
+          padding: 0;
+          text-indent: 200%;
+          overflow: hidden;
+          background-image: url(../img/ext-bg/home-white.png);
+          background-repeat: no-repeat;
+          background-position: center 16px;
+          transition: none;
+
+          &:hover {
+            background-position: center -24px;
+          }
+        }
+      }
+
+      .menu-primary {
+
+        .menu-item {
+          position: relative;
+          padding-left: 0;
+          padding-right: 0;
+          width: auto;
+          float: left;
+          text-align: center;
+        }
+      }
+
+      .has-dropdown {
+        & > a:after {
+          top: 1.5rem;
+        }
+        &.hover .dropdown li:hover:not(.has-form):not(.active) > a:not(.button) {
+          color: #E5DABB;
+        }
+      }
+    }
+  }
+  // Arrow for sections under browse
+  .single-extension-solutions .nav-primary li.browse:after,
+  .single-extension-programs .nav-primary li.browse:after,
+  .page-parent-browse .nav-primary li.browse:after,
+  // Arrow for sections under news
+  .single-post .nav-primary li.news:after,
+  .category .nav-primary li.news:after,
+  // Arrow for sections under about
+  .page-parent-about .nav-primary li.about:after,
+  // Arrow for sections under contact
+  .page-parent-contact .nav-primary li.contact:after,
+  {
+    @extend .nav-arrow;
+  }
+
+}
+
+@media #{$medium-only} {
+
+}
+
+@media #{$large-up}{
+  .nav-primary .top-bar-section ul {
+    max-width: rem-calc(1140);
+  }
+
+}
+
+@media #{$large-only}{
+
+}
+
+@media #{$xlarge-up}{
+
+}
+
+@media #{$xlarge-only}{
+
+}
+
+@media #{$xxlarge-up}{
+
+}
+
+@media #{$xxlarge-only}{
+
+}
