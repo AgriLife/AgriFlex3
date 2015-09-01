@@ -1,3 +1,9 @@
+@function scale-extension-logo($divisor){
+  $logowidth: 380px;
+  $logoheight: 156px;
+  @return ($logowidth / $divisor - $logowidth % $divisor / $divisor) ($logoheight / $divisor - $logoheight % $divisor / $divisor);
+}
+
 /* Site Header
 ---------------------------------------------------------------------------------------------------- */
 
@@ -18,30 +24,28 @@
   }
 
   .site-title {
-      margin: 0;
-      display: inline-block;
-      font: 100 2.75rem "proxima-nova",sans-serif;
-      line-height: 1.4;
-      color: #222;
-      font-style: normal;
-      text-rendering: optimizelegibility;
-      padding: 0;
+    margin: 0;
+    display: inline-block;
+    font: 100 2.75rem "proxima-nova",sans-serif;
+    line-height: 1.4;
+    color: #222;
+    font-style: normal;
+    text-rendering: optimizelegibility;
+    padding: 0;
 
-      a {
-        display: block;
-        background-image: url(../img/logo-ext.png)!important;
-        background-repeat: no-repeat;
-        background-color: #fff;
-        background-size: 190px 78px;
-        width: 190px;
-        height: 78px;
+    a {
+      display: block;
+      background-image: url(../img/logo-ext.png)!important;
+      background-repeat: no-repeat;
+      background-color: #fff;
+      background-size: scale-extension-logo(2);
+      width: 380px / 2;
+      height: 156px / 2;
 
-
-        span {
-          display: none;
-        }
+      span {
+        display: none;
       }
-
+    }
 
     a,
     a:hover {

@@ -148,10 +148,10 @@ class AgriFlex_Assets {
      */
     public function add_typekit() {
 
-        if('agrilife-extension' == AG_EXT_DIRNAME || 'agrilife-extension-unit' == AG_EXTUNIT_DIRNAME ) {
+        if(defined('AG_EXT_DIRNAME') || defined('AG_EXTUNIT_DIRNAME') ) {
             // For Extension
             $key = 'xox0blb';
-        } elseif ('agrilife-college' == AG_COL_DIRNAME ) {
+        } elseif (defined('AG_COL_DIRNAME') ) {
             // For College
             $key = 'bbz1kzh';
         } else {
