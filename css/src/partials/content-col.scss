@@ -207,6 +207,10 @@
   }
 
   .program-list {
+    a {
+      text-decoration: underline;
+    }
+
     .program-row {
 
       @include grid-row();

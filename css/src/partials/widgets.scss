@@ -154,22 +154,3 @@ h4.widget-title {
     border: 1px solid $widget-footer-form-border;
   }
 }
-
-.sidebar.sidebar-primary .widget_agrilife_county_locator {
-  text-align: center;
-  a {
-    text-decoration: none;
-    &.county-office-list-title {
-      text-decoration: underline;
-    }
-    &.county-office-phone {
-      font-size: 1.4em;
-    }
-  }
-  #contact-button {
-    margin-bottom: 0.5rem;
-  }
-  #county-office-list {
-    margin: .5rem 0 0;
-  }
-}
