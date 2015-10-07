@@ -170,11 +170,12 @@ only screen and (min-device-pixel-ratio: 1.5) {
     .agency-wrap {
       @include grid-column($center: true);
       width: $row-width;
+      position: relative;
     }
 
     ul {
       position: absolute;
-      left: -5px;
+      left: 0;
       margin: 0;
 
       li {
