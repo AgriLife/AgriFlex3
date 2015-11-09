@@ -119,39 +119,43 @@ footer .wrap {
   }
 
   .sidebar-content-wrap .sidebar-primary {
-            @include grid-column($columns: 4, $float: right);
-            padding-left: 2em;
-            padding-right: 2em;
-            padding-top: 3em;
-            position: relative;
-            margin-top: 104px;
-          }
+    @include grid-column($columns: 4, $float: right);
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 3em;
+    position: relative;
+    margin-top: 104px;
+  }
 
-  .sidebar-content-sidebar {
-    .site-inner {
-      .wrap {
-        @include grid-row();
+  .content-sidebar .site-inner .wrap,
+  .sidebar-content-sidebar .site-inner .wrap {
+    @include grid-row();
 
-        .content-sidebar-wrap {
-          @include grid-column($columns: 10, $float: right, $collapse: true);
-
-          .content {
-            @include grid-column($columns: 8);
-            background-color: $content-bg-color;
-          }
-
-          .sidebar-primary {
-            @include grid-column($columns: 4, $float: left);
-            margin-top: 104px;
-          }
-
-        }
-
-        .sidebar-secondary {
-          @include grid-column($columns: 2);
-          margin-top: 104px;
-        }
+    .content-sidebar-wrap {
+      .content {
+        @include grid-column($columns: 8);
+        background-color: $content-bg-color;
       }
+
+      .sidebar-primary {
+        @include grid-column($columns: 4, $float: left);
+        margin-top: 104px;
+      }
+    }
+  }
+
+  .content-sidebar .site-inner .wrap .content-sidebar-wrap {
+    @include grid-column($columns: 12, $float: right, $collapse: true);
+  }
+
+  .sidebar-content-sidebar .site-inner .wrap {
+    .content-sidebar-wrap {
+      @include grid-column($columns: 10, $float: right, $collapse: true);
+    }
+
+    .sidebar-secondary {
+      @include grid-column($columns: 2);
+      margin-top: 104px;
     }
   }
 
@@ -215,6 +219,7 @@ footer .wrap {
 }
 
 @media #{$medium-up-common} {
+  .content-sidebar,
   .sidebar-content-sidebar {
     .site-inner {
       .wrap {
@@ -240,7 +245,7 @@ footer .wrap {
 }
 
 @media #{$large-up}{
-
+  .content-sidebar,
   .sidebar-content-sidebar {
     .site-inner {
       .wrap {
