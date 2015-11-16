@@ -462,38 +462,6 @@ only screen and (min-device-pixel-ratio: 1.5) {
     margin: 0 auto;
   }
 }
-/* Scale down navigation menu items */
-@media only screen and (min-width: 40em) and (max-width: 990px){
-  .top-bar.nav-primary .top-bar-section {
-    ul {
-      padding-left: 0.35rem;
-      padding-right: 0.35rem;
-    }
-
-    li {
-      a[title="home"]{
-        width: rem-calc(21px) + 0.7rem;
-      }
-
-      & > a {
-        font-size: 1rem;
-      }
-
-      &:not(.has-form) a:not(.button) {
-        padding-left: 0.35rem;
-        padding-right: 0.35rem;
-      }
-
-      &.has-dropdown > a {
-        padding-right: rem-calc(10px) + 0.7rem !important;
-
-        &:after {
-          margin-right: 0.35rem;
-        }
-      }
-    }
-  }
-}
 @media only screen and (min-width: 40em) and (max-width: 805px){
   .agency-bar ul {
     left: 0;

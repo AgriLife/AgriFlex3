@@ -93,7 +93,6 @@ footer .wrap {
 
   .top-bar-wrapper {
     height: 50px;
-    overflow: hidden;
   }
 
 	.contain-to-grid {
@@ -134,11 +133,27 @@ footer .wrap {
     .content-sidebar-wrap {
       .content {
         @include grid-column($columns: 8);
-        background-color: $content-bg-color;
+        background-color: $content-bg-color; 
       }
 
       .sidebar-primary {
         @include grid-column($columns: 4, $float: left);
+        margin-top: 104px;
+      }
+    }
+  }
+
+  .sidebar-content .site-inner .wrap {
+    @include grid-row();
+
+    .content-sidebar-wrap {
+      .content {
+        @include grid-column($columns: 8, $push: 4);
+        background-color: $content-bg-color;
+      }
+
+      .sidebar-primary {
+        @include grid-column($columns: 4, $pull: 8, $float: left);
         margin-top: 104px;
       }
     }
