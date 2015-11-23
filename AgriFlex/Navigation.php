@@ -15,8 +15,19 @@ class AgriFlex_Navigation {
 
 		// Add search to the nav bar
 		add_filter( 'agriflex_nav_elements', array( $this, 'display_search' ) );
+    
+    // Remove span tags from nav link elements
+    add_filter( 'wp_nav_menu_args', array( $this, 'custom_nav_attributes' ) );
 
 	}
+  
+  public function custom_nav_attributes( $atts ){
+  	if($atts['theme_location'] == 'primary'){
+	  	$atts['link_before'] = '';
+	    $atts['link_after'] = '';
+	  }
+    return $atts;
+  }
 
 	public function custom_nav_walker( $nav_output, $nav, $args ) {
 

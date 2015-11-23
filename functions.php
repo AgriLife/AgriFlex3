@@ -28,6 +28,8 @@ class AgriFlex {
 	private function __construct() {
 
 		add_action( 'init', array( $this, 'init' ) );
+    
+    // remove_filter( 'genesis_attr_nav-link-wrap', 'genesis_attributes_nav_link_wrap' );
 
 	}
 
