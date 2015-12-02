@@ -4,6 +4,10 @@ $base-font-size: $rem-base;
 $base-line-height: $rem-base * 1.5;
 @include establish-baseline( $base-font-size );
 
+body {
+	line-height: 24px; // Fix for Foundation 5.0.2 to be like 5.4
+}
+
 a,
 button,
 input:focus,

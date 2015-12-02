@@ -42,7 +42,9 @@
 }
 
 @media #{$small-only} {
-
+  .top-bar-wrapper {
+    background-color: #5D0025;
+  }
 }
 
 @media #{$medium-up} {
@@ -50,17 +52,23 @@
     ul.menu-search-container {
       display: none;
     }
-    ul.menu li a[title='home'] {
-      display: block;
-      text-indent: -999em;
-      background: url("../img/college/home-college.png") no-repeat 50% 13px;
-      width: 21px;
-      padding: 1em 1em 0 0;
-      height: 30px;
-      margin: 0 .5em 0 1em;
-      @include no-transition;
-      &:hover {
-        background-position: 50% -17px;
+    ul.menu li {
+      a[title='home'],
+      &:not(.has-form) a[title='home'],
+      &.active a[title='home'],
+      &.active:not(.has-form) a[title='home']:hover:not(.button) {
+        display: block;
+        text-indent: -999em;
+        background: transparent url("../img/college/home-college.png") no-repeat 50% 13px;
+        width: 21px;
+        padding: 1em 1em 0 0;
+        height: 30px;
+        margin: 0 .5em 0 1em;
+        @include no-transition;
+
+        &:hover {
+          background-position: 50% -17px;
+        }
       }
     }
   }

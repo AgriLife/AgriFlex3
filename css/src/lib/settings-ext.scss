@@ -3,7 +3,7 @@
 
 $body-bg: #fff !default;
 $body-font-color: $gray-lighter;
-$body-font-family: "proxima-nova", Arial, sans-serif !default;
+$body-font-family: "proxima-nova", Arial, sans-serif !default; 
 $body-font-weight: normal !default;
 $body-font-style: normal !default;
 
@@ -37,7 +37,8 @@ $large-up: "#{only screen} and (min-width:#{ 1140px })";
 // $xxlarge-up: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)})";
 // $xxlarge-only: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)}) and (max-width:#{upper-bound($xxlarge-range)})";
 
-
+$topbar-menu-icon-color: #fff;
+$topbar-menu-link-color: #fff;
 $paragraph-font-family: $body-font-family;
 //$paragraph-font-weight: $paragraph-font-weight;
 $paragraph-font-size: 1.05rem;

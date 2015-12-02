@@ -91,36 +91,40 @@ body {
 
 @media #{$medium-up} {
 
-    .top-bar-wrapper {
+  .top-bar-wrapper {
 		@include grid-row();
-
 		width: 100%;
-        overflow: visible;
-        background: transparent;
+    overflow: visible;
+    background: transparent;
 	}
 
-	.contain-to-grid {
-      .top-bar {
-        max-width: 71.25rem;
-        width: 100%;
-        overflow: visible;
-        margin: 0 auto;
-        background: $primary-color;
-        li a:not(.button) {
-          background: $primary-color;
-        }
-        .top-bar-section ul {
-          background: $primary-color;
-          li > a {
-            background: $primary-color;
-          }
-        }
-	  }
+	.contain-to-grid .top-bar {
+    max-width: 71.25rem;
+    width: 100%;
+    overflow: visible;
+    margin: 0 auto;
+    background: $primary-color;
+
+    li a:not(.button) {
+      background: $primary-color;
     }
 
-    .site-inner  {
-        @include grid-row();
+    .top-bar-section ul {
+      background: $primary-color;
+
+      li > a {
+        background: $primary-color;
+      }
     }
+  }
+
+  .sidebar-content .content {
+    float: right;
+  }
+
+  .site-inner  {
+    @include grid-row();
+  }
 
 	.sidebar-primary,
 	.sidebar-secondary {
@@ -204,12 +208,9 @@ body {
         margin: 2% 0;
 	}
 
-    .site-inner  {
-      @include inner-background($inner-background-img,$inner-background-size,$inner-background-offset);
-      .wrap {
-        margin-top: 55px;
-      }
-    }
+  .site-inner  {
+    @include inner-background($inner-background-img,$inner-background-size,$inner-background-offset);
+  }
 
 	.sidebar-primary,
 	.sidebar-secondary {
@@ -220,10 +221,51 @@ body {
 			@include grid-column(12);
 		}
 	}
+  
+  .content-sidebar .site-inner .wrap,
+  .sidebar-content-sidebar .site-inner .wrap {
+    @include grid-row();
+    margin-top: 55px;
 
-	.sidebar-content .sidebar-primary {
-		float: left;
-	}
+    .content-sidebar-wrap {
+      .content {
+        @include grid-column($columns: 8);
+      }
+
+      .sidebar-primary {
+        @include grid-column($columns: 4, $float: left);
+      }
+    }
+  }
+
+  .sidebar-content .site-inner .wrap {
+    @include grid-row();
+    margin-top: 55px;
+
+    .content-sidebar-wrap {
+      .content {
+        @include grid-column($columns: 8, $push: 4);
+      }
+
+      .sidebar-primary {
+        @include grid-column($columns: 4, $pull: 8, $float: left);
+      }
+    }
+  }
+
+  .content-sidebar .site-inner .wrap .content-sidebar-wrap {
+    @include grid-column($columns: 12, $float: right, $collapse: true);
+  }
+
+  .sidebar-content-sidebar .site-inner .wrap {
+    .content-sidebar-wrap {
+      @include grid-column($columns: 10, $float: right, $collapse: true);
+    }
+
+    .sidebar-secondary {
+      @include grid-column($columns: 2);
+    }
+  }
 
 }
 
