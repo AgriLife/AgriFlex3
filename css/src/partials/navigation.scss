@@ -8,18 +8,21 @@
   }
 
 	ul.menu-search-container {
-        @include grid-column(12);
+    @include grid-column(12);
+    clear: both;
+    padding: 0.5rem 1rem;
 
 		.search li {
 			@include grid-row();
 
 			input[type="search"] {
-				@include grid-column(6, $offset:1, $float:left);
+        @include grid-column(8);
 			}
 
-			input[type="submit"] {
-				@include grid-column(4, $float: right);
-                @include button($padding: $button-tny, $bg: #666, $radius: 10px);
+      input[type="submit"] {
+        @include grid-column($columns: 3, $offset: 1);
+        @include button($padding: 0, $bg: #666, $radius: 10px);
+        margin-bottom: 0;
 			}
 		}
 	}
