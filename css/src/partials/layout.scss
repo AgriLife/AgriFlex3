@@ -210,6 +210,10 @@ body {
 
   .site-inner  {
     @include inner-background($inner-background-img,$inner-background-size,$inner-background-offset);
+
+    .wrap {
+      margin-top: 55px;
+    }
   }
 
 	.sidebar-primary,
@@ -222,6 +226,10 @@ body {
 		}
 	}
   
+  .site-inner .wrap {
+    margin-top: 55px;
+  }
+
   .content-sidebar .site-inner .wrap,
   .sidebar-content-sidebar .site-inner .wrap {
     @include grid-row();

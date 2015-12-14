@@ -98,6 +98,15 @@
         &.parent-link a {
           color: #fff;
           text-transform: uppercase;
+
+          &:hover {
+            background-color: $topbar-link-bg-color-hover;
+            color: $topbar-link-color-hover;
+
+            @if ($topbar-link-bg-hover) {
+              background: $topbar-link-bg-hover;
+            }
+          }
         }
         &.title h5 a {
           color: #fff;
@@ -113,6 +122,7 @@
       line-height: 1.05rem;
       text-transform: uppercase;
       color: #444;
+      background-color: #F0F0F0;
     }
   }
 }
@@ -214,8 +224,14 @@
             top: 40px;
           }
 
-          &.has-dropdown > a:after {
-            top: 1.5rem;
+          &.has-dropdown {
+            > a:after {
+              top: 1.5rem;
+            }
+            
+            li.has-dropdown a:after {
+              top: 0;
+            }
           }
 
           > a {

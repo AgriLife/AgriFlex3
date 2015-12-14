@@ -43,7 +43,7 @@ class AgriFlex_Navigation {
 		);
 
 		$nav_markup_open = genesis_markup( array(
-				'html5' => '<div class="top-bar-wrapper"><nav class="nav-primary top-bar" data-topbar data-options="is_hover: false">',
+				'html5' => '<div class="top-bar-wrapper"><nav class="nav-primary top-bar" data-topbar data-options="is_hover: false" role="navigation">',
 				'xhtml' => '<div id="nav">',
 				'context' => 'nav-primary',
 				'echo' => false,

@@ -54,7 +54,14 @@
 }
 
 @media #{$small-only} {
+  .top-bar-section .dropdown li.parent-link a:hover {
+    background-color: $topbar-link-bg-color-hover;
+    color: $topbar-link-color-hover;
 
+    @if ($topbar-link-bg-hover) {
+      background: $topbar-link-bg-hover;
+    }
+  }
 }
 
 @media #{$medium-up} {

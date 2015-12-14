@@ -71,7 +71,8 @@ ul.people-listing-ul {
     border-bottom: none;
   }
 }
-.entry-content ul li.people-listing-item {
+.entry-content ul li.people-listing-item,
+.entry-content ul li.gfield {
   list-style-type: none;
 }
 .people-container {
