@@ -43,6 +43,7 @@ cache
 css/*.css
 js/public.min.js
 js/admin.min.js
+css/*.css.map
 
 # Ignore dependencies using package control
 node_modules/*
