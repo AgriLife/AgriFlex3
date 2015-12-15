@@ -39,8 +39,14 @@ class AgriFlex_Assets {
 	 */
 	public function register_global_scripts() {
 
+    wp_register_script( 'fastclick',
+      AF_THEME_DIRURL . '/bower_components/foundation/js/vendor/fastclick.js',
+      false,
+      true
+    );
+
 		wp_register_script( 'foundation',
-			AF_THEME_DIRURL . '/bower_components/foundation/js/foundation.js',
+			AF_THEME_DIRURL . '/bower_components/foundation/js/foundation/foundation.js',
 			array( 'jquery' ),
 			false,
 			true
@@ -76,6 +82,7 @@ class AgriFlex_Assets {
 	 */
 	public function enqueue_global_scripts() {
 
+    wp_enqueue_script( 'fastclick' );
 		wp_enqueue_script( 'foundation' );
 		wp_enqueue_script( 'foundation-topbar' );
 		wp_enqueue_script( 'agriflex-public' );
