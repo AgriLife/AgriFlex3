@@ -49,7 +49,8 @@ class AgriFlex_ThemeCustomizer {
     if ( get_theme_mod('agriflex_background_image') != '' && 0 < count( strlen( ( $background_image_url = get_theme_mod( 'agriflex_background_image' ) ) ) ) ) { ?>
       <style type="text/css">
         @media only screen and (min-width: 880px) {
-          body.home .site-container {
+          body.home .site-container,
+          body .site-container {
             background-image: url(<?php echo $background_image_url; ?>) !important;
           }
         }
