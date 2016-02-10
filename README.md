@@ -7,6 +7,12 @@
 * [Ruby Gems][gems]
 * [Compass][compass]
 * [Bower][bower]
+
+## WordPress Site Requirements
+
+* Genesis Theme
+* AgriLife Core Plugin
+* Advanced Custom Fields Plugin
  
 ## Installation and Use
 
