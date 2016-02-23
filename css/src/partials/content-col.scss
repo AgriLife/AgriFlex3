@@ -226,6 +226,14 @@
       @media #{$medium-up} {
         @include grid-column(4);
       }
+
+      ul {
+        list-style-type: disc;
+      }
+
+      ol {
+        list-style-type: decimal;
+      }
     }
 
   }

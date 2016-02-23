@@ -10,7 +10,7 @@ javascripts_dir = "js"
 fonts_dir = "font"
 
 # Can be :expanded, :nested, :compact or :compressed
-output_style = :expanded
+output_style = :compressed
 
 # Allows relative paths to be used
 relative_assets = true
