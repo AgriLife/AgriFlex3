@@ -348,6 +348,15 @@
       @include grid-column(12);
       &:hover {
         text-decoration: underline;
+        
+        .page-template-landing1.sidebar-content &,
+        .page-template-landing1.content-sidebar &,
+        .page-template-landing1.full-width-content & {
+          text-decoration: none;
+          a:hover {
+            text-decoration: underline;
+          }
+        }
       }
       img.program-image {
         width: 100%;
@@ -391,6 +400,12 @@
     .program-list {
       .single-program {
         @include grid-column(6);
+
+        .page-template-landing1.sidebar-content &,
+        .page-template-landing1.content-sidebar &,
+        .page-template-landing1.full-width-content & {
+          @include grid-column(4);
+        }
       }
     }
   }
