@@ -30,6 +30,7 @@
   --------------------------------------------- */
 
   .widget-area {
+    display: none;
   }
 
   ul.genesis-nav-menu,
@@ -50,6 +51,10 @@
     overflow: hidden;
   }
 
+  .widget-wrap {
+    padding: 0;
+  }
+
   .site-title {
     font: 500 2.75rem "minion-pro",sans-serif;
     line-height: 1.4;
@@ -60,6 +65,10 @@
     text-rendering: optimizelegibility;
   }
 
+}
+
+.primary-search {
+  display: none;
 }
 
 .agency-bar {
@@ -98,6 +107,12 @@ only screen and (min-device-pixel-ratio: 1.5) {
     width: 100%;
   }
   .site-header {
+    .wrap {
+      padding: 16px 1em;
+    }
+    // .site-title {
+    //   margin: 2em 0 0 0;
+    // }
 
     /*.title-area {
       padding: 0;
@@ -136,8 +151,14 @@ only screen and (min-device-pixel-ratio: 1.5) {
     */
 
     .widget-area {
+      display: block;
       float: right;
       text-align: right;
+    }
+
+    .title-area {
+      position: relative;
+      padding: 0;
     }
 
     .site-description,
@@ -147,25 +168,67 @@ only screen and (min-device-pixel-ratio: 1.5) {
       text-align: left;
     }
 
+    .search-form {
+      float: right;
+      max-height: none;
+      margin: 0.1em 0 0 0;
+
+      input[type="search"] {
+        width: 180px;
+        border: 1px solid #d5d6da;
+        padding: 0.1em .3em;
+        background: #fff url("../img/search-college.png") no-repeat 150px 45%;
+      }
+      input[type="submit"] {
+        @include visuallyhidden;
+      }
+      fieldset {
+        position: relative;
+        border: 0;
+        padding: 0;
+        margin: 0;
+      }
+      .search-submit {
+        background: none;
+        padding: 0.78em 1em;
+        border: 0;
+        border-left: 1px solid gray;
+        color: gray;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 1;
+        width: auto;
+        .icon-search:before {
+          content: "\73";
+        }
+      }
+    }
+    .header-widget-area {
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 0;
+      padding: 1em;
+    }
+
   }
 
   .header-image .site-header .widget-area {
     padding: 40px 0;
   }
 
-
-
   .agency-bar {
+    $nav-item-width: 167;
+    $nav-item-height: 42;
+    $nav-first-item-width: 164;
+    $nav-first-item-offest: 97;
+
     @include grid-row();
     background-color: $gray-agency-bar;
     max-width: 100%;
     height: 42px;
     display: block;
-
-    $nav-item-width: 167;
-    $nav-item-height: 42;
-    $nav-first-item-width: 164;
-    $nav-first-item-offest: 97;
 
     .agency-wrap {
       @include grid-column($center: true);
@@ -292,12 +355,43 @@ only screen and (min-device-pixel-ratio: 1.5) {
 
 }
 
+@media #{$medium-up-common}{
+  .agency-bar {
+    position: absolute;
+  }
+  .site-header {
+    .title-area {
+      margin: 2em 0 0 0;
+    }
+    .header-widget-area {
+      padding: 0 1em;
+    }
+  }
+}
+
 @media #{$medium-only} {
 
 }
 
 @media #{$large-up}{
 
+}
+
+// $large-up is different in College variation
+@media #{only screen} and (min-width:#{ 1140px }){
+  .site-header {
+    .wrap {
+      padding: 16px 0;
+      position: relative;
+
+      .title-area {
+        padding: 0;
+      }
+    }
+    .header-widget-area {
+      padding: 0;
+    }
+  }
 }
 
 @media #{$large-only}{

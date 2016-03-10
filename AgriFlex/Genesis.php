@@ -211,6 +211,8 @@ class AgriFlex_Genesis {
 
 		if(!defined('AG_EXT_DIRNAME') && !defined('AG_EXTUNIT_DIRNAME') ) {
 			unregister_sidebar( 'sidebar-alt' );
+		}
+		if(defined('AG_COL_DIR_PATH')){
 			unregister_sidebar( 'header-right' );
 		}
 
