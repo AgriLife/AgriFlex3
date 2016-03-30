@@ -10,6 +10,7 @@
 *~
 *.sass-cache
 ._*
+*.psd
 
 # OS or Editor folders
 .DS_Store
@@ -47,6 +48,8 @@ css/*.css.map
 
 # Ignore dependencies using package control
 node_modules/*
+vendor/*
+composer.json
 bower_components/*
 css/lib/colors.css
 css/lib/functions.css
