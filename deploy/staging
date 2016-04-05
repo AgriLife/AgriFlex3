@@ -1,0 +1,2 @@
+mkdir /wp-content/themes/AgriFlex3/test
+put -rp "${HOME}/clone/" /wp-content/themes/AgriFlex3/test/
