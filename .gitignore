@@ -47,7 +47,7 @@ js/admin.min.js
 css/*.css.map
 
 # Ignore dependencies using package control
-node_modules/*
+node_modules
 vendor/*
 composer.json
 bower_components/*
