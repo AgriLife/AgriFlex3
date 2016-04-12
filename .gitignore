@@ -50,7 +50,7 @@ css/*.css.map
 node_modules
 vendor/*
 composer.json
-bower_components/*
+bower_components
 css/lib/colors.css
 css/lib/functions.css
 css/lib/grid.css
