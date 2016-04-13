@@ -7,7 +7,7 @@ module.exports = (grunt) ->
         'js/src/public/coffee/**.coffee',
         'js/src/admin/*.js',
         'js/src/public/*.js',
-        '**/*.scss'
+        'css/src/*.scss'
       ]
       tasks: ['develop']
     coffee:
