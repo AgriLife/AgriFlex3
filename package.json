@@ -14,7 +14,7 @@
     "grunt-contrib-concat": "~0.3.0",
     "grunt-contrib-watch": "~0.5.3"
   },
-  "repository": "",
+  "repository": "https://github.com/agrilife/agriflex3",
   "author": "J. Aaron Eaton and Travis Ward",
   "license": "GPL2+",
   "readmeFilename": "README.md",
