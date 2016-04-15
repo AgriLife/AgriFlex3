@@ -58,7 +58,7 @@ module.exports = (grunt) ->
         'universal-selector': false
         'font-sizes': false
         'overqualified-elements': false
-        'force': true
+        force: true
       src: ['css/*.css']
     concat:
       adminjs:
@@ -77,7 +77,7 @@ module.exports = (grunt) ->
 
   @registerTask 'default', ['coffee', 'compass']
   @registerTask 'develop', ['compass', 'coffee:compilePublic', 'coffee:compileAdmin', 'jshint', 'concat']
-  @registerTask 'package', ['default', 'csslint', 'jshint', 'concat']
+  @registerTask 'package', ['default', 'csslint --force', 'jshint', 'concat']
 
   @event.on 'watch', (action, filepath) =>
     @log.writeln('#{filepath} has #{action}')
