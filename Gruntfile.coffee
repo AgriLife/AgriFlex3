@@ -58,7 +58,7 @@ module.exports = (grunt) ->
         'universal-selector': false
         'font-sizes': false
         'overqualified-elements': false
-        force: true
+        'force': true
       src: ['css/*.css']
     concat:
       adminjs:
