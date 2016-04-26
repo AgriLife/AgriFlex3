@@ -359,7 +359,7 @@ $large-up: "#{only screen} and (min-width: #{$breakpoint-large})";
       top: 0;
     }
     .agency-bar .agency-wrap {
-      width: 62rem;
+      max-width: 62rem;
       box-sizing: content-box;
     }
     .site-inner {
