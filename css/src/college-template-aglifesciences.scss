@@ -13,6 +13,7 @@ $breakpoint-medium-agriflex3: 721px;
 $breakpoint-large: 840px;
 $small-only: "#{only screen} and (max-width: #{$breakpoint-medium})";
 $medium-up: "#{only screen} and (min-width: #{$breakpoint-medium})";
+$medium-up-common: "#{only screen} and (min-width:#{ 970px })";
 $medium-up-agriflex3: "#{only screen} and (min-width: #{$breakpoint-medium-agriflex3})";
 $large-up: "#{only screen} and (min-width: #{$breakpoint-large})";
 
@@ -299,6 +300,11 @@ $large-up: "#{only screen} and (min-width: #{$breakpoint-large})";
     margin-bottom: 10px!important;
   }
 }
+@media #{$medium-up-common} {
+  .agency-bar ul {
+    text-align: left;
+  }
+}
 @media #{$medium-up-agriflex3} {
   .home {
     background: #87817B none repeat scroll 0% 0%;
@@ -316,9 +322,6 @@ $large-up: "#{only screen} and (min-width: #{$breakpoint-large})";
       ul {
         position: relative;
       }
-    }
-    &.page-template-landing-aglifesciences .agency-bar ul {
-      text-align: left;
     }
     .site-title {
       display: none;
