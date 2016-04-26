@@ -315,6 +315,7 @@ $large-up: "#{only screen} and (min-width: #{$breakpoint-large})";
 
       ul {
         position: relative;
+        text-align: left;
       }
     }
     .site-title {
