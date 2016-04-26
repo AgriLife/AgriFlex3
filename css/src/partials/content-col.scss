@@ -265,7 +265,9 @@
 }
 
 .entry-header .entry-meta a,
-.entry-content *:not(.soliloquy-outer-container) a:not(.accordion-title):not(.button),
+body:not(.page-template-landing1) .entry-content a:not(.accordion-title):not(.button),
+body.page-template-landing1 .home-content a:not(.accordion-title):not(.button),
+body.page-template-landing1 .entry-content ~ * a:not(.accordion-title):not(.button),
 .entry-footer a,
 .sidebar p a,
 .recentcomments a {
