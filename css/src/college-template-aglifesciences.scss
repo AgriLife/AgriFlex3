@@ -632,6 +632,11 @@ $large-up: "#{only screen} and (min-width: #{$breakpoint-large})";
     padding-right: 10px;
   }
 }
+@media all and (min-width: 636px){
+  .home .agency-bar ul {
+    width: 100%;
+  }
+}
 @media all and (min-width: 721px){
   .home .agency-bar ul {
     left: 248px;
