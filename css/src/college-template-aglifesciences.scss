@@ -315,8 +315,10 @@ $large-up: "#{only screen} and (min-width: #{$breakpoint-large})";
 
       ul {
         position: relative;
-        text-align: left;
       }
+    }
+    &.page-template-landing-aglifesciences .agency-bar ul {
+      text-align: left;
     }
     .site-title {
       display: none;
