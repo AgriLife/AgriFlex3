@@ -137,13 +137,14 @@
         &.menu-search-container {
           display: none;
         }
-        li {
-          & > a {
-            font-size: rem-calc(18);
-          }
-          &.current-menu-item:after {
-            @extend .nav-arrow;
-          }
+        li > a {
+          font-size: rem-calc(18);
+        }
+        li.current-menu-item:after {
+          @extend .nav-arrow;
+        }
+        li.active:not(.has-form) a:hover:not(.button) {
+          color: #5c0025;
         }
       }
 
