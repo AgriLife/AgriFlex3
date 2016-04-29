@@ -2,39 +2,81 @@
 --------------------------------------------- */
 
 .nav-primary {
+  background: transparent;
 
   .top-bar-section {
+
+    ul {
+      width: 100%;
+      display: block;
+      background-color: transparent;
+
+      li > a {
+        text-transform: uppercase;
+        font-size: rem-calc(14);
+      }
+
+      &.menu-search-container {
+        .search li {
+          @include grid-row($behavior: collapse);
+          background-color: transparent;
+
+          input[type="search"] {
+            @include grid-column(8);
+          }
+
+          input[type="submit"] {
+            @include grid-column(4);
+          }
+        }
+      }
+    }
+    
+    .menu {
+      background-color: $secondary-color;
+
+      li {
+        &.has-dropdown > a::after {
+          border-top-color: #fff;
+        }
+
+        &,
+        &:not(.has-form) a:not(.button),
+        &.active:not(.has-form) a:not(.button) {
+          background-color: transparent;
+        }
+
+        a,
+        &.active:not(.has-form) a:not(.button) {
+          color: #fff;
+        }
+        
+        a:hover,
+        &.hover a,
+        &:not(.has-form) a:not(.button):hover,
+        &:not(.has-form):not(.active):hover > a:not(.button):hover {
+          color: #fff;
+          background-color: rgba(0,0,0,0.2);
+        }
+        
+        li:hover {
+          color: #fff;
+          background-color: #222;
+        }
+
+        li.active:not(.has-form) > a:not(.button){
+          background-color: #500000;
+        }
+      }
+    }
 
     .menu-primary {
       position: relative;
       @include grid-column();
     }
 
-    ul {
-      width: 100%;
-      display: block;
-
-      li > a {
-        text-transform: uppercase;
-        font-size: rem-calc(14);
-      }
-    }
   }
 
-	ul.menu-search-container {
-
-		.search li {
-			@include grid-row($behavior: collapse);
-
-			input[type="search"] {
-				@include grid-column(8);
-			}
-
-			input[type="submit"] {
-				@include grid-column(4);
-			}
-		}
-	}
 	.wrap {
 	}
 
