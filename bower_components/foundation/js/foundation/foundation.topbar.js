@@ -256,6 +256,8 @@
 
       S('body').off('.topbar').on('click.fndtn.topbar', function (e) {
         var parent = S(e.target).closest('li').closest('li.hover'),
+            $this = S(this),
+            topbar = $this.closest('[' + self.attr_name() + ']'),
             settings = topbar.data(self.attr_name(true) + '-init');
 
         if (parent.length > 0) {
