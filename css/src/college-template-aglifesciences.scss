@@ -364,7 +364,7 @@ $large-up: "#{only screen} and (min-width: #{$breakpoint-large})";
     }
     .site-inner {
       .featured-content .featured-stories li {
-        margin: 10px auto;
+        margin: 7px auto;
         width: 90%;
         border-bottom: 1px solid #7D3351;
         padding: .2em 0 .5em 0;
@@ -558,7 +558,7 @@ $large-up: "#{only screen} and (min-width: #{$breakpoint-large})";
     .site-inner .featured-content .featured-stories li {
         width: 165px;
         border-bottom: 3px solid #7D3351;
-        padding: 5px 0 14px 0;
+        padding: 5px 0 11px 0;
     }
     .challenge, .audience {
       width: 195px;
