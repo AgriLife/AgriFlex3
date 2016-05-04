@@ -256,8 +256,7 @@
 
       S('body').off('.topbar').on('click.fndtn.topbar', function (e) {
         var parent = S(e.target).closest('li').closest('li.hover'),
-            $this = S(this),
-            topbar = $this.closest('[' + self.attr_name() + ']'),
+            topbar = S(e.target).closest('[' + self.attr_name() + ']'),
             settings = topbar.data(self.attr_name(true) + '-init');
 
         if (parent.length > 0) {
@@ -266,7 +265,7 @@
 
         S('[' + self.attr_name() + '] li.hover').removeClass('hover');
         
-        if(settings && !settings.is_hover){
+        if(!settings.is_hover){
           S('[' + self.attr_name() + '] a.last-clicked').removeClass('last-clicked');
         }
       });
