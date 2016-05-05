@@ -184,7 +184,7 @@ class AgriFlex_RequiredDOM
 			        <li><a href="http://itaccessibility.tamu.edu/" target="_blank">Accessibility Policy</a></li>
 			        <li><a href="http://www2.dir.state.tx.us/pubs/Pages/weblink-privacy.aspx" target="_blank">State Link Policy</a></li>
 			        <li><a href="http://www.tsl.state.tx.us/trail" target="_blank">Statewide Search</a></li>
-			        <li><a href="http://www.tamus.edu/veterans/" target="_blank">Veterans Benefits</a></li>
+			        <li><a href="http://veterans.tamu.edu/" target="_blank">Veterans Benefits</a></li>
 			        <li><a href="http://fcs.tamu.edu/families/military_families/" target="_blank">Military Families</a></li>
 			        <li><a href="https://secure.ethicspoint.com/domain/en/report_custom.asp?clientid=19681" target="_blank">Risk, Fraud &amp; Misconduct Hotline</a></li>
 			        <li><a href="http://www.texashomelandsecurity.com/" target="_blank">Texas Homeland Security</a></li>
