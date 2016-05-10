@@ -38,6 +38,13 @@
       border-bottom: 1px solid $gray-lighter;
       border-right: 1px solid $gray-lighter;
     }
+  
+    @media screen and (max-width: 400px){
+      a {
+        padding-left: 11px;
+        padding-right: 11px;
+      }
+    }
   }
 
   .footer-ext-logo {
@@ -54,6 +61,13 @@
       padding: 15px 57px;
       float: left;
       border-bottom: 1px solid $gray-lighter;
+    }
+  
+    @media screen and (max-width: 400px){
+      a {
+        padding-left: 35px;
+        padding-right: 35px;
+      }
     }
   }
 
