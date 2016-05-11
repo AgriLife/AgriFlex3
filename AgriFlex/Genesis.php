@@ -56,6 +56,9 @@ class AgriFlex_Genesis {
 
 		// Remove some Genesis settings metaboxes
 		add_action( 'genesis_theme_settings_metaboxes', array( $this, 'remove_genesis_metaboxes' ) );
+		
+		// Add Read More excerpt link
+		add_filter( 'excerpt_more', array( $this, 'agriflex_auto_excerpt_more' ) );
 
 	}
 
@@ -283,5 +286,15 @@ class AgriFlex_Genesis {
 		remove_meta_box( 'genesis-theme-settings-scripts',    $_genesis_theme_settings_pagehook, 'main' );
 
 	}
+
+	/**
+	 * Adds the Read More link to post excerpts
+	 */
+	public function agriflex_auto_excerpt_more( $more ) {
+
+		return '... <span class="read-more"><a href="' . get_permalink() . '">' .
+    __( 'Read More &rarr;', 'agriflex' ) . '</a></span>';
+
+  }
 
 }

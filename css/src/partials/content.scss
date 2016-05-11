@@ -15,6 +15,28 @@
 		border: none;
 	}
 
+  .read-more {
+    display: block;
+    float: right;
+
+    a {
+      padding: .2em 1em;
+      background: #e8e7d5;
+      border-radius: 3px;
+      box-shadow: 0 1px 2px #ddd;
+      border: none;
+      float: left;
+      margin: 20px 0 20px 2px;
+      text-decoration: none;
+
+      &:hover {
+      	background: #e2dbbf;
+      	box-shadow: 0 1px 1px #fff;
+      	color: #002838;
+      }
+    }
+  }
+
 	ol,
 	p,
 	ul {
