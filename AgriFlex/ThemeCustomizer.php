@@ -13,33 +13,35 @@ class AgriFlex_ThemeCustomizer {
   // Add Customization Control
   public function agriflex_customize_register($wp_customize){
     // A group of options for the control
-    $wp_customize->add_section(
-      'agriflex_background_options',
-      array(
-          'title'     => 'Background Image',
-          'priority'  => 30 
-      )
-    );
-    // Register the option's data for the control
-    $wp_customize->add_setting(
-      'agriflex_background_image',
-      array(
-          'default'      => '',
-          'transport'    => 'refresh'
-      )
-    );
-    // Display a control in Appearance > Customize
-    $wp_customize->add_control(
-      new WP_Customize_Image_Control(
-        $wp_customize,
+    if(defined('AG_EXTUNIT_DIRNAME') || defined('AG_EXT_DIRNAME')){
+      $wp_customize->add_section(
+        'agriflex_background_options',
+        array(
+            'title'     => 'Background Image',
+            'priority'  => 30 
+        )
+      );
+      // Register the option's data for the control
+      $wp_customize->add_setting(
         'agriflex_background_image',
         array(
-          'label'    => '',
-          'settings' => 'agriflex_background_image',
-          'section'  => 'agriflex_background_options'
+            'default'      => '',
+            'transport'    => 'refresh'
         )
-      )
-    );
+      );
+      // Display a control in Appearance > Customize
+      $wp_customize->add_control(
+        new WP_Customize_Image_Control(
+          $wp_customize,
+          'agriflex_background_image',
+          array(
+            'label'    => '',
+            'settings' => 'agriflex_background_image',
+            'section'  => 'agriflex_background_options'
+          )
+        )
+      );
+    }
   }
 
   /* Use the control's data in the theme.
