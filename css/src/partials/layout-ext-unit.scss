@@ -115,6 +115,24 @@ footer .wrap {
   }
   .content {
     padding-top: 1em;
+
+    .loop-shortcode .loop-article {
+      clear: both;
+
+      .content {
+        padding: 0;
+        float: none;
+
+        & > *:not(p):first-child {
+          float: left;
+          margin: 5px 15px 5px 0;
+        }
+        
+        p {
+          margin: 1.25em 0;
+        }
+      }
+    }
   }
 
   .sidebar-content-wrap .sidebar-primary {
@@ -131,9 +149,9 @@ footer .wrap {
     @include grid-row();
 
     .content-sidebar-wrap {
-      .content {
+      & > .content {
         @include grid-column($columns: 8);
-        background-color: $content-bg-color; 
+        background-color: $content-bg-color;
       }
 
       .sidebar-primary {
@@ -277,7 +295,7 @@ footer .wrap {
         .content-sidebar-wrap {
           position: relative;
 
-          .content {
+          & > .content {
             padding-left: 2em;
             padding-right: 2em;
             padding-top: 2em;

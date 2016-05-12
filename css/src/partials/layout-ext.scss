@@ -90,42 +90,63 @@ footer .wrap {
 	}
 
 	.contain-to-grid {
-      .top-bar {
-        max-width: 71.25rem;
-        width: 100%;
-        overflow: visible;
-        margin: 0 auto;
+    .top-bar {
+      max-width: 71.25rem;
+      width: 100%;
+      overflow: visible;
+      margin: 0 auto;
+      background: $white;
+      li a:not(.button) {
         background: $white;
-        li a:not(.button) {
+      }
+      .top-bar-section ul {
+        background: $white;
+        li > a {
           background: $white;
         }
-        .top-bar-section ul {
-          background: $white;
-          li > a {
-            background: $white;
-          }
-        }
+      }
 	  }
-    }
+  }
 
-    .sidebar-content-sidebar {
-      .site-inner {
-        .wrap {
-          @include grid-row();
+  .content {
+    
+    .loop-shortcode .loop-article {
+      clear: both;
 
-          .content-sidebar-wrap {
-            @include grid-column(12);
-          }
+      .content {
+        padding: 0;
+        float: none;
 
-          .sidebar-secondary {
-            @include grid-column(12);
-          }
-          .sidebar-primary {
-          }
-
+        & > *:not(p):first-child {
+          float: left;
+          margin: 5px 15px 5px 0;
+        }
+        
+        p {
+          margin: 1.25em 0;
         }
       }
     }
+  }
+
+  .sidebar-content-sidebar {
+    .site-inner {
+      .wrap {
+        @include grid-row();
+
+        .content-sidebar-wrap {
+          @include grid-column(12);
+        }
+
+        .sidebar-secondary {
+          @include grid-column(12);
+        }
+        .sidebar-primary {
+        }
+
+      }
+    }
+  }
 
 
 	.sidebar-primary,
