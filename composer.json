@@ -1,0 +1,21 @@
+{
+    "name": "agrilife/agriflex",
+    "description": "Functionality for AgriLife AgriFlex theme",
+    "license": "GPL2+",
+    "authors": [
+        {
+            "name": "Zach Watkins",
+            "email": "watkinza@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+    },
+  "require-dev": {
+  },
+    "autoload": {
+        "psr-4": {
+            "AgriLife\\AgriFlex\\": "src"
+        }
+    }
+}
