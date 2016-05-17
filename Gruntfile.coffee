@@ -33,7 +33,14 @@ module.exports = (grunt) ->
       dist:
         options:
           config: 'config.rb'
-          specify: ['css/src/*.scss']
+          force: true
+      dev:
+        options:
+          config: 'config.rb'
+          force: true
+          outputStyle: 'expanded'
+          sourcemap: true
+          noLineComments: true
     jshint:
       files: ['js/src/admin/*.js', 'js/src/public/*.js']
       options:
@@ -75,9 +82,9 @@ module.exports = (grunt) ->
   @loadNpmTasks 'grunt-contrib-concat'
   @loadNpmTasks 'grunt-contrib-watch'
 
-  @registerTask 'default', ['coffee', 'compass']
-  @registerTask 'develop', ['compass', 'coffee:compilePublic', 'coffee:compileAdmin', 'jshint', 'concat']
-  @registerTask 'package', ['default', 'csslint', 'jshint', 'concat']
+  @registerTask 'default', ['coffee', 'compass:dist']
+  @registerTask 'develop', ['coffee', 'compass:dev', 'jshint', 'concat']
+  @registerTask 'package', ['default', 'jshint', 'concat']
 
   @event.on 'watch', (action, filepath) =>
     @log.writeln('#{filepath} has #{action}')
