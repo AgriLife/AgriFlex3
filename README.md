@@ -26,7 +26,8 @@
     * Header Right: Positioned in the header on the right side for desktop browsers, and inside the collapsible menu on mobile browsers
     * Primary Sidebar: Positioned next to a page's content depending on which page layout it uses
 * Theme customization for background images on Extension and Extension Unit sites
-* Page Layouts: * Page Layouts
+* Page Layouts:
+
 ![Content Sidebar](http://agrilife.org/fishnutrition/wp-content/themes/genesis/lib/admin/images/layouts/cs.gif)
 ![Sidebar Content](http://agrilife.org/fishnutrition/wp-content/themes/genesis/lib/admin/images/layouts/sc.gif)
 ![Content](http://agrilife.org/fishnutrition/wp-content/themes/genesis/lib/admin/images/layouts/c.gif)
