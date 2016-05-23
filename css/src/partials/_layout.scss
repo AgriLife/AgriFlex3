@@ -265,6 +265,10 @@ body {
         @include grid-column($columns: 4, $float: left);
       }
     }
+    
+    #wrap #content {
+      @include grid-column($columns: 12);
+    }
   }
 
   .sidebar-content .site-inner .wrap {
