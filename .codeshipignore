@@ -71,7 +71,7 @@ bower_components/**/picturefill/logos/*.png
 bower_components/**/superfish/examples/
 # Only using one file from bower_components/html5shiv
 bower_components/html5shiv/
-bower_components/html5shiv/dist/html5shiv.js
+!bower_components/html5shiv/dist/html5shiv.js
 css/src
 js/src
 # Prevent Composer files from being loaded if they are only used for PHP5.6+
