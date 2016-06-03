@@ -120,6 +120,10 @@ ul.people-listing-ul {
     @include grid-column(7);
   }
 
+  .people-person-details {
+    margin-left: 0;
+  }
+
   .people-person-content {
     @include grid-column(12);
   }
