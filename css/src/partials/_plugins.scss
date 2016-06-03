@@ -82,6 +82,7 @@ ul.people-listing-ul {
   }
   .people-image {
     @include grid-column(4);
+    margin-right: 0;
     text-align: center;
     img[title="No photo found"] {
       width: 70px;
