@@ -307,6 +307,7 @@ body.page-template-landing-aglifesciences .home-content a:not(.accordion-title):
 }
 
 .sidebar a:hover,
+.post-type-archive-people .people-name a:hover,
 .people-listing-item .people-container a:hover {
   @extend %underline-hover;
 }
