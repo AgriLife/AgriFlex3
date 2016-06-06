@@ -291,6 +291,8 @@ body:not(.page-template-landing1):not(.page-template-landing-aglifesciences) .en
 body.page-template-landing1 .home-content a:not(.accordion-title):not(.button),
 body.page-template-landing1 .entry-content ~ *:not(.program-list) a:not(.accordion-title):not(.button):not(.job-listing-link),
 body.page-template-landing-aglifesciences .home-content a:not(.accordion-title):not(.button),
+.people-listing-item .people-container,
+.post-type-archive-people .people-name,
 .entry-footer a,
 .sidebar p a,
 .recentcomments a {
@@ -302,13 +304,7 @@ body.page-template-landing-aglifesciences .home-content a:not(.accordion-title):
   }
 }
 
-.post-type-archive-people .people-name a {
-  @extend %underline-default;
-}
-
-.sidebar a:hover,
-.post-type-archive-people .people-name a:hover,
-.people-listing-item .people-container a:hover {
+.sidebar a:hover {
   @extend %underline-hover;
 }
 
