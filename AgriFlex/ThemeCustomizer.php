@@ -51,7 +51,7 @@ class AgriFlex_ThemeCustomizer {
       $wp_customize->add_setting(
         'agriflex_background_crop',
         array(
-          'default'     => true,
+          'default'     => false,
         )
       );
       $wp_customize->add_control(
