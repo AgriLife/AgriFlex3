@@ -3,17 +3,17 @@
 
 .content .soliloquy-container {
 
-  .soliloquy-caption .soliloquy-caption-inside {
-    padding-bottom: 2em;
-  }
+	.soliloquy-caption .soliloquy-caption-inside {
+		padding-bottom: 2em;
+	}
 
-  .soliloquy-pager {
-    text-align: left;
-    margin: 0 0 0 1em;
-    a {
-      @include no-transition;
-    }
-  }
+	.soliloquy-pager {
+		text-align: left;
+		margin: 0 0 0 1em;
+		a {
+			@include no-transition;
+		}
+	}
 }
 
 
@@ -21,33 +21,33 @@
 --------------------------------------------- */
 
 a.accordion-title {
-  padding: 15px 0;
-  font-size: 1.1em;
+	padding: 15px 0;
+	font-size: 1.1em;
 
-  &::before {
-    width: 0;
-    height: 0;
-    border-top: 7px solid transparent;
-    border-bottom: 7px solid transparent;
-    border-left: 7px solid $primary-color;
-    margin: 0 20px 0 3px;
-    content: " ";
-    display: inline-block;
-  }
+	&::before {
+		width: 0;
+		height: 0;
+		border-top: 7px solid transparent;
+		border-bottom: 7px solid transparent;
+		border-left: 7px solid $primary-color;
+		margin: 0 20px 0 3px;
+		content: " ";
+		display: inline-block;
+	}
 
-  &.down::before {
-    border-left: 7px solid transparent;
-    border-right: 7px solid transparent;
-    border-top: 7px solid $primary-color;
-    margin: 0 16px 0 0;
-  }
+	&.down::before {
+		border-left: 7px solid transparent;
+		border-right: 7px solid transparent;
+		border-top: 7px solid $primary-color;
+		margin: 0 16px 0 0;
+	}
 }
 
 .accordion-content {
-  width: 97% !important;
-  margin: 0 auto;
-  border-left: 1px dashed $gray-lighter;
-  padding-left: 2em;
+	width: 97% !important;
+	margin: 0 auto;
+	border-left: 1px dashed $gray-lighter;
+	padding-left: 2em;
 }
 
 /* AgriLife People
@@ -55,106 +55,106 @@ a.accordion-title {
 
 .single-people #content,
 .post-type-archive-people #content {
-  @include grid-column(12);
+	@include grid-column(12);
 }
 
 ul.people-listing-ul {
-  margin-left: 0;
+	margin-left: 0;
 }
 
 // archive list
 .people-listing-item {
-  border-bottom: 1px dashed #f0f0f0;
-  padding-bottom: .5em;
-  margin-bottom: .5em;
-  &:last-child {
-    border-bottom: none;
-  }
+	border-bottom: 1px dashed #F0F0F0;
+	padding-bottom: .5em;
+	margin-bottom: .5em;
+	&:last-child {
+		border-bottom: none;
+	}
 }
 .entry-content ul li.people-listing-item,
 .entry-content ul li.gfield {
-  list-style-type: none;
+	list-style-type: none;
 }
 .people-container {
-  @include grid-row();
-  a:hover {
-    text-decoration: underline;
-  }
-  .people-image {
-    @include grid-column(4);
-    margin-right: 0;
-    text-align: center;
-    img[title="No photo found"] {
-      width: 70px;
-    }
-  }
-  .people-head {
-    @include grid-column(8);
+	@include grid-row();
+	a:hover {
+		text-decoration: underline;
+	}
+	.people-image {
+		@include grid-column(4);
+		margin-right: 0;
+		text-align: center;
+		img[title="No photo found"] {
+			width: 70px;
+		}
+	}
+	.people-head {
+		@include grid-column(8);
 
-    h2 {
-      font-size: 1.2em;
-      margin: 0;
-    }
-    h3 {
-      margin: 0;
-    }
-    h3, h4 {
-      font-size: 1em;
-    }
-  }
-  .people-contact-details {
-    @include grid-column(8);
-    float: right;
-    p {
-      margin-bottom: 0;
-    }
-  }
+		h2 {
+			font-size: 1.2em;
+			margin: 0;
+		}
+		h3 {
+			margin: 0;
+		}
+		h3, h4 {
+			font-size: 1em;
+		}
+	}
+	.people-contact-details {
+		@include grid-column(8);
+		float: right;
+		p {
+			margin-bottom: 0;
+		}
+	}
 }
 
 // single listing
 .people {
-  .people-single-image {
-    @include grid-column(5);
-  }
+	.people-single-image {
+		@include grid-column(5);
+	}
 
-  .people-person-details,
-  .education {
-    @include grid-column(7);
-  }
+	.people-person-details,
+	.education {
+		@include grid-column(7);
+	}
 
-  .people-person-details {
-    margin-left: 0;
-  }
+	.people-person-details {
+		margin-left: 0;
+	}
 
-  .people-person-content {
-    @include grid-column(12);
-  }
+	.people-person-content {
+		@include grid-column(12);
+	}
 
-  .field-office,
-  .field-title {
-    @include grid-column(4, $collapse: true);
-  }
-  .office,
-  .email,
-  .phone {
-    @include grid-column(8, $collapse: true);
-  }
+	.field-office,
+	.field-title {
+		@include grid-column(4, $collapse: true);
+	}
+	.office,
+	.email,
+	.phone {
+		@include grid-column(8, $collapse: true);
+	}
 
-  .details {
-    .name {
-      display: none;
-    }
-    dd.role {
-      font-weight: bold;
-      font-size: 1.1em;
-    }
-    dd.email {
-      word-wrap: break-word;
-    }
-    dd,dt {
-      margin-bottom: 0;
-    }
-  }
+	.details {
+		.name {
+			display: none;
+		}
+		dd.role {
+			font-weight: bold;
+			font-size: 1.1em;
+		}
+		dd.email {
+			word-wrap: break-word;
+		}
+		dd, dt {
+			margin-bottom: 0;
+		}
+	}
 
 }
 
@@ -162,10 +162,10 @@ ul.people-listing-ul {
 /* The Events Calendar tri.be
 --------------------------------------------- */
 .tribe-mini-calendar-event {
-  .vcard {
-    margin: 0;
-    padding: 0;
-  }
+	.vcard {
+		margin: 0;
+		padding: 0;
+	}
 }
 
 
@@ -175,22 +175,22 @@ ul.people-listing-ul {
 }
 
 @media #{$medium-up} {
-  .single-people #content,
-  .post-type-archive-people #content,
-  .tax-types.content-sidebar #content {
-    @include grid-column(8);
-  }
+	.single-people #content,
+	.post-type-archive-people #content,
+	.tax-types.content-sidebar #content {
+		@include grid-column(8);
+	}
 
 }
 
 /* PubMed Reflist
 --------------------------------------------- */
 .sidebar .pubmed-entry {
-  color: #000;
-  span.pubmed-link {
-    white-space: nowrap;
-    &, & a {
-      color: #5E564E;
-    }
-  }
+	color: #000;
+	span.pubmed-link {
+		white-space: nowrap;
+		&, & a {
+			color: #5E564E;
+		}
+	}
 }

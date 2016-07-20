@@ -1,64 +1,64 @@
 @mixin break-text() {
-  -ms-word-wrap: break-word;
-  word-wrap: break-word;
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
 }
 
 @mixin button() {
-  background-color: $gray-light;
-  border: none;
-  box-shadow: none;
-  color: $white;
-  cursor: pointer;
-  padding: 10px;
-  text-transform: uppercase;
-  width: auto;
-  @include appearance(none);
+	background-color: $gray-light;
+	border: none;
+	box-shadow: none;
+	color: $white;
+	cursor: pointer;
+	padding: 10px;
+	text-transform: uppercase;
+	width: auto;
+	@include appearance(none);
 }
 
 @mixin button-hover() {
-  background-color: $form-button-hover;
-  color: $white;
+	background-color: $form-button-hover;
+	color: $white;
 }
 
 // Hide only visually, but have it available for screenreaders: h5bp.com/v
 @mixin visuallyhidden() {
-  border: 0;
-  clip: rect(0 0 0 0);
-  position: absolute;
-  overflow: hidden;
-  margin: -1px;
-  padding: 0;
-  width: 1px;
-  height: 1px;
-  &.focusable:active,
-  &.focusable:focus {
-    clip: auto;
-    position: static;
-    overflow: visible;
-    margin: 0;
-    width: auto;
-    height: auto;
-  }
+	border: 0;
+	clip: rect(0 0 0 0);
+	position: absolute;
+	overflow: hidden;
+	margin: -1px;
+	padding: 0;
+	width: 1px;
+	height: 1px;
+	&.focusable:active,
+	&.focusable:focus {
+		clip: auto;
+		position: static;
+		overflow: visible;
+		margin: 0;
+		width: auto;
+		height: auto;
+	}
 }
 
 @mixin inner-background($img, $size, $offset) {
-  background: url($img) top right no-repeat transparent;
-  background-size: $size;
-  background-position-y: $offset;
-  padding-top: 1px;
-  margin-top: 15px;
+	background: url($img) top right no-repeat transparent;
+	background-size: $size;
+	background-position-y: $offset;
+	padding-top: 1px;
+	margin-top: 15px;
 }
 
 @mixin placeholder {
-  &::-webkit-input-placeholder {@content}
-  &:-moz-placeholder           {@content}
-  &::-moz-placeholder          {@content}
-  &:-ms-input-placeholder      {@content}
+	&::-webkit-input-placeholder {@content}
+	&:-moz-placeholder					 {@content}
+	&::-moz-placeholder					 {@content}
+	&:-ms-input-placeholder			 {@content}
 }
 
 @mixin no-transition() {
-  -moz-transition: none;
-  -webkit-transition: none;
-  -o-transition: color 0 ease-in;
-  transition: none;
+	-moz-transition: none;
+	-webkit-transition: none;
+	-o-transition: color 0 ease-in;
+	transition: none;
 }

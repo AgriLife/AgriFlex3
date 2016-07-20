@@ -10,9 +10,9 @@
     "grunt-contrib-coffee": "~0.7.0",
     "grunt-contrib-compass": "~0.6.0",
     "grunt-contrib-jshint": "~0.7.2",
-    "grunt-contrib-csslint": "~0.2.0",
     "grunt-contrib-concat": "~0.3.0",
-    "grunt-contrib-watch": "~0.5.3"
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-sass-lint": "~0.2.0"
   },
   "repository": "https://github.com/agrilife/agriflex3",
   "author": "J. Aaron Eaton and Travis Ward",

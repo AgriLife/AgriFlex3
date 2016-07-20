@@ -3,97 +3,97 @@
 
 .site-header {
 
-  /* Title Area
-  --------------------------------------------- */
+	/* Title Area
+	--------------------------------------------- */
 
-  .title-area {
-    font-weight: 700;
-    float: left;
-    padding: 16px 0;
-  }
+	.title-area {
+		font-weight: 700;
+		float: left;
+		padding: 16px 0;
+	}
 
-  .college-title {
-    margin: 0;
+	.college-title {
+		margin: 0;
 
-    a {
-      border: 0;
-      overflow: hidden;
-      padding: 50px 130px;
-      background: url("../img/logo-college-maroon.png") no-repeat center transparent;
-      background-size: 190px 37px;
-      width: 190px;
-      height: 37px;
+		a {
+			border: 0;
+			overflow: hidden;
+			padding: 50px 130px;
+			background: url("../img/logo-college-maroon.png") no-repeat center transparent;
+			background-size: 190px 37px;
+			width: 190px;
+			height: 37px;
 
-      span {
-        display: none;
-      }
-    }
-  }
+			span {
+				display: none;
+			}
+		}
+	}
 
-  .site-description {
-    color: $site-description;
-    @include adjust-font-size-to(14px);
-    font-weight: 300;
-    margin: 0;
-  }
+	.site-description {
+		color: $site-description;
+		@include adjust-font-size-to(14px);
+		font-weight: 300;
+		margin: 0;
+	}
 
 
-  /* Full width header, no widgets */
+	/* Full width header, no widgets */
 
-  .header-full-width .title-area,
-  .header-full-width .site-title {
-  }
+	.header-full-width .title-area,
+	.header-full-width .site-title {
+	}
 
-  /* Widget Area
-  --------------------------------------------- */
+	/* Widget Area
+	--------------------------------------------- */
 
-  .widget-area {
-  }
+	.widget-area {
+	}
 
-  ul.genesis-nav-menu,
-  .search-form {
-    float: none;
-  }
+	ul.genesis-nav-menu,
+	.search-form {
+		float: none;
+	}
 
-  .site-description,
-  .title-area,
-  .search-form{
-    text-align: center;
-  }
+	.site-description,
+	.title-area,
+	.search-form{
+		text-align: center;
+	}
 
-  .site-title {
-    font: 700 2.75rem "quatro-slab",serif;
-    line-height: 1;
-    text-align: center;
-    margin: .5em;
-    color: #222;
-    font-style: normal;
-    text-rendering: optimizelegibility;
-  }
+	.site-title {
+		font: 700 2.75rem "quatro-slab", serif;
+		line-height: 1;
+		text-align: center;
+		margin: .5em;
+		color: #222;
+		font-style: normal;
+		text-rendering: optimizelegibility;
+	}
 }
 
 
 .primary-search {
-  display: none;
+	display: none;
 }
 
 .agency-bar {
-  display: none;
+	display: none;
 }
 
 .header-image .site-header .wrap {
-  background-position: center top;
+	background-position: center top;
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-only screen and (-moz-min-device-pixel-ratio: 1.5),
-only screen and (-o-min-device-pixel-ratio: 3/2),
-only screen and (min-device-pixel-ratio: 1.5) {
+	only screen and (-moz-min-device-pixel-ratio: 1.5),
+	only screen and (-o-min-device-pixel-ratio: 3/2),
+	only screen and (min-device-pixel-ratio: 1.5) {
 
-  .header-image .site-header .wrap {
-    background: url(images/logo@2x.png) no-repeat left;
-    background-size: 360px 164px;
-  }
+		.header-image .site-header .wrap {
+			background: url(images/logo@2x.png) no-repeat left;
+			background-size: 360px 164px;
+		}
 
 }
 
@@ -107,223 +107,223 @@ only screen and (min-device-pixel-ratio: 1.5) {
 
 @media #{$medium-up} {
 
-  #imageView {
-    position: absolute;
-    top: 200px;
-    width: 100%;
-  }
-  .site-header {
+	#imageView {
+		position: absolute;
+		top: 200px;
+		width: 100%;
+	}
+	.site-header {
 
-    .site-title {
-      margin: 2em 0 0 0;
-    }
-    
-    .college-title {
-      margin: -20px 0 0 0;
+		.site-title {
+			margin: 2em 0 0 0;
+		}
+		
+		.college-title {
+			margin: -20px 0 0 0;
 
-      a {
-        border: 0;
-        overflow: hidden;
-        border-bottom: #fff 8px solid;
-        border-right: #fff 10px solid;
-        border-left: #fff 10px solid;
-        padding: 28px 20px 37px 20px;
-        position: absolute;
-        background: url("../img/logo-college.png") no-repeat center $primary-color;
-        background-size: 146px 28px;
-        width: 200px;
-        height: 37px;
-        @include box-shadow();
+			a {
+				border: 0;
+				overflow: hidden;
+				border-bottom: #FFF 8px solid;
+				border-right: #FFF 10px solid;
+				border-left: #FFF 10px solid;
+				padding: 28px 20px 37px 20px;
+				position: absolute;
+				background: url("../img/logo-college.png") no-repeat center $primary-color;
+				background-size: 146px 28px;
+				width: 200px;
+				height: 37px;
+				@include box-shadow();
 
-        span {
-          display: none;
-        }
-      }
-    }
+				span {
+					display: none;
+				}
+			}
+		}
 
-    .widget-area {
-      float: right;
-      text-align: right;
-    }
+		.widget-area {
+			float: right;
+			text-align: right;
+		}
 
-    .title-area {
-      padding: 16px 1em;
-      position: relative;
-    }
+		.title-area {
+			padding: 16px 1em;
+			position: relative;
+		}
 
-    .site-description,
-    .title-area,
-    .search-form,
-    .site-title {
-      text-align: left;
-    }
+		.site-description,
+		.title-area,
+		.search-form,
+		.site-title {
+			text-align: left;
+		}
 
-    .search-form {
-      float: right;
-      max-height: none;
-      margin: 0.1em 0 0 0;
+		.search-form {
+			float: right;
+			max-height: none;
+			margin: 0.1em 0 0 0;
 
-      input[type="search"] {
-        width: 180px;
-        border: 1px solid #d5d6da;
-        padding: 0.1em .3em;
-        background: #fff url("../img/search-college.png") no-repeat 150px 45%;
-      }
-      input[type="submit"] {
-        @include visuallyhidden;
-      }
-      fieldset {
-        position: relative;
-        border: 0;
-        padding: 0;
-        margin: 0;
-      }
-      .search-submit {
-        background: none;
-        padding: 0.78em 1em;
-        border: 0;
-        border-left: 1px solid gray;
-        color: gray;
-        position: absolute;
-        top: 0;
-        right: 0;
-        z-index: 1;
-        width: auto;
-        .icon-search:before {
-          content: "\73";
-        }
-      }
-    }
-    .primary-search {
-      display: block;
-      position: absolute;
-      right: 0;
-      top: 0;
-      padding: 1em;
-    }
+			input[type="search"] {
+				width: 180px;
+				border: 1px solid #D5D6DA;
+				padding: 0.1em .3em;
+				background: #FFF url("../img/search-college.png") no-repeat 150px 45%;
+			}
+			input[type="submit"] {
+				@include visuallyhidden;
+			}
+			fieldset {
+				position: relative;
+				border: 0;
+				padding: 0;
+				margin: 0;
+			}
+			.search-submit {
+				background: none;
+				padding: 0.78em 1em;
+				border: 0;
+				border-left: 1px solid #808080;
+				color: #808080;
+				position: absolute;
+				top: 0;
+				right: 0;
+				z-index: 1;
+				width: auto;
+				.icon-search:before {
+					content: "\73";
+				}
+			}
+		}
+		.primary-search {
+			display: block;
+			position: absolute;
+			right: 0;
+			top: 0;
+			padding: 1em;
+		}
 
-  }
+	}
 
-  .header-image .site-header .widget-area {
-    padding: 40px 0;
-  }
+	.header-image .site-header .widget-area {
+		padding: 40px 0;
+	}
 
-  .agency-bar {
-    $nav-item-width: 116;
-    $nav-item-height: 42;
-    $nav-item-bgcolor: #5E564E;
-    $nav-item-pipe-width: 28;
-    $nav-item-bgoffset-x: 12;
+	.agency-bar {
+		$nav-item-width: 116;
+		$nav-item-height: 42;
+		$nav-item-bgcolor: #5E564E;
+		$nav-item-pipe-width: 28;
+		$nav-item-bgoffset-x: 12;
 
-    @include grid-row();
-    background-color: $gray-agency-bar;
-    max-width: 100%;
-    height: #{$nav-item-height}px;
-    display: block;
+		@include grid-row();
+		background-color: $gray-agency-bar;
+		max-width: 100%;
+		height: #{$nav-item-height}px;
+		display: block;
 
-    & + .site-container .site-header .college-title a {
-      z-index: 5;
-    }
+		& + .site-container .site-header .college-title a {
+			z-index: 5;
+		}
 
-    .agency-wrap {
-      position: relative;
-      @include grid-column($center: true, $collapse: true);
-      width: 100%;
+		.agency-wrap {
+			position: relative;
+			@include grid-column($center: true, $collapse: true);
+			width: 100%;
 
-    }
+		}
 
-    ul {
-      position: absolute;
-      width: 100%;
-      margin: 0;
-      text-align: center;
+		ul {
+			position: absolute;
+			width: 100%;
+			margin: 0;
+			text-align: center;
 
-      li {
-        display: inline-block;
-        position: relative;
-        z-index: 5;
+			li {
+				display: inline-block;
+				position: relative;
+				z-index: 5;
 
-        &:after {
-          content: "";
-          display: block;
-          width: 100%;
-          height: 100%;
-          position: absolute;
-          top: 0;
-          left: 0;
-          z-index: 1;
-          -webkit-transform: skewX(-20deg);
-          transform: skewX(-20deg);
-          box-shadow: 0 0 10px #222;
-          background: $nav-item-bgcolor;
-        }
-        
-        &:hover:after {
-          background-color: #4F5628;
-        }
+				&:after {
+					content: "";
+					display: block;
+					width: 100%;
+					height: 100%;
+					position: absolute;
+					top: 0;
+					left: 0;
+					z-index: 1;
+					-webkit-transform: skewX(-20deg);
+					transform: skewX(-20deg);
+					box-shadow: 0 0 10px #222;
+					background: $nav-item-bgcolor;
+				}
+				
+				&:hover:after {
+					background-color: #4F5628;
+				}
 
-        a {
-          background: url('../img/college/agency-nav.png') no-repeat #{$nav-item-bgoffset-x}px 0;
-          cursor: pointer;
-          display: block;
-          height: #{$nav-item-height}px;
-          width: $nav-item-width + $nav-item-pipe-width * 1px;
-          opacity: 0.35;
-          text-indent: -9999em;
-          position: relative;
-          z-index: 2;
-          transition: none 300ms ease-out;
+				a {
+					background: url('../img/college/agency-nav.png') no-repeat #{$nav-item-bgoffset-x}px 0;
+					cursor: pointer;
+					display: block;
+					height: #{$nav-item-height}px;
+					width: $nav-item-width + $nav-item-pipe-width * 1px;
+					opacity: 0.35;
+					text-indent: -9999em;
+					position: relative;
+					z-index: 2;
+					transition: none 300ms ease-out;
 
-          &:hover {
-            opacity: 1;
-          }
-        }
+					&:hover {
+						opacity: 1;
+					}
+				}
 
-        &.tvmdl-item {
-          z-index: 4;
-          &:hover:after {
-            background-color: #8C5933;
-          }
-          a {
-            width: $nav-item-pipe-width + 72px;
-            background-position: #{$nav-item-bgoffset-x}px $nav-item-height * -1px;
-          }
-        }
+				&.tvmdl-item {
+					z-index: 4;
+					&:hover:after {
+						background-color: #8C5933;
+					}
+					a {
+						width: $nav-item-pipe-width + 72px;
+						background-position: #{$nav-item-bgoffset-x}px $nav-item-height * -1px;
+					}
+				}
 
-        &.ext-item {
-          z-index: 3;
-          &:hover:after {
-            background-color: #1B607B;
-          }
-          a {
-            width: $nav-item-pipe-width + 83px;
-            background-position: #{$nav-item-bgoffset-x}px $nav-item-height * -2px;
-          }
-        }
+				&.ext-item {
+					z-index: 3;
+					&:hover:after {
+						background-color: #1B607B;
+					}
+					a {
+						width: $nav-item-pipe-width + 83px;
+						background-position: #{$nav-item-bgoffset-x}px $nav-item-height * -2px;
+					}
+				}
 
-        &.res-item {
-          z-index: 2;
-          &:hover:after {
-            background-color: #5C8C39;
-          }
-          a {
-            width: $nav-item-pipe-width + 81px;
-            background-position: #{$nav-item-bgoffset-x}px $nav-item-height * -3px;
-          }
-        }
+				&.res-item {
+					z-index: 2;
+					&:hover:after {
+						background-color: #5C8C39;
+					}
+					a {
+						width: $nav-item-pipe-width + 81px;
+						background-position: #{$nav-item-bgoffset-x}px $nav-item-height * -3px;
+					}
+				}
 
-        &.college-item {
-          z-index: 1;
-          &:hover:after {
-            background-color: #5C0025;
-          }
-          a {
-            background-position: #{$nav-item-bgoffset-x}px $nav-item-height * -4px;
-          }
-        }
-      }
-    }
-  }
+				&.college-item {
+					z-index: 1;
+					&:hover:after {
+						background-color: #5C0025;
+					}
+					a {
+						background-position: #{$nav-item-bgoffset-x}px $nav-item-height * -4px;
+					}
+				}
+			}
+		}
+	}
 
 }
 
@@ -332,49 +332,49 @@ only screen and (min-device-pixel-ratio: 1.5) {
 }
 
 @media #{$medium-up-common}{
-  $nav-item-width: 116;
-  $nav-item-pipe-width: 28;
-  $nav-item-bgoffset-x: 12;
+	$nav-item-width: 116;
+	$nav-item-pipe-width: 28;
+	$nav-item-bgoffset-x: 12;
 
-  .agency-bar {
-    position: absolute;
+	.agency-bar {
+		position: absolute;
 
-    ul {
-      left: 208px;
-      width: auto;
+		ul {
+			left: 208px;
+			width: auto;
 
-      li:first-child a {
-        width: 8 + $nav-item-width + $nav-item-pipe-width * 1px;
-        background-position: #{$nav-item-bgoffset-x + 8}px 0;
-      }
-    }
-  }
-  .site-header .primary-search {
-    padding: 0 1em 0 0;
-  }
+			li:first-child a {
+				width: 8 + $nav-item-width + $nav-item-pipe-width * 1px;
+				background-position: #{$nav-item-bgoffset-x + 8}px 0;
+			}
+		}
+	}
+	.site-header .primary-search {
+		padding: 0 1em 0 0;
+	}
 }
 
 @media #{$large-up}{
 
-  .agency-bar {
-    
-    .agency-wrap {
-      width: $row-width;
-    }
+	.agency-bar {
+		
+		.agency-wrap {
+			width: $row-width;
+		}
 
-    ul {
-      left: 192px;
-    }
-  }
+		ul {
+			left: 192px;
+		}
+	}
 
-  .site-header {
-    .title-area {
-      padding: 16px 0;
-    }
-    .primary-search {
-      padding: 0;
-    }
-  }
+	.site-header {
+		.title-area {
+			padding: 16px 0;
+		}
+		.primary-search {
+			padding: 0;
+		}
+	}
 
 }
 

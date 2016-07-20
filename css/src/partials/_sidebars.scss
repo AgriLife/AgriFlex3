@@ -18,31 +18,32 @@
 	}
 
 	.widget {
-      h4.widget-title {
-        font-size: 1.1em;
-        margin-bottom: 1em;
-        letter-spacing: 1px;
-        background: url($inner-background-img) top right no-repeat transparent;
-        background-size: 1024px;
-        color: #fff;
-        text-align: left;
-        text-transform: uppercase;
-        padding: 3% 4% 3% 5%;
-        line-height: 1.1;
-      }
+		
+		h4.widget-title {
+			font-size: 1.1em;
+			margin-bottom: 1em;
+			letter-spacing: 1px;
+			background: url($inner-background-img) top right no-repeat transparent;
+			background-size: 1024px;
+			color: #FFF;
+			text-align: left;
+			text-transform: uppercase;
+			padding: 3% 4% 3% 5%;
+			line-height: 1.1;
+		}
 
 
-      &:nth-child(4n+1) h4.widget-title {
-        background-position: right -120px;
-      }
+		&:nth-child(4n+1) h4.widget-title {
+			background-position: right -120px;
+		}
 
-      &:nth-child(4n+2) h4.widget-title {
-        background-position: right -180px;
-      }
-      
-      .button-container-centered {
-        text-align: center;
-      }
+		&:nth-child(4n+2) h4.widget-title {
+			background-position: right -180px;
+		}
+		
+		.button-container-centered {
+			text-align: center;
+		}
 
 	}
 
@@ -57,17 +58,17 @@
 }
 
 @media #{$medium-up} {
-  .widget-wrap {
-    padding: 1em;
-    background: $sidebar-background;
-  }
-  .sidebar {
-    &.sidebar-primary .widget,
-    &.sidebar-secondary .widget{
-      width: 50%;
-      padding-bottom: 1rem;
-    }
-  }
+	.widget-wrap {
+		padding: 1em;
+		background: $sidebar-background;
+	}
+	.sidebar {
+		&.sidebar-primary .widget,
+		&.sidebar-secondary .widget{
+			width: 50%;
+			padding-bottom: 1rem;
+		}
+	}
 
 }
 
@@ -76,13 +77,13 @@
 }
 
 @media #{$large-up}{
-  .sidebar {
-    &.sidebar-primary .widget,
-    &.sidebar-secondary .widget{
-      width: 100%;
-      padding: 0;
-    }
-  }
+	.sidebar {
+		&.sidebar-primary .widget,
+		&.sidebar-secondary .widget{
+			width: 100%;
+			padding: 0;
+		}
+	}
 
 
 }

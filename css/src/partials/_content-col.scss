@@ -15,27 +15,27 @@
 		border: none;
 	}
 
-  .read-more {
-    display: block;
-    float: right;
+	.read-more {
+		display: block;
+		float: right;
 
-    a {
-      padding: .2em 1em;
-      background: #e8e7d5;
-      border-radius: 3px;
-      box-shadow: 0 1px 2px #ddd;
-      border: none;
-      float: left;
-      margin: 20px 0 20px 2px;
-      text-decoration: none;
+		a {
+			padding: .2em 1em;
+			background: #E8E7D5;
+			border-radius: 3px;
+			box-shadow: 0 1px 2px #DDD;
+			border: none;
+			float: left;
+			margin: 20px 0 20px 2px;
+			text-decoration: none;
 
-      &:hover {
-        background: #e2dbbf;
-        box-shadow: 0 1px 1px #fff;
-        color: #002838;
-      }
-    }
-  }
+			&:hover {
+				background: #E2DBBF;
+				box-shadow: 0 1px 1px #FFF;
+				color: #002838;
+			}
+		}
+	}
 
 	ol,
 	p,
@@ -72,6 +72,22 @@
 	.search-form {
 		width: 50%;
 	}
+
+	a[href$=".png"],
+	a[href$=".jpg"],
+	a[href$=".gif"],
+	a.accordion-title {
+		&, &:hover {
+			text-decoration: none;
+			background-image: none;
+		}
+	}
+
+	.people-contact-details .people-email a {
+		text-decoration: none;
+		background-image: none;
+	}
+	
 }
 
 .archive-description,
@@ -100,55 +116,55 @@
 }
 
 .posts .post {
-  clear: both;
-  font-size: 0.99em;
-  margin-bottom: 23px;
-  padding-bottom: 23px;
-  .entry-header {
-    @include grid-row();
-    margin: 0.913em 0;
-    .entry-title {
-      @include grid-column($columns:11, $push:1);
-      font: 400 1.2em/1.2em "ff-meta-web-pro";
-      a {
-        color: #B7A66D;
-        &:hover {
-          text-decoration: underline;
-        }
-      }
-    }
-    .entry-meta {
-      @include grid-column($columns:1, $pull:11, $collapse:true);
-      clear: none;
-      margin-bottom: 0;
-      padding-top: 5px;
-      font: 900 1.1em "quatro-slab",serif;
-      text-align: center;
-      span {
-        display: block;
-        line-height: 1.2em;
-      }
-      .day {
-        font-size: 1.8em;
-        line-height: 0.75em;
-        height: 23px;
-      }
-    }
-  }
-  .entry-content {
-    @include grid-column($columns:11, $offset:1);
-    margin-bottom: 1.25em;
-    margin-top: 0;
-    p {
-      line-height: 1.25em;
-    }
-  }
-  img.alignleft {
-    margin: 0 15px 5px 0;
-  }
-  .entry-footer {
-    clear: both;
-  }
+	clear: both;
+	font-size: 0.99em;
+	margin-bottom: 23px;
+	padding-bottom: 23px;
+	.entry-header {
+		@include grid-row();
+		margin: 0.913em 0;
+		.entry-title {
+			@include grid-column($columns: 11, $push: 1);
+			font: 400 1.2em/1.2em "ff-meta-web-pro";
+			a {
+				color: #B7A66D;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+		.entry-meta {
+			@include grid-column($columns: 1, $pull: 11, $collapse: true);
+			clear: none;
+			margin-bottom: 0;
+			padding-top: 5px;
+			font: 900 1.1em "quatro-slab", serif;
+			text-align: center;
+			span {
+				display: block;
+				line-height: 1.2em;
+			}
+			.day {
+				font-size: 1.8em;
+				line-height: 0.75em;
+				height: 23px;
+			}
+		}
+	}
+	.entry-content {
+		@include grid-column($columns: 11, $offset: 1);
+		margin-bottom: 1.25em;
+		margin-top: 0;
+		p {
+			line-height: 1.25em;
+		}
+	}
+	img.alignleft {
+		margin: 0 15px 5px 0;
+	}
+	.entry-footer {
+		clear: both;
+	}
 }
 
 /* Entry Navigation
@@ -176,114 +192,114 @@
 }
 
 .entry-content a.button {
-  @include button($padding: rem-calc(12), $radius: 1.5rem);
-  border: 4px solid #E2DEDE;
-  box-shadow: 0 1px 0 inset #BE4C4C;
-  @include background-image(linear-gradient(#740000, #500000));
-  &:hover {
-    @include background-image(linear-gradient(#500000, #500000));
-  }
-  // 1b607b, saturation -101, +110 value
+	@include button($padding: rem-calc(12), $radius: 1.5rem);
+	border: 4px solid #E2DEDE;
+	box-shadow: 0 1px 0 inset #BE4C4C;
+	@include background-image(linear-gradient(#740000, #500000));
+	&:hover {
+		@include background-image(linear-gradient(#500000, #500000));
+	}
+	// 1b607b, saturation -101, +110 value
 }
 
 /* page-template-landing1
 --------------------------------------------- */
 .page-template-landing1 {
 
-  .soliloquy-container {
-    margin: 0px auto;
+	.soliloquy-container {
+		margin: 0 auto;
 
-    @media #{only screen} and (min-width:#{ 780px }) {
-      padding-top: 1em;
-    }
+		@media #{only screen} and (min-width: #{ 780px }) {
+			padding-top: 1em;
+		}
 
-    @media #{$large-up} {
-      padding-top: 0;
-      padding-left: 1em;
-    }
-  }
+		@media #{$large-up} {
+			padding-top: 0;
+			padding-left: 1em;
+		}
+	}
 
-  .featured-content {
-    margin-bottom: 2em;
-  }
+	.featured-content {
+		margin-bottom: 2em;
+	}
 
-  .content {
-    padding-right: 0px;
-    padding-left: 0px;
-    h2, h3 {
-      font-family: $body-font-family;
-    }
-  }
+	.content {
+		padding-right: 0;
+		padding-left: 0;
+		h2, h3 {
+			font-family: $body-font-family;
+		}
+	}
 
-  .page-title {
-    margin-top: 0;
-  }
+	.page-title {
+		margin-top: 0;
+	}
 
-  .welcome {
-    margin: 0 0 2em 0;
-  }
+	.welcome {
+		margin: 0 0 2em 0;
+	}
 
-  .home-content {
-    padding-right: 1em;
-    padding-left: 1em;
+	.home-content {
+		padding-right: 1em;
+		padding-left: 1em;
 
-    @media #{$large-up} {
-      padding-right: 0;
-    }
-  }
+		@media #{$large-up} {
+			padding-right: 0;
+		}
+	}
 
-  .program-head {
-    padding: 0 0 0 1em;
-  }
-  .program-image {
-    width: 100%;
-  }
+	.program-head {
+		padding: 0 0 0 1em;
+	}
+	.program-image {
+		width: 100%;
+	}
 
-  .program-list {
-    a {
-      text-decoration: underline;
-    }
+	.program-list {
+		a {
+			text-decoration: underline;
+		}
 
-    .program-row {
+		.program-row {
 
-      @include grid-row();
+			@include grid-row();
 
-    }
-    .single-program {
-      @include grid-column(12);
+		}
+		.single-program {
+			@include grid-column(12);
 
-      @media #{$small-up} {
-        @include grid-column(6);
-      }
+			@media #{$small-up} {
+				@include grid-column(6);
+			}
 
-      @media #{$medium-up} {
-        @include grid-column(4);
-      }
+			@media #{$medium-up} {
+				@include grid-column(4);
+			}
 
-      ul {
-        list-style-type: disc;
-      }
+			ul {
+				list-style-type: disc;
+			}
 
-      ol {
-        list-style-type: decimal;
-      }
-    }
+			ol {
+				list-style-type: decimal;
+			}
+		}
 
-  }
+	}
 
 }
 
 /* Link underline customizations */
 %underline-default {
-  $underline-color: lighten( $anchor-font-color, 75% );
-  text-decoration: none;
-  @include background-image(linear-gradient(transparent 0%, transparent 83%, $underline-color 84%, $underline-color 95%, transparent 96%));
+	$underline-color: lighten( $anchor-font-color, 75% );
+	text-decoration: none;
+	@include background-image(linear-gradient(transparent 0, transparent 83%, $underline-color 84%, $underline-color 95%, transparent 96%));
 }
 
 %underline-hover {
-  $underline-color: lighten( $anchor-font-color, 25% );
-  text-decoration: none;
-  @include background-image(linear-gradient(transparent 0%, transparent 83%, $underline-color 84%, $underline-color 95%, transparent 96%));
+	$underline-color: lighten( $anchor-font-color, 25% );
+	text-decoration: none;
+	@include background-image(linear-gradient(transparent 0, transparent 83%, $underline-color 84%, $underline-color 95%, transparent 96%));
 }
 
 .entry-header .entry-meta a,
@@ -296,32 +312,16 @@ body.page-template-landing-aglifesciences .home-content a:not(.accordion-title):
 .entry-footer a,
 .sidebar p a,
 .recentcomments a {
-  & {
-    @extend %underline-default;
-  }
-  &:hover {
-    @extend %underline-hover;
-  }
+	& {
+		@extend %underline-default;
+	}
+	&:hover {
+		@extend %underline-hover;
+	}
 }
 
 .sidebar a:hover {
-  @extend %underline-hover;
-}
-
-.entry-content {
-  a[href$=".png"],
-  a[href$=".jpg"],
-  a[href$=".gif"],
-  a.accordion-title {
-    &, &:hover {
-      text-decoration: none;
-      background-image: none;
-    }
-  }
-  .people-contact-details .people-email a {
-    text-decoration: none;
-    background-image: none;
-  }
+	@extend %underline-hover;
 }
 
 @media #{$small-up} {

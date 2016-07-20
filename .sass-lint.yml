@@ -1,0 +1,68 @@
+# Linter Options
+# https://github.com/sasstools/sass-lint/tree/master/docs/rules
+options:
+  # Don't merge default rules
+  merge-default-rules: false
+# File Options
+files:
+  include: 'css/src/**/*.s+(a|c)ss'
+  ignore:
+    - 'sass/vendor/**/*.*'
+# Rule Configuration
+rules:
+  brace-style:
+    - 2
+    - style: '1tbs'
+    - allow-single-line: false
+  no-color-keywords: 2
+  no-duplicate-properties:
+    - 2
+    -
+      exclude:
+        - background
+        - background-color
+        - border
+        - white-space
+  no-mergeable-selectors: 2
+  no-misspelled-properties:
+    - 2
+    - 
+      'extra-properties':
+        - 'ms-filter'
+        - '*text-indent'
+        - '*zoom'
+  space-after-colon: true
+  space-after-comma: true
+  trailing-semicolon: true
+  extends-before-mixins: 2
+  # extends-before-declarations: 2
+  # placeholder-in-extend: 2
+  # mixins-before-declarations:
+  #   - 2
+  #   -
+  #     exclude:
+  #       - breakpoint
+  #       - mq
+  #       - clearfix
+  #       - appearance
+
+  no-warn: 1
+  no-debug: 1
+  # no-ids: 1
+  no-important: 1
+  hex-notation:
+    - 2
+    -
+      style: uppercase
+  indentation:
+    - 1
+    -
+      size: tab
+  # property-sort-order:
+  #   - 1
+  #   -
+  #     order:
+  #       - display
+  #       - margin
+  #       - padding
+  #     ignore-custom-properties: true

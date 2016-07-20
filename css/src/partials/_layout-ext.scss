@@ -12,7 +12,7 @@ $total-columns: 12;
 }
 
 .site-inner {
-  @include grid-row();
+	@include grid-row();
 }
 header .wrap,
 .site-inner .wrap,
@@ -33,8 +33,8 @@ footer .wrap {
 /* Breadcrumbs
 --------------------------------------------- */
 .breadcrumb {
-  padding-top: 2em;
-  padding-bottom: 1em;
+	padding-top: 2em;
+	padding-bottom: 1em;
 }
 
 /* Content
@@ -82,72 +82,71 @@ footer .wrap {
 
 @media #{$medium-up} {
 
-    .top-bar-wrapper {
+	.top-bar-wrapper {
 		//@include grid-row();
 		width: 100%;
-        overflow: visible;
-        background: transparent;
+		overflow: visible;
+		background: transparent;
 	}
 
 	.contain-to-grid {
-    .top-bar {
-      max-width: 71.25rem;
-      width: 100%;
-      overflow: visible;
-      margin: 0 auto;
-      background: $white;
-      li a:not(.button) {
-        background: $white;
-      }
-      .top-bar-section ul {
-        background: $white;
-        li > a {
-          background: $white;
-        }
-      }
-	  }
-  }
+		.top-bar {
+			max-width: 71.25rem;
+			width: 100%;
+			overflow: visible;
+			margin: 0 auto;
+			background: $white;
+			li a:not(.button) {
+				background: $white;
+			}
+			.top-bar-section ul {
+				background: $white;
+				li > a {
+					background: $white;
+				}
+			}
+		}
+	}
 
-  .content {
-    
-    .loop-shortcode .loop-article {
-      clear: both;
+	.content {
+		
+		.loop-shortcode .loop-article {
+			clear: both;
 
-      .content {
-        padding: 0;
-        float: none;
+			.content {
+				padding: 0;
+				float: none;
 
-        & > *:not(p):first-child {
-          float: left;
-          margin: 5px 15px 5px 0;
-        }
-        
-        p {
-          margin: 1.25em 0;
-        }
-      }
-    }
-  }
+				& > *:not(p):first-child {
+					float: left;
+					margin: 5px 15px 5px 0;
+				}
+				
+				p {
+					margin: 1.25em 0;
+				}
+			}
+		}
+	}
 
-  .sidebar-content-sidebar {
-    .site-inner {
-      .wrap {
-        @include grid-row();
+	.sidebar-content-sidebar {
+		.site-inner {
+			.wrap {
+				@include grid-row();
 
-        .content-sidebar-wrap {
-          @include grid-column(12);
-        }
+				.content-sidebar-wrap {
+					@include grid-column(12);
+				}
 
-        .sidebar-secondary {
-          @include grid-column(12);
-        }
-        .sidebar-primary {
-        }
+				.sidebar-secondary {
+					@include grid-column(12);
+				}
+				.sidebar-primary {
+				}
 
-      }
-    }
-  }
-
+			}
+		}
+	}
 
 	.sidebar-primary,
 	.sidebar-secondary {
@@ -160,16 +159,16 @@ footer .wrap {
 	.one-half,
 	.three-sixths,
 	.two-fourths,
-  .one-of-2,
-  .two-of-2 {
+	.one-of-2,
+	.two-of-2 {
 		@include grid-column(6);
 	}
 	 
 	.one-third,
 	.two-sixths,
-  .one-of-3,
-  .two-of-3,
-  .three-of-3 {
+	.one-of-3,
+	.two-of-3,
+	.three-of-3 {
 		@include grid-column(4);
 	}
 	 
@@ -218,92 +217,92 @@ footer .wrap {
 
 @media #{$medium-up-common} {
 
-  .sidebar-content-sidebar {
-    .site-inner {
-      .wrap {
-        @include grid-row($behavior: nest-collapse);
+	.sidebar-content-sidebar {
+		.site-inner {
+			.wrap {
+				@include grid-row($behavior: nest-collapse);
 
-        .sidebar-secondary {
-          @include grid-column($columns: 3, $float: left, $collapse: true);
-          background-color: $sidebar-secondary-background;
-          margin-top: 104px;
-        }
+				.sidebar-secondary {
+					@include grid-column($columns: 3, $float: left, $collapse: true);
+					background-color: $sidebar-secondary-background;
+					margin-top: 104px;
+				}
 
-        .content-sidebar-wrap {
-          @include grid-column($columns: 9, $float: right, $collapse: true);
+				.content-sidebar-wrap {
+					@include grid-column($columns: 9, $float: right, $collapse: true);
 
-          .content {
-            @include grid-column($columns: 8, $float: left);
-            background-color: $content-bg-color;
-          }
+					.content {
+						@include grid-column($columns: 8, $float: left);
+						background-color: $content-bg-color;
+					}
 
-          .sidebar-primary {
-            @include grid-column($columns: 4, $float: left, $collapse: true);
-            margin-top: 104px;
-          }
+					.sidebar-primary {
+						@include grid-column($columns: 4, $float: left, $collapse: true);
+						margin-top: 104px;
+					}
 
-        }
+				}
 
-      }
-    }
-  }
+			}
+		}
+	}
 }
 
 @media #{$large-up}{
 
-  .sidebar-content-sidebar {
-    .site-inner {
-      .wrap {
-        @include grid-row($behavior: nest-collapse);
+	.sidebar-content-sidebar {
+		.site-inner {
+			.wrap {
+				@include grid-row($behavior: nest-collapse);
 
 
-        .sidebar-secondary {
-          position: relative;
-          padding-left: 0;
-          padding-right: 0;
-          width: 212px;
-          float: left;
+				.sidebar-secondary {
+					position: relative;
+					padding-left: 0;
+					padding-right: 0;
+					width: 212px;
+					float: left;
 
-          background-color: $sidebar-secondary-background;
-          margin-top: 104px;
+					background-color: $sidebar-secondary-background;
+					margin-top: 104px;
 
-          .widget {
-            @include grid-column($columns: 12, $collapse: true);
-          }
-        }
+					.widget {
+						@include grid-column($columns: 12, $collapse: true);
+					}
+				}
 
-        .content-sidebar-wrap {
-          position: relative;
-          padding-left: 0;
-          padding-right: 0;
-          width: 928px;
-          float: right;
+				.content-sidebar-wrap {
+					position: relative;
+					padding-left: 0;
+					padding-right: 0;
+					width: 928px;
+					float: right;
 
-          .content {
-            position: relative;
-            padding-left: 26px;
-            padding-right: 26px;
-            width: 612px;
-            float: left;
-            background-color: $content-bg-color;
-          }
+					.content {
+						position: relative;
+						padding-left: 26px;
+						padding-right: 26px;
+						width: 612px;
+						float: left;
+						background-color: $content-bg-color;
+					}
 
-          .sidebar-primary {
-            position: relative;
-            padding-left: 16px;
-            padding-right: 16px;
-            width: 316px;
-            float: left;
-            margin-top: 104px;
-          }
+					.sidebar-primary {
+						position: relative;
+						padding-left: 16px;
+						padding-right: 16px;
+						width: 316px;
+						float: left;
+						margin-top: 104px;
+					}
 
-        }
+				}
 
-      }
-    }
+			}
+		}
 
 
-  }
+	}
 
 
 }
