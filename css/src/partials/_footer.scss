@@ -2,43 +2,43 @@
 ---------------------------------------------------------------------------------------------------- */
 
 .site-footer {
-  background-color: $footer-background;
-  color: $footer-text;
-  @include adjust-font-size-to(10px);
-  padding: 30px 0;
-  text-align: center;
-  font: {
-    family: $footer-font-family;
-    weight: $footer-font-weight;
-  }
-
-    ul {
-      margin-left: 0;
-      font: {
-        family: $footer-font-family;
-        weight: $footer-font-weight;
-      }
-    }
-
-  .footer-container {
-    @include grid-column(12);
-  }
-
-  .footer-container-tamus {
-    @include grid-column(12);
-  }
-
-    .footer-tamus {
-      border: 2px solid $white;
-    }
-
-	p {
-    margin-bottom: 0;
+	background-color: $footer-background;
+	color: $footer-text;
+	@include adjust-font-size-to(10px);
+	padding: 30px 0;
+	text-align: center;
+	font: {
+		family: $footer-font-family;
+		weight: $footer-font-weight;
 	}
 
-    a {
-      color: $footer-text;
-    }
+	ul {
+		margin-left: 0;
+		font: {
+			family: $footer-font-family;
+			weight: $footer-font-weight;
+		}
+	}
+
+	.footer-container {
+		@include grid-column(12);
+	}
+
+	.footer-container-tamus {
+		@include grid-column(12);
+	}
+
+	.footer-tamus {
+		border: 2px solid $white;
+	}
+
+	p {
+		margin-bottom: 0;
+	}
+
+	a {
+		color: $footer-text;
+	}
 
 	.footer-widgets .widget-area {
 	}
@@ -47,27 +47,27 @@
 
 @media #{$medium-up} {
 
-  .site-footer {
-    max-width: $row-width;
-    margin: 0 auto;
+	.site-footer {
+		max-width: $row-width;
+		margin: 0 auto;
 
-    .footer-container {
-      @include grid-column( $columns: 10, $float: left );
-    }
+		.footer-container {
+			@include grid-column( $columns: 10, $float: left );
+		}
 
-    .footer-container-tamus {
-      @include grid-column( $columns: 2, $float: right );
-      a {
-        float: right;
-      }
-    }
+		.footer-container-tamus {
+			@include grid-column( $columns: 2, $float: right );
+			a {
+				float: right;
+			}
+		}
 
-  }
+	}
 
-  .req-links li {
-    float: left;
-    font-size: 0.8em;
-    margin: .2em 1em .2em 0;
-  }
+	.req-links li {
+		float: left;
+		font-size: 0.8em;
+		margin: .2em 1em .2em 0;
+	}
 
 }

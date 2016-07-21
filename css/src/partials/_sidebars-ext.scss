@@ -2,104 +2,104 @@
 ---------------------------------------------------------------------------------------------------- */
 
 .sidebar {
-    padding-top: 3rem;
+	padding-top: 3rem;
 
-    p {
-      color: $gray-lighter;
-      line-height: 1.4;
+	p {
+		color: $gray-lighter;
+		line-height: 1.4;
 
-      &:last-child {
-		margin-bottom: 0;
-      }
+		&:last-child {
+			margin-bottom: 0;
+		}
 	}
 
-    ul {
-      margin-left: 0;
+	ul {
+		margin-left: 0;
 
-      ul {
-        margin-left: 1.1rem;
-      }
-    }
+		ul {
+			margin-left: 1.1rem;
+		}
+	}
 
 	.widget {
-      &:first-child {
-        padding-top: 0;
-      }
-      &:last-child {
-        margin-bottom: 3rem;
-      }
+		&:first-child {
+			padding-top: 0;
+		}
+		&:last-child {
+			margin-bottom: 3rem;
+		}
 
-      h4 {
-      }
+		h4 {
+		}
 	}
 
 	&.sidebar-primary {
-      background-color: $sidebar-primary-background;
-      .widget {
-        border-bottom: 1px solid $gray-lightest;
-      }
-      a {
-        text-decoration: underline;
-        &:hover {
-          text-decoration: none;
-        }
-      }
+		background-color: $sidebar-primary-background;
+		.widget {
+			border-bottom: 1px solid $gray-lightest;
+		}
+		a {
+			text-decoration: underline;
+			&:hover {
+				text-decoration: none;
+			}
+		}
 	}
 
 	&.sidebar-secondary {
-      .current-highlight {
-        border-left: 3px solid $primary-color;
-      }
-      .current-menu-ancestor {
-        a {
-          @extend .current-highlight;
-          &:hover {
-            border-left: 3px solid $primary-color;
-          }
-        }
-      }
-      li {
-        list-style-type: none;
-        word-wrap: break-word;
-        a {
-          display: block;
-          line-height: 1.1rem;
-          background-color: $grey-even-lighter-than-lightest;
-          padding: .7rem .4rem .7rem .8rem;
-          border-left: 3px solid $grey-even-lighter-than-lightest;
+		.current-highlight {
+			border-left: 3px solid $primary-color;
+		}
+		.current-menu-ancestor {
+			a {
+				@extend .current-highlight;
+				&:hover {
+					border-left: 3px solid $primary-color;
+				}
+			}
+		}
+		li {
+			list-style-type: none;
+			word-wrap: break-word;
+			a {
+				display: block;
+				line-height: 1.1rem;
+				background-color: $grey-even-lighter-than-lightest;
+				padding: .7rem .4rem .7rem .8rem;
+				border-left: 3px solid $grey-even-lighter-than-lightest;
 
-          &:hover {
-            border-left: 3px solid $gray-lightest;
-            background-color: $gray-lightest;
-            text-decoration: none;
-          }
-        }
-        &.current-menu-item {
-          a {
-            @extend .current-highlight;
-            font-weight: bold;
-          }
-          .sub-menu a {
-            font-weight: normal;
-          }
-        }
-        .sub-menu a {
-          padding: .4rem .4rem .4rem 1.6rem;
-        }
-      }
+				&:hover {
+					border-left: 3px solid $gray-lightest;
+					background-color: $gray-lightest;
+					text-decoration: none;
+				}
+			}
+			&.current-menu-item {
+				a {
+					@extend .current-highlight;
+					font-weight: bold;
+				}
+				.sub-menu a {
+					font-weight: normal;
+				}
+			}
+			.sub-menu a {
+				padding: .4rem .4rem .4rem 1.6rem;
+			}
+		}
 
-      ul > li:last-child {
-        margin-bottom: 0;
-      }
+		ul > li:last-child {
+			margin-bottom: 0;
+		}
 
-      ul.menu > li:last-child {
-        border-bottom: 1px solid $gray-lightest;
-      }
+		ul.menu > li:last-child {
+			border-bottom: 1px solid $gray-lightest;
+		}
 	}
 }
 
 .home .sidebar.sidebar-primary {
-  background-color: white;
+	background-color: #FFF;
 }
 
 @media #{$small-up} {
@@ -111,23 +111,23 @@
 }
 
 @media #{$medium-up} {
-  .sidebar {
-    &.sidebar-primary .widget,
-    &.sidebar-secondary .widget{
-      width: 100%;
-      margin-bottom: 1rem;
-    }
-  }
+	.sidebar {
+		&.sidebar-primary .widget,
+		&.sidebar-secondary .widget{
+			width: 100%;
+			margin-bottom: 1rem;
+		}
+	}
 
 }
 
 @media #{$medium-up-common} {
-  .sidebar {
-    margin-top: 3rem;
-    .widget {
-      padding-top: 3rem;
-    }
-  }
+	.sidebar {
+		margin-top: 3rem;
+		.widget {
+			padding-top: 3rem;
+		}
+	}
 }
 
 @media #{$large-up}{

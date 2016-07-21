@@ -9,11 +9,11 @@ $total-columns: 12;
 
 .site-container {
 	position: relative;
-  z-index: 100;
+	z-index: 100;
 }
 
 .site-inner {
-  @include grid-row();
+	@include grid-row();
 }
 header .wrap,
 .site-inner .wrap,
@@ -34,8 +34,8 @@ footer .wrap {
 /* Breadcrumbs
 --------------------------------------------- */
 .breadcrumb {
-  padding-top: 2em;
-  padding-bottom: 1em;
+	padding-top: 2em;
+	padding-bottom: 1em;
 }
 
 /* Content
@@ -83,129 +83,126 @@ footer .wrap {
 
 @media #{$medium-up} {
 
-  .top-bar-wrapper {
-    clear: both;
+	.top-bar-wrapper {
+		clear: both;
 		width: 100%;
-    overflow: visible;
-    background: transparent;
-    margin: 1em 0;
+		height: 50px;
+		overflow: visible;
+		background: transparent;
+		margin: 1em 0;
 	}
 
-  .top-bar-wrapper {
-    height: 50px;
-  }
-
 	.contain-to-grid {
-    .top-bar {
-      max-width: 71.25rem;
-      width: 100%;
-      overflow: visible;
-      margin: 0 auto;
-      background: $white;
-      li a:not(.button) {
-        background: $white;
-      }
-      .top-bar-section ul {
-        background: $white;
-        li > a {
-          background: $white;
-        }
-      }
-	  }
-  }
-  
-  .content {
-    padding-top: 1em;
+		.top-bar {
+			max-width: 71.25rem;
+			width: 100%;
+			overflow: visible;
+			margin: 0 auto;
+			background: $white;
+			li a:not(.button) {
+				background: $white;
+			}
+			.top-bar-section ul {
+				background: $white;
+				li > a {
+					background: $white;
+				}
+			}
+		}
+	}
+	
+	.content {
+		padding-top: 1em;
 
-    .loop-shortcode .loop-article {
-      clear: both;
+		.loop-shortcode .loop-article {
+			clear: both;
 
-      .content {
-        padding: 0;
-        float: none;
+			.content {
+				padding: 0;
+				float: none;
 
-        & > *:not(p):first-child {
-          float: left;
-          margin: 5px 15px 5px 0;
-        }
-        
-        p {
-          margin: 1.25em 0;
-        }
-      }
-    }
-  }
+				& > *:not(p):first-child {
+					float: left;
+					margin: 5px 15px 5px 0;
+				}
+				
+				p {
+					margin: 1.25em 0;
+				}
+			}
+		}
+	}
 
-  .sidebar-content-wrap .sidebar-primary {
-    @include grid-column($columns: 4, $float: right);
-    padding-left: 2em;
-    padding-right: 2em;
-    padding-top: 3em;
-    position: relative;
-    margin-top: 104px;
-  }
+	.sidebar-content-wrap .sidebar-primary {
+		@include grid-column($columns: 4, $float: right);
+		padding-left: 2em;
+		padding-right: 2em;
+		padding-top: 3em;
+		position: relative;
+		margin-top: 104px;
+	}
 
-  .content-sidebar .site-inner .wrap,
-  .sidebar-content-sidebar .site-inner .wrap {
-    @include grid-row();
+	.content-sidebar .site-inner .wrap,
+	.sidebar-content-sidebar .site-inner .wrap {
+		@include grid-row();
 
-    .content-sidebar-wrap {
-      & > .content {
-        @include grid-column($columns: 8);
-        background-color: $content-bg-color;
-      }
+		.content-sidebar-wrap {
+			& > .content {
+				@include grid-column($columns: 8);
+				background-color: $content-bg-color;
+			}
 
-      .sidebar-primary {
-        @include grid-column($columns: 4, $float: left);
-        margin-top: 104px;
-      }
-    }
-  }
+			.sidebar-primary {
+				@include grid-column($columns: 4, $float: left);
+				margin-top: 104px;
+			}
+		}
+	}
 
-  .sidebar-content .site-inner .wrap {
-    @include grid-row();
+	.sidebar-content .site-inner .wrap {
+		@include grid-row();
 
-    .content-sidebar-wrap {
-      .content {
-        @include grid-column($columns: 8, $push: 4);
-        background-color: $content-bg-color;
-      }
+		.content-sidebar-wrap {
+			.content {
+				@include grid-column($columns: 8, $push: 4);
+				background-color: $content-bg-color;
+			}
 
-      .sidebar-primary {
-        @include grid-column($columns: 4, $pull: 8, $float: left);
-        margin-top: 104px;
-      }
-    }
-  }
+			.sidebar-primary {
+				@include grid-column($columns: 4, $pull: 8, $float: left);
+				margin-top: 104px;
+			}
+		}
+	}
 
-  .content-sidebar .site-inner .wrap .content-sidebar-wrap {
-    @include grid-column($columns: 12, $float: right, $collapse: true);
-  }
+	.content-sidebar .site-inner .wrap .content-sidebar-wrap {
+		@include grid-column($columns: 12, $float: right, $collapse: true);
+	}
 
-  .sidebar-content-sidebar .site-inner .wrap {
-    .content-sidebar-wrap {
-      @include grid-column($columns: 10, $float: right, $collapse: true);
-    }
+	.sidebar-content-sidebar .site-inner .wrap {
+		.content-sidebar-wrap {
+			@include grid-column($columns: 10, $float: right, $collapse: true);
+		}
 
-    .sidebar-secondary {
-      @include grid-column($columns: 2);
-      margin-top: 104px;
-    }
-  }
+		.sidebar-secondary {
+			@include grid-column($columns: 2);
+			margin-top: 104px;
+		}
+	}
 
 	.one-half,
 	.three-sixths,
 	.two-fourths,
-  .one-of-2,
-  .two-of-2 {
+	.one-of-2,
+	.two-of-2 {
 		@include grid-column(6);
 	}
 	 
 	.one-third,
 	.two-sixths,
-  .one-of-3,
-  .two-of-3,
-  .three-of-3 {
+	.one-of-3,
+	.two-of-3,
+	.three-of-3 {
 		@include grid-column(4);
 	}
 	 
@@ -253,64 +250,64 @@ footer .wrap {
 }
 
 @media #{$medium-up-common} {
-  .content-sidebar,
-  .sidebar-content-sidebar {
-    .site-inner {
-      .wrap {
-        @include grid-row($behavior: nest-collapse);
+	.content-sidebar,
+	.sidebar-content-sidebar {
+		.site-inner {
+			.wrap {
+				@include grid-row($behavior: nest-collapse);
 
-        .sidebar-secondary {
-          background-color: $sidebar-secondary-background;
-        }
+				.sidebar-secondary {
+					background-color: $sidebar-secondary-background;
+				}
 
-        .content-sidebar-wrap {
+				.content-sidebar-wrap {
 
-          .content {
-            background-color: $content-bg-color;
-          }
+					.content {
+						background-color: $content-bg-color;
+					}
 
-          .sidebar-primary {
-            margin-top: 104px;
-          }
-        }
-      }
-    }
-  }
+					.sidebar-primary {
+						margin-top: 104px;
+					}
+				}
+			}
+		}
+	}
 }
 
 @media #{$large-up}{
-  .content-sidebar,
-  .sidebar-content-sidebar {
-    .site-inner {
-      .wrap {
-        @include grid-row($behavior: nest-collapse);
+	.content-sidebar,
+	.sidebar-content-sidebar {
+		.site-inner {
+			.wrap {
+				@include grid-row($behavior: nest-collapse);
 
-        .sidebar-secondary {
-          position: relative;
-          background-color: $sidebar-secondary-background;
-          margin-top: 104px;
-          padding-left: 2em;
-          padding-right: 2em;
-        }
+				.sidebar-secondary {
+					position: relative;
+					background-color: $sidebar-secondary-background;
+					margin-top: 104px;
+					padding-left: 2em;
+					padding-right: 2em;
+				}
 
-        .content-sidebar-wrap {
-          position: relative;
+				.content-sidebar-wrap {
+					position: relative;
 
-          & > .content {
-            padding-left: 2em;
-            padding-right: 2em;
-            padding-top: 2em;
-            position: relative;
-            background-color: $content-bg-color;
-          }
+					& > .content {
+						padding-left: 2em;
+						padding-right: 2em;
+						padding-top: 2em;
+						position: relative;
+						background-color: $content-bg-color;
+					}
 
-        }
+				}
 
-      }
-    }
+			}
+		}
 
 
-  }
+	}
 
 
 }

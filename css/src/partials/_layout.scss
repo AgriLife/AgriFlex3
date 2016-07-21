@@ -18,15 +18,15 @@ footer .wrap {
 }
 
 .site-inner .wrap {
-  background-color: $white;
+	background-color: $white;
 }
 
 body {
-  background-color: #ffffff; // Old browsers
-  @include filter-gradient(#ffffff, #d4d4d4, vertical); // IE6-8
-  // IE9 SVG, needs conditional override of 'filter' to 'none'
-  $experimental-support-for-svg: true;
-  @include background-image(linear-gradient(top, #ffffff 0%,#ffffff 10%,#d4d4d4 29%,#d4d4d4 100%));
+	background-color: #FFFFFF; // Old browsers
+	@include filter-gradient(#FFFFFF, #D4D4D4, vertical); // IE6-8
+	// IE9 SVG, needs conditional override of 'filter' to 'none'
+	$experimental-support-for-svg: true !global;
+	@include background-image(linear-gradient(top, #FFFFFF 0, #FFFFFF 10%, #D4D4D4 29%, #D4D4D4 100%));
 }
 /* Header
 --------------------------------------------- */
@@ -40,10 +40,10 @@ body {
 /* Breadcrumbs
 --------------------------------------------- */
 .breadcrumb {
-  border-bottom: 1px solid $gray-lighter;
-  margin-left: 0.9375rem;
-  margin-right: 0.9375rem;
-  padding: 1em 0;
+	border-bottom: 1px solid $gray-lighter;
+	margin-left: 0.9375rem;
+	margin-right: 0.9375rem;
+	padding: 1em 0;
 }
 
 /* Content
@@ -91,61 +91,61 @@ body {
 
 @media #{$medium-up} {
 
-  .top-bar-wrapper {
+	.top-bar-wrapper {
 		@include grid-row();
 		width: 100%;
-    overflow: visible;
-    background: transparent;
+		overflow: visible;
+		background: transparent;
 	}
 
 	.contain-to-grid .top-bar {
-    max-width: 71.25rem;
-    width: 100%;
-    overflow: visible;
-    margin: 0 auto;
-    background: $primary-color;
+		max-width: 71.25rem;
+		width: 100%;
+		overflow: visible;
+		margin: 0 auto;
+		background: $primary-color;
 
-    li a:not(.button) {
-      background: $primary-color;
-    }
+		li a:not(.button) {
+			background: $primary-color;
+		}
 
-    .top-bar-section ul {
-      background: $primary-color;
+		.top-bar-section ul {
+			background: $primary-color;
 
-      li > a {
-        background: $primary-color;
-      }
-    }
-  }
+			li > a {
+				background: $primary-color;
+			}
+		}
+	}
 
-  .sidebar-content .content {
-    float: right;
-  }
+	.sidebar-content .content {
+		float: right;
+	}
 
-  .content {
-    
-    .loop-shortcode .loop-article {
-      clear: both;
+	.content {
+		
+		.loop-shortcode .loop-article {
+			clear: both;
 
-      .content {
-        padding: 0;
-        float: none;
+			.content {
+				padding: 0;
+				float: none;
 
-        & > *:not(p):first-child {
-          float: left;
-          margin: 5px 15px 5px 0;
-        }
-        
-        p {
-          margin: 1.25em 0;
-        }
-      }
-    }
-  }
+				& > *:not(p):first-child {
+					float: left;
+					margin: 5px 15px 5px 0;
+				}
+				
+				p {
+					margin: 1.25em 0;
+				}
+			}
+		}
+	}
 
-  .site-inner  {
-    @include grid-row();
-  }
+	.site-inner	{
+		@include grid-row();
+	}
 
 	.sidebar-primary,
 	.sidebar-secondary {
@@ -158,16 +158,16 @@ body {
 	.one-half,
 	.three-sixths,
 	.two-fourths,
-  .one-of-2,
-  .two-of-2 {
+	.one-of-2,
+	.two-of-2 {
 		@include grid-column(6);
 	}
 	 
 	.one-third,
 	.two-sixths,
-  .one-of-3,
-  .two-of-3,
-  .three-of-3 {
+	.one-of-3,
+	.two-of-3,
+	.three-of-3 {
 		@include grid-column(4);
 	}
 	 
@@ -220,85 +220,81 @@ body {
 
 @media #{$large-up}{
 
-  .top-bar-wrapper {
-    margin-bottom: 1em;
-  }
+	.top-bar-wrapper {
+		margin-bottom: 1em;
+	}
 
 	.content {
 		@include grid-column(8);
-        margin: 2% 0;
+		margin: 2% 0;
 	}
 
-  .site-inner  {
-    @include inner-background($inner-background-img,$inner-background-size,$inner-background-offset);
+	.site-inner	{
+		@include inner-background($inner-background-img, $inner-background-size, $inner-background-offset);
 
-    .wrap {
-      margin-top: 55px;
-    }
-  }
+		.wrap {
+			margin-top: 55px;
+		}
+	}
 
 	.sidebar-primary,
 	.sidebar-secondary {
 		@include grid-column(4);
-        margin: 2% 0;
+		margin: 2% 0;
 
 		.widget {
 			@include grid-column(12);
 		}
 	}
-  
-  .site-inner .wrap {
-    margin-top: 55px;
-  }
 
-  .content-sidebar .site-inner .wrap,
-  .sidebar-content-sidebar .site-inner .wrap {
-    @include grid-row();
-    margin-top: 55px;
+	.content-sidebar .site-inner .wrap,
+	.sidebar-content-sidebar .site-inner .wrap {
+		@include grid-row();
+		margin-top: 55px;
 
-    .content-sidebar-wrap {
-      .content {
-        @include grid-column($columns: 8);
-      }
+		.content-sidebar-wrap {
+			.content {
+				@include grid-column($columns: 8);
+			}
 
-      .sidebar-primary {
-        @include grid-column($columns: 4, $float: left);
-      }
-    }
-  }
+			.sidebar-primary {
+				@include grid-column($columns: 4, $float: left);
+			}
+		}
+	}
 
-  .content-sidebar .site-inner > .wrap > #wrap > #content {
-    @include grid-column($columns: 8);
-  }
+	.content-sidebar .site-inner > .wrap > #wrap > #content {
+		@include grid-column($columns: 8);
+	}
 
-  .sidebar-content .site-inner .wrap {
-    @include grid-row();
-    margin-top: 55px;
+	.sidebar-content .site-inner .wrap {
+		@include grid-row();
+		margin-top: 55px;
 
-    .content-sidebar-wrap {
-      .content {
-        @include grid-column($columns: 8, $push: 4);
-      }
+		.content-sidebar-wrap {
+			.content {
+				@include grid-column($columns: 8, $push: 4);
+			}
 
-      .sidebar-primary {
-        @include grid-column($columns: 4, $pull: 8, $float: left);
-      }
-    }
-  }
+			.sidebar-primary {
+				@include grid-column($columns: 4, $pull: 8, $float: left);
+			}
+		}
+	}
 
-  .content-sidebar .site-inner .wrap .content-sidebar-wrap {
-    @include grid-column($columns: 12, $float: right, $collapse: true);
-  }
+	.content-sidebar .site-inner .wrap .content-sidebar-wrap {
+		@include grid-column($columns: 12, $float: right, $collapse: true);
+	}
 
-  .sidebar-content-sidebar .site-inner .wrap {
-    .content-sidebar-wrap {
-      @include grid-column($columns: 10, $float: right, $collapse: true);
-    }
+	.sidebar-content-sidebar .site-inner .wrap {
+		.content-sidebar-wrap {
+			@include grid-column($columns: 10, $float: right, $collapse: true);
+		}
 
-    .sidebar-secondary {
-      @include grid-column($columns: 2);
-    }
-  }
+		.sidebar-secondary {
+			@include grid-column($columns: 2);
+		}
+	}
 
 }
 

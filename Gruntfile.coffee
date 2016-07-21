@@ -50,23 +50,10 @@ module.exports = (grunt) ->
           module: true
           document: true
         force: true
-    csslint:
+    sasslint:
       options:
-        'star-property-hack': false
-        'duplicate-properties': false
-        'unique-headings': false
-        # 'ids': false
-        'display-property-grouping': false
-        'floats': false
-        'outline-none': false
-        'box-model': false
-        'adjoining-classes': false
-        'box-sizing': false
-        'universal-selector': false
-        'font-sizes': false
-        'overqualified-elements': false
-        force: true
-      src: ['css/*.css']
+        configFile: '.sass-lint.yml'
+      target: ['css/src/**/*.s+(a|c)ss']
     concat:
       adminjs:
         src: ['js/src/admin/*.js']
@@ -78,12 +65,12 @@ module.exports = (grunt) ->
   @loadNpmTasks 'grunt-contrib-coffee'
   @loadNpmTasks 'grunt-contrib-compass'
   @loadNpmTasks 'grunt-contrib-jshint'
-  @loadNpmTasks 'grunt-contrib-csslint'
   @loadNpmTasks 'grunt-contrib-concat'
   @loadNpmTasks 'grunt-contrib-watch'
+  @loadNpmTasks 'grunt-sass-lint'
 
   @registerTask 'default', ['coffee', 'compass:dist']
-  @registerTask 'develop', ['coffee', 'compass:dev', 'jshint', 'concat']
+  @registerTask 'develop', ['sasslint', 'compass:dev', 'coffee', 'jshint', 'concat']
   @registerTask 'package', ['default', 'jshint', 'concat']
 
   @event.on 'watch', (action, filepath) =>

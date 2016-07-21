@@ -3,19 +3,19 @@
 	 how you please.
 --------------------------------------------- */
 $gray-dark: #303031;
-$gray-medium: #3f4041;
+$gray-medium: #3F4041;
 $gray-light: #5E564E;
 $gray-lighter: #707274;
-$gray-lightest: #e7e7e7;
-$grey-even-lighter-than-lightest: #f6f6f6;
-$white: #fff; // Because sometimes white isn't always white
+$gray-lightest: #E7E7E7;
+$grey-even-lighter-than-lightest: #F6F6F6;
+$white: #FFF; // Because sometimes white isn't always white
 
-$primary-color: #1b607b;
-$secondary-color: #5c0025;
-$alert-color: #f04124;
+$primary-color: #1B607B;
+$secondary-color: #5C0025;
+$alert-color: #F04124;
 $success-color: #43AC6A;
-$warning-color: #f08a24;
-$info-color: #a0d3e8;
+$warning-color: #F08A24;
+$info-color: #A0D3E8;
 
 /* Body
 --------------------------------------------- */
@@ -41,7 +41,7 @@ $site-description: $white;
 --------------------------------------------- */
 $nav-text: $secondary-color;
 $nav-link: $secondary-color;
-$nav-sub-border: #eee;
+$nav-sub-border: #EEE;
 
 
 $topbar-bg: $white;
@@ -60,7 +60,7 @@ $topbar-link-bg-active-hover: $white;
 
 /* Sidebars
 --------------------------------------------- */
-$sidebar-primary-background: #ebebeb;
+$sidebar-primary-background: #EBEBEB;
 $sidebar-secondary-background: $white;
 
 /* Pagination
@@ -69,19 +69,19 @@ $pagination-font-color: $white;
 
 /* Comments
 --------------------------------------------- */
-$comment-background: #f5f5f5;
+$comment-background: #F5F5F5;
 
 /* Widgets
 --------------------------------------------- */
 $widget-background: $white;
-$widget-entry: #f5f5f5;
+$widget-entry: #F5F5F5;
 $widget-footer-background: $gray-light;
 $widget-footer-text: $gray-dark;
 $widget-footer-link: $gray-dark;
-$widget-footer-link-hover: #ddd;
-$widget-footer-form-border: #ddd;
+$widget-footer-link-hover: #DDD;
+$widget-footer-form-border: #DDD;
 
 /* Footer
 --------------------------------------------- */
-$footer-text: #8d9092;
+$footer-text: #8D9092;
 $footer-background: $gray-medium;

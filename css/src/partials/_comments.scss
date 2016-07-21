@@ -5,7 +5,7 @@
 .entry-comments,
 .entry-pings {
 	background-color: $white;
-	@include margin-trailer()
+	@include margin-trailer();
 }
 
 .entry-comments,
@@ -26,7 +26,7 @@
 	input[type="email"],
 	input[type="text"],
 	input[type="url"] {
-		width: 50%
+		width: 50%;
 	}
 
 	label {

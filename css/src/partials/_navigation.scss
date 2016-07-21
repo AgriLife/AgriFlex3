@@ -3,26 +3,26 @@
 
 .nav-primary {
 
-  .top-bar-section > ul > li > a {
-    text-transform: uppercase;
-  }
+	.top-bar-section > ul > li > a {
+		text-transform: uppercase;
+	}
 
 	ul.menu-search-container {
-    @include grid-column(12);
-    clear: both;
-    padding: 0.5rem 1rem;
+		@include grid-column(12);
+		clear: both;
+		padding: 0.5rem 1rem;
 
 		.search li {
 			@include grid-row();
 
 			input[type="search"] {
-        @include grid-column(8);
+				@include grid-column(8);
 			}
 
-      input[type="submit"] {
-        @include grid-column($columns: 3, $offset: 1);
-        @include button($padding: 0, $bg: #666, $radius: 10px);
-        margin-bottom: 0;
+			input[type="submit"] {
+				@include grid-column($columns: 3, $offset: 1);
+				@include button($padding: 0, $bg: #666, $radius: 10px);
+				margin-bottom: 0;
 			}
 		}
 	}
@@ -45,44 +45,44 @@
 }
 
 @media #{$small-only} {
-  .top-bar-wrapper {
-    background-color: #5D0025;
-  }
-  .top-bar-section .dropdown li.parent-link a:hover {
-    background-color: $topbar-link-bg-color-hover;
-    color: $topbar-link-color-hover;
+	.top-bar-wrapper {
+		background-color: #5D0025;
+	}
+	.top-bar-section .dropdown li.parent-link a:hover {
+		background-color: $topbar-link-bg-color-hover;
+		color: $topbar-link-color-hover;
 
-    @if ($topbar-link-bg-hover) {
-      background: $topbar-link-bg-hover;
-    }
-  }
+		@if ($topbar-link-bg-hover) {
+			background: $topbar-link-bg-hover;
+		}
+	}
 }
 
 @media #{$medium-up} {
-  .top-bar-section {
-    ul.menu-search-container {
-      display: none;
-    }
-    ul.menu li {
-      a[title='home'],
-      &:not(.has-form) a[title='home'],
-      &.active a[title='home'],
-      &.active:not(.has-form) a[title='home']:hover:not(.button) {
-        display: block;
-        text-indent: -999em;
-        background: transparent url("../img/college/home-college.svg") no-repeat 50% 13px;
-        width: 21px;
-        padding: 1em 1em 0 0;
-        height: 30px;
-        margin: 0 .5em 0 1em;
-        @include no-transition;
+	.top-bar-section {
+		ul.menu-search-container {
+			display: none;
+		}
+		ul.menu li {
+			a[title='home'],
+			&:not(.has-form) a[title='home'],
+			&.active a[title='home'],
+			&.active:not(.has-form) a[title='home']:hover:not(.button) {
+				display: block;
+				text-indent: -999em;
+				background: transparent url("../img/college/home-college.svg") no-repeat 50% 13px;
+				width: 21px;
+				padding: 1em 1em 0 0;
+				height: 30px;
+				margin: 0 .5em 0 1em;
+				@include no-transition;
 
-        &:hover {
-          background-position: 50% -17px;
-        }
-      }
-    }
-  }
+				&:hover {
+					background-position: 50% -17px;
+				}
+			}
+		}
+	}
 
 }
 

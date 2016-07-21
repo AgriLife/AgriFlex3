@@ -77,15 +77,15 @@ address {
 }
 
 .breadcrumb {
-  font-size: .8rem;
+	font-size: .8rem;
 }
 
 h4 {
-  color: $secondary-color;
+	color: $secondary-color;
 
-  a {
-    color: $secondary-color;
-  }
+	a {
+		color: $secondary-color;
+	}
 }
 
 @media #{$small-up} {

@@ -5,16 +5,16 @@
 $gray-dark: #333;
 $gray-medium: #5E564E;
 $gray-light: #717074;
-$gray-lighter: #d6d6d6;
-$gray-lightest: #f7f7f9;
-$white: #f8f8f8; // Because sometimes white isn't always white
+$gray-lighter: #D6D6D6;
+$gray-lightest: #F7F7F9;
+$white: #F8F8F8; // Because sometimes white isn't always white
 
 $primary-color: #500000;
-$secondary-color: #9C7D0D; //#e7e7e7;
-$alert-color: #f04124;
+$secondary-color: #9C7D0D; //#E7E7E7;
+$alert-color: #F04124;
 $success-color: #43AC6A;
-$warning-color: #f08a24;
-$info-color: #a0d3e8;
+$warning-color: #F08A24;
+$info-color: #A0D3E8;
 
 
 /* Body
@@ -43,7 +43,7 @@ $topbar-bg: $topbar-bg-color;
 --------------------------------------------- */
 $nav-text: $gray-dark;
 $nav-link: $gray-dark;
-$nav-sub-border: #eee;
+$nav-sub-border: #EEE;
 
 /* Pagination
 --------------------------------------------- */
@@ -51,17 +51,17 @@ $pagination-font-color: $white;
 
 /* Comments
 --------------------------------------------- */
-$comment-background: #f5f5f5;
+$comment-background: #F5F5F5;
 
 /* Widgets
 --------------------------------------------- */
-$widget-background: #f2eddd; //$white;
-$widget-entry: #f5f5f5;
+$widget-background: #F2EDDD; //$white;
+$widget-entry: #F5F5F5;
 $widget-footer-background: $gray-light;
 $widget-footer-text: $gray-dark;
 $widget-footer-link: $gray-dark;
-$widget-footer-link-hover: #ddd;
-$widget-footer-form-border: #ddd;
+$widget-footer-link-hover: #DDD;
+$widget-footer-form-border: #DDD;
 
 /* Footer
 --------------------------------------------- */
