@@ -73,14 +73,16 @@ class AgriFlex_ThemeCustomizer {
     
     global $wpdb;
 
-    if ( get_theme_mod('agriflex_background_image') != '' && 0 < count( strlen( ( $background_image_url = get_theme_mod( 'agriflex_background_image' ) ) ) ) ) {
+    $validsite = defined('AG_EXTUNIT_DIRNAME') || defined('AG_EXT_DIRNAME') ? true : false;
+    $background_image_url = get_theme_mod('agriflex_background_image');
+
+    if ( $validsite && $background_image_url != '' && 0 < count( strlen( $background_image_url ) ) ) {
 
       // Check for image size preference
       $cropped = boolval( get_theme_mod( 'agriflex_background_crop' ) );
       if($cropped === true){
 
-        $image_url = get_theme_mod('agriflex_background_image');
-        $image_id = $wpdb->get_col($wpdb->prepare("SELECT ID FROM $wpdb->posts WHERE guid='%s';", $image_url ));
+        $image_id = $wpdb->get_col($wpdb->prepare("SELECT ID FROM $wpdb->posts WHERE guid='%s';", $background_image_url ));
         $src = wp_get_attachment_image_src( $image_id[0], 'agriflex_background_image');
 
         if( $src ){
