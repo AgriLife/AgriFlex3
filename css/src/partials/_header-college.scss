@@ -352,6 +352,13 @@
 	.site-header .primary-search {
 		padding: 0 1em 0 0;
 	}
+
+	.site-container {
+		background-repeat: no-repeat;
+		background-position: center 107px;
+		background-size: contain;
+	}
+
 }
 
 @media #{$large-up}{
