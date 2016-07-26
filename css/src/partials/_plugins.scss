@@ -50,6 +50,27 @@ a.accordion-title {
 	padding-left: 2em;
 }
 
+.js .page-template-flexiblecolumns .af-accordion {
+
+	.accordion-content {
+		transition: height 0.3s linear;
+		overflow: hidden;
+
+		p {
+			margin: 0;
+			padding: 0;
+		}
+	}
+	
+	.accordion-title {
+		text-decoration: none;
+	}
+
+	a.accordion-title.up + .accordion-content {
+		height: 0!important;
+	}
+}
+
 /* AgriLife People
 --------------------------------------------- */
 
