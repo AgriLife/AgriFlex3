@@ -24,12 +24,16 @@ class AgriFlex_ThemeCustomizer {
   // Add Customization Control
   public function agriflex_customize_register($wp_customize){
     // A group of options for the control
+    $bgimage_message = 'Recommendation: 1280px width';
+    if( defined('AG_COL_DIRNAME') )
+      $bgimage_message .= ', grayscale';
+    
     $wp_customize->add_section(
       'agriflex_background_options',
       array(
         'title'     => 'Background Image',
         'priority'  => 30,
-        'description' => __('Recommended width of 1280px', 'agriflex3')
+        'description' => __($bgimage_message, 'agriflex3')
       )
     );
     // Register the option's data for the control
