@@ -10,6 +10,10 @@ class AgriFlex_ThemeCustomizer {
 
       add_action( 'wp_head', array( $this, 'agriflex_customize_background' ));
 
+      if( defined('AG_COL_DIRNAME') ){
+        add_action( 'genesis_before', array( $this, 'agriflex_college_background' ));
+      }
+
       // Add custom image size 1280 x 215 with a crop top center
       add_image_size( 'agriflex_background_image', 1280, 215, array( 'center', 'top') );
 
@@ -69,6 +73,18 @@ class AgriFlex_ThemeCustomizer {
   /* Use the control's data in the theme.
   ------------------------------------------ */
   // Add CSS
+  public function agriflex_college_background() {
+
+    $background_image_url = get_theme_mod('agriflex_background_image');
+
+    if ( $background_image_url != '' && 0 < count( strlen( $background_image_url ) ) ) {
+      ?>
+        <div class="agriflex-college-background"><div class="agriflex-college-background-gradient"></div></div>
+      <?php
+    }
+
+  }
+
   public function agriflex_customize_background() {
     
     global $wpdb;
@@ -76,27 +92,60 @@ class AgriFlex_ThemeCustomizer {
     $background_image_url = get_theme_mod('agriflex_background_image');
 
     if ( $background_image_url != '' && 0 < count( strlen( $background_image_url ) ) ) {
+      
+      $image_id = $wpdb->get_col($wpdb->prepare("SELECT ID FROM $wpdb->posts WHERE guid='%s';", $background_image_url ));
 
       // Check for image size preference
       $cropped = boolval( get_theme_mod( 'agriflex_background_crop' ) );
       if($cropped === true){
 
-        $image_id = $wpdb->get_col($wpdb->prepare("SELECT ID FROM $wpdb->posts WHERE guid='%s';", $background_image_url ));
         $src = wp_get_attachment_image_src( $image_id[0], 'agriflex_background_image');
 
         if( $src ){
           $background_image_url = $src[0];
         }
 
+      } else {
+
+        $src = wp_get_attachment_image_src( $image_id[0], 'full' );
+
       }
+
       ?>
       <style type="text/css">
+      <?php
+
+      if( defined('AG_COL_DIRNAME') ){
+
+        $style = '@media only screen and (min-width:%spx){.agriflex-college-background{background-image:url(%s);height:%spx;}}';
+        $ratio = $src[2] / $src[1];
+        $breakpoints = array(1140, 1340, 1540, 1740, 1905);
+
+        ?>
+        @media only screen and (min-width: 880px) {
+          .agriflex-college-background {
+            background-image: url(<?php echo $background_image_url; ?>);
+          }
+        }
+        <?php
+
+        foreach($breakpoints as $size){
+          $height = round( $size * $ratio );
+          echo sprintf($style, $size, $src[0], $height);
+        }
+
+      } else {
+
+        ?>
         @media only screen and (min-width: 880px) {
           body.home .site-container,
           body .site-container {
             background-image: url(<?php echo $background_image_url; ?>) !important;
           }
         }
+        <?php
+      }
+      ?>
       </style>
       <?php
 
