@@ -303,8 +303,6 @@ $large-up: "#{only screen} and (min-width: #{$breakpoint-large})";
 }
 @media #{$medium-up-agriflex3} {
 	.home {
-		background: #87817B none repeat scroll 0 0;
-		background-image: linear-gradient(#D6D6D6 1200px, #87817B 1700px);
 
 		#bg-image-container {
 			background-image: url(../img/college/corn-bg2.jpg);
