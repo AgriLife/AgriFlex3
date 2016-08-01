@@ -22,11 +22,14 @@ footer .wrap {
 }
 
 body {
-	background-color: #FFFFFF; // Old browsers
-	@include filter-gradient(#FFFFFF, #D4D4D4, vertical); // IE6-8
-	// IE9 SVG, needs conditional override of 'filter' to 'none'
-	$experimental-support-for-svg: true !global;
-	@include background-image(linear-gradient(top, #FFFFFF 0, #FFFFFF 10%, #D4D4D4 29%, #D4D4D4 100%));
+	background-color: #D4D4D4;
+
+	&.agriflex-no-custom-bg {
+		@include filter-gradient(#FFFFFF, #D4D4D4, vertical); // IE6-8
+		// IE9 SVG, needs conditional override of 'filter' to 'none'
+		$experimental-support-for-svg: true !global;
+		@include background-image(linear-gradient(top, #FFFFFF 0, #FFFFFF 10%, #D4D4D4 29%, #D4D4D4 100%));
+	}
 }
 /* Header
 --------------------------------------------- */

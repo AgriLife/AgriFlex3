@@ -356,11 +356,6 @@
 		padding: 0 1em 0 0;
 	}
 
-	body {
-		background-color: #D4D4D4;
-		background-image: none;
-	}
-
 	.agriflex-college-background {
 		background-repeat: no-repeat;
 		background-position: center top;
@@ -378,7 +373,7 @@
 		.agriflex-college-background-gradient {
 			// IE9 SVG, needs conditional override of 'filter' to 'none'
 			$experimental-support-for-svg: true !global;
-			@include background-image(linear-gradient(top, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0) 70%, #D4D4D4 100%));
+			@include background-image(linear-gradient(top, rgba(212, 212, 212, 0) 0, rgba(212, 212, 212, 0) 70%, #D4D4D4 100%));
 		}
 	}
 
