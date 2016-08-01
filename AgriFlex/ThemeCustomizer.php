@@ -39,8 +39,12 @@ class AgriFlex_ThemeCustomizer {
 
     // Inform users of ideal background image properties
     $bgimage_message = 'Recommendation: 1280px width';
-    if( defined('AG_COL_DIRNAME') )
+    $bgimage_default = AF_THEME_DIRURL . '/img/ext-bg/headline-bg-noblur.jpg';
+    
+    if( defined('AG_COL_DIRNAME') ){
       $bgimage_message .= ', grayscale';
+      $default = '';
+    }
 
     // A group of options for the control
     $wp_customize->add_section(
@@ -56,7 +60,7 @@ class AgriFlex_ThemeCustomizer {
     $wp_customize->add_setting(
       'agriflex_background_image',
       array(
-        'default'      => AF_THEME_DIRURL . '/img/ext-bg/headline-bg-noblur.jpg',
+        'default'      => $bgimage_default,
         'transport'    => 'refresh',
       )
     );
