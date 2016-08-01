@@ -43,7 +43,7 @@ class AgriFlex_ThemeCustomizer {
     
     if( defined('AG_COL_DIRNAME') ){
       $bgimage_message .= ', grayscale';
-      $default = '';
+      $bgimage_default = '';
     }
 
     // A group of options for the control
