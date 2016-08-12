@@ -55,6 +55,9 @@ class AgriFlex {
     // Add AgriFlex theme customization
     $af_customize = new AgriFlex_ThemeCustomizer;
 
+    // Add AgriFlex theme options menu
+    $af_affiliation = new AgriFlex_AgencyAffiliation;
+
 	}
 
 	/**
