@@ -10,7 +10,7 @@ if( function_exists('acf_add_local_field_group') ):
         'key' => 'field_57acdad9e680e',
         'label' => 'Agency Top',
         'name' => 'agency_top',
-        'type' => 'radio',
+        'type' => 'checkbox',
         'instructions' => '',
         'required' => 0,
         'conditional_logic' => 0,
@@ -21,7 +21,6 @@ if( function_exists('acf_add_local_field_group') ):
         ),
         'choices' => array (
           'college' => 'College',
-          'college/extension' => 'College and Extension',
           'extension' => 'Extension',
           'research' => 'Research',
           'tfs' => 'TFS',
@@ -37,7 +36,7 @@ if( function_exists('acf_add_local_field_group') ):
         'key' => 'field_57acdd9bc9f10',
         'label' => 'Extension Type',
         'name' => 'ext_type',
-        'type' => 'radio',
+        'type' => 'checkbox',
         'instructions' => '',
         'required' => 0,
         'conditional_logic' => array (
@@ -46,13 +45,6 @@ if( function_exists('acf_add_local_field_group') ):
               'field' => 'field_57acdad9e680e',
               'operator' => '==',
               'value' => 'extension',
-            ),
-          ),
-          array (
-            array (
-              'field' => 'field_57acdad9e680e',
-              'operator' => '==',
-              'value' => 'college/extension',
             ),
           ),
         ),
