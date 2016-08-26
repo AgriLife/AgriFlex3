@@ -35,13 +35,13 @@
 ## Development Installation
 
 1. Copy this repo to the desired location.
-2. In your terminal, navigate to the plugin location `cd /path/to/the/plugin`
-3. Run `composer install` to set up the php modules
-4. Run `npm install` to set up the grunt modules
-5. Run `bower install` to install JS dependencies
-6. Run `grunt watch` and do what you do best
+2. In your terminal, navigate to the plugin location 'cd /path/to/the/plugin'
+3. Run 'composer install' to set up the php modules
+4. Run 'npm install' to set up the grunt modules
+5. Run 'bower install html5shiv#3.7.0' and 'bower install respond#1.4.1' to install JS dependencies
+6. Run 'grunt watch' and do what you do best
  
-*NOTE:* If you add Compass or Coffeescript files, be sure to add them to the `Gruntfile`.
+*NOTE:* If you add Compass or Coffeescript files, be sure to add them to the 'Gruntfile'.
 
 ## System Requirements
 
