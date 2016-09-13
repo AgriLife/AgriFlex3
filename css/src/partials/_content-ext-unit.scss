@@ -397,9 +397,12 @@
 }
 
 .page-template-flexiblecolumns {
-	.row {
-		margin-top: 1.875rem;
+	header {
 		margin-bottom: 1.875rem;
+	}
+	
+	.row {
+		padding-bottom: 1.875rem;
 
 		h3 {
 			margin-top: 0;
