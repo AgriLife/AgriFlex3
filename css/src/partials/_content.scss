@@ -139,6 +139,17 @@ input[type="submit"] {
 	}
 }
 
+.page-template-flexiblecolumns {
+	.row {
+		margin-top: 1.875rem;
+		margin-bottom: 1.875rem;
+
+		h3 {
+			margin-top: 0;
+		}
+	}
+}
+
 @media #{$small-up} {
 
 }
