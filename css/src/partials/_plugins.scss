@@ -160,6 +160,10 @@ ul.people-listing-ul {
 	.phone {
 		@include grid-column(8, $collapse: true);
 	}
+	.website,
+	.resume {
+		@include grid-column(12, $collapse: true);
+	}
 
 	.details {
 		.name {
