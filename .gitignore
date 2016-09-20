@@ -62,3 +62,7 @@ css/src/default.css
 css/src/ext.css
 css/src/lib/colors-ext.css
 css/src/partials/header-ext.css
+
+# Ignore distribution files
+AgriFlex3.zip
+secret.json

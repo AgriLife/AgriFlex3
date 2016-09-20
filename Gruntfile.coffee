@@ -61,17 +61,79 @@ module.exports = (grunt) ->
       publicjs:
         src: ['js/src/public/*.js']
         dest: 'js/public.min.js'
+    compress:
+      main:
+        options:
+          archive: 'AgriFlex3.zip'
+        files: [
+          {src: ['AgriFlex/*.php']},
+          {src: ['css/*.css']},
+          {src: ['img/**']},
+          {src: ['js/*.js']},
+          {src: ['bower_components/fastclick/lib/fastclick.js']},
+          {src: ['bower_components/foundation/{css,js}/**']},
+          {src: ['bower_components/html5shiv/dist/html5shiv.js']},
+          {src: ['bower_components/jquery/{dist,sizzle}/**/*.js']},
+          {src: ['bower_components/jquery-placeholder/*.js']},
+          {src: ['bower_components/jquery.cookie/jquery.cookie.js']},
+          {src: ['bower_components/modernizr/modernizr.js']},
+          {src: ['bower_components/respond/{cross-domain,dest}/*.js']},
+          {src: ['vendor/**', '!vendor/composer/autoload_static.php']},
+          {src: ['functions.php']},
+          {src: ['README.md']},
+          {src: ['rtl.css']},
+          {src: ['screenshot.png']},
+          {src: ['search.php']},
+          {src: ['style.css']}
+        ]
+    gh_release:
+      options:
+        token: grunt.file.readJSON('secret.json').gh_token
+        owner: 'agrilife'
+        repo: grunt.file.readJSON('package.json').name
+      release:
+        tag_name: grunt.file.readJSON('package.json').version
+        target_commitish: 'master'
+        name: '...'
+        body: '...'
+        draft: false
+        prerelease: false
+        asset:
+          name: 'AgriFlex3.zip'
+          file: 'AgriFlex3.zip'
+          'Content-Type': 'application/zip'
+    prompt:
+      target:
+        options:
+          questions: [
+            {
+              config: 'gh_release.release.name',
+              type: 'input',
+              message: 'Release name:',
+              default: 'bug-fixes'
+            }
+            {
+              config: 'gh_release.release.body',
+              type: 'input',
+              message: 'Release description:',
+              default: 'Bug fixes in various files'
+            }
+          ]
 
   @loadNpmTasks 'grunt-contrib-coffee'
   @loadNpmTasks 'grunt-contrib-compass'
   @loadNpmTasks 'grunt-contrib-jshint'
   @loadNpmTasks 'grunt-contrib-concat'
   @loadNpmTasks 'grunt-contrib-watch'
+  @loadNpmTasks 'grunt-contrib-compress'
+  @loadNpmTasks 'grunt-prompt'
+  @loadNpmTasks 'grunt-gh-release'
   @loadNpmTasks 'grunt-sass-lint'
 
   @registerTask 'default', ['coffee', 'compass:dist']
   @registerTask 'develop', ['sasslint', 'compass:dev', 'coffee', 'jshint', 'concat']
   @registerTask 'package', ['default', 'jshint', 'concat']
+  @registerTask 'release', ['prompt', 'package', 'compress', 'gh_release']
 
   @event.on 'watch', (action, filepath) =>
     @log.writeln('#{filepath} has #{action}')
