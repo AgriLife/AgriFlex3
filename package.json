@@ -17,7 +17,8 @@
     "grunt-sass-lint": "~0.2.0",
     "curlrequest": "~0.3.10",
     "underscore": "~1.8.3",
-    "grunt-gh-release": "0.0.2"
+    "grunt-gh-release": "0.0.2",
+    "grunt-gitinfo": "~0.1.8"
   },
   "repository": "https://github.com/agrilife/agriflex3",
   "author": "J. Aaron Eaton and Travis Ward",
