@@ -41,7 +41,10 @@
 5. Run 'bower install html5shiv#3.7.0' and 'bower install respond#1.4.1' to install JS dependencies
 6. Run 'grunt watch' and do what you do best
  
-*NOTE:* If you add Compass or Coffeescript files, be sure to add them to the 'Gruntfile'.
+## Developer Notes
+
+1. If you add Compass or Coffeescript files, be sure to add them to the 'Gruntfile'.
+2. Release tasks are included, but should only be used by the repository's owners
 
 ## System Requirements
 

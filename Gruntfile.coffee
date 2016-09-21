@@ -86,39 +86,25 @@ module.exports = (grunt) ->
           {src: ['search.php']},
           {src: ['style.css']}
         ]
+    gitinfo:
+      commands:
+        'lastUpdate': ['log', '-1', '--format="%B"', '--follow', 'package.json']
     gh_release:
       options:
-        token: grunt.file.readJSON('secret.json').gh_token
+        token: '<%= grunt.file.readJSON("secret.json").gh_token %>'
         owner: 'agrilife'
         repo: grunt.file.readJSON('package.json').name
       release:
         tag_name: grunt.file.readJSON('package.json').version
         target_commitish: 'master'
-        name: '...'
-        body: '...'
+        name: 'Release'
+        body: '<%= gitinfo.lastUpdate %>'
         draft: false
         prerelease: false
         asset:
           name: 'AgriFlex3.zip'
           file: 'AgriFlex3.zip'
           'Content-Type': 'application/zip'
-    prompt:
-      target:
-        options:
-          questions: [
-            {
-              config: 'gh_release.release.name',
-              type: 'input',
-              message: 'Release name:',
-              default: 'bug-fixes'
-            }
-            {
-              config: 'gh_release.release.body',
-              type: 'input',
-              message: 'Release description:',
-              default: 'Bug fixes in various files'
-            }
-          ]
 
   @loadNpmTasks 'grunt-contrib-coffee'
   @loadNpmTasks 'grunt-contrib-compass'
@@ -129,11 +115,12 @@ module.exports = (grunt) ->
   @loadNpmTasks 'grunt-prompt'
   @loadNpmTasks 'grunt-gh-release'
   @loadNpmTasks 'grunt-sass-lint'
+  @loadNpmTasks 'grunt-gitinfo'
 
   @registerTask 'default', ['coffee', 'compass:dist']
   @registerTask 'develop', ['sasslint', 'compass:dev', 'coffee', 'jshint', 'concat']
   @registerTask 'package', ['default', 'jshint', 'concat']
-  @registerTask 'release', ['prompt', 'package', 'compress', 'gh_release']
+  @registerTask 'release', ['gitinfo', 'package', 'compress', 'gh_release']
 
   @event.on 'watch', (action, filepath) =>
     @log.writeln('#{filepath} has #{action}')
