@@ -88,7 +88,7 @@ module.exports = (grunt) ->
         ]
     gitinfo:
       commands:
-        'lastUpdate': ['log', '-1', '--format="%B"', '--follow', 'package.json']
+        'lastUpdate': ['log', '-1', '--format="%B"', '--no-merges']
     gh_release:
       options:
         token: process.env.RELEASE_KEY
@@ -112,7 +112,6 @@ module.exports = (grunt) ->
   @loadNpmTasks 'grunt-contrib-concat'
   @loadNpmTasks 'grunt-contrib-watch'
   @loadNpmTasks 'grunt-contrib-compress'
-  @loadNpmTasks 'grunt-prompt'
   @loadNpmTasks 'grunt-gh-release'
   @loadNpmTasks 'grunt-sass-lint'
   @loadNpmTasks 'grunt-gitinfo'
