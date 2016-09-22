@@ -91,7 +91,7 @@ module.exports = (grunt) ->
         'lastUpdate': ['log', '-1', '--format="%B"', '--follow', 'package.json']
     gh_release:
       options:
-        token: '<%= grunt.file.readJSON("secret.json").gh_token %>'
+        token: process.env.RELEASE_KEY
         owner: 'agrilife'
         repo: grunt.file.readJSON('package.json').name
       release:
