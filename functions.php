@@ -16,6 +16,69 @@ define( 'AF_THEME_DIRPATH', get_stylesheet_directory() );
 define( 'AF_THEME_DIRURL', get_stylesheet_directory_uri() );
 define( 'AF_THEME_TEXTDOMAIN', 'agriflex' );
 
+// Check for dependencies
+add_action( 'after_switch_theme', 'check_theme_dependencies', 10, 2 );
+function check_theme_dependencies( $oldtheme_name, $oldtheme ) {
+
+  $missing_dependencies = false;
+
+  $agrilifecore_installed = defined('AG_CORE_DIRNAME');
+  $acf_installed = count(glob(get_theme_root() . '/[aA]dvanced-[cC]ustom-[fF]ields', GLOB_ONLYDIR)) > 0;
+
+  if( !$agrilifecore_installed || !$acf_installed ){
+    $missing_dependencies = true;
+  }
+
+  if ( $missing_dependencies ){
+
+    // Update default admin notice: Theme not activated.
+    add_filter( 'gettext', 'update_activation_admin_notice', 10, 3 );
+
+    // Custom styling for default admin notice.
+    add_action( 'admin_head', 'error_activation_admin_notice' );
+
+    // Switch back to previous theme.
+    switch_theme( $oldtheme->stylesheet );
+      return false;
+
+  }
+}
+
+function update_activation_admin_notice( $translated, $original, $domain ) {
+
+  $message = 'AgriFlex3 Error: %s. Restoring previous theme.';
+
+  // Specify error
+  $error = array();
+  $agrilifecore_installed = defined('AG_CORE_DIRNAME');
+  $acf_installed = count(glob(get_theme_root() . '/[aA]dvanced-[cC]ustom-[fF]ields', GLOB_ONLYDIR)) > 0;
+
+  if(!$agrilifecore_installed){
+    $error[] = 'AgriLife Core plugin is not installed and active';
+  }
+  if(!$acf_installed){
+    $error[] = 'Advanced Custom Fields plugin is not installed and active';
+  }
+
+  $message = sprintf($message, implode($error, ', '));
+  
+  $strings = array(
+    'New theme activated.' => $message
+  );
+
+  if ( isset( $strings[$original] ) ) {
+    // Translate but without running all the filters again.
+    $translations = get_translations_for_domain( $domain );
+    $translated = $translations->translate( $strings[$original] );
+  }
+
+  return $translated;
+}
+
+function error_activation_admin_notice() {
+  echo '<style>#message2{border-left-color:#dc3232;}</style>';
+}
+
 // Autoload all classes
 spl_autoload_register( 'AgriFlex::autoload' );
 
