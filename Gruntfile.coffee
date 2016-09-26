@@ -88,7 +88,15 @@ module.exports = (grunt) ->
         ]
     gitinfo:
       commands:
-        'lastUpdate': ['log', '-1', '--pretty=format:"%s"', '--no-merges']
+        'lastUpdate': [
+          'log',
+          # get commits since last release
+          '`git tag -l | sort -r | sed -n 2p`..`git describe --tags`',
+          # message format: "author: commit message"
+          '--pretty=format:"%an: %s"',
+          # exclude merge commits
+          '--no-merges'
+        ]
     gh_release:
       options:
         token: process.env.RELEASE_KEY

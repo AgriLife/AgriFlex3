@@ -1,7 +1,7 @@
 ## WordPress Requirements
 
 1. Genesis theme
-2. AgriLife Core plugin
+2. [AgriLife Core plugin](https://github.com/agrilife/agrilife-core)
 3. Advanced Custom Fields plugin
 
 ## Optional Site Requirements
