@@ -90,8 +90,8 @@ module.exports = (grunt) ->
       commands:
         'lastUpdate': [
           'log',
-          # get commits since last release
-          '`git', 'tag', '-l', '|', 'sort', '-r', '|', 'sed', '-n', '2p`..`git', 'describe', '--tags`',
+          # output from releasetags task
+          '',
           # message format: "author: commit message"
           '--pretty=format:"%an: %s"',
           # exclude merge commits
@@ -127,7 +127,22 @@ module.exports = (grunt) ->
   @registerTask 'default', ['coffee', 'compass:dist']
   @registerTask 'develop', ['sasslint', 'compass:dev', 'coffee', 'jshint', 'concat']
   @registerTask 'package', ['default', 'jshint', 'concat']
-  @registerTask 'release', ['gitinfo', 'compress', 'gh_release']
+  @registerTask 'release', ['releasetags', 'gitinfo', 'compress', 'gh_release']
+  @registerTask 'releasetags', 'Get last two release tags for gh_release', ->
+    done = @async()
+    grunt.util.spawn {
+      cmd: 'git'
+      args: [ 'tag', '--column' ]
+    }, (err, result, code) ->
+      gittags = ''
+      output = result.stdout
+      if output
+        matches = result.stdout.match(/([0-9.]*)\s+([0-9.]*)$/)
+        gittags = matches[1] + '..' + matches[2];
+      @config 'gitinfo.commands.lastUpdate.1', gittags
+      done()
+      return
+    return
 
   @event.on 'watch', (action, filepath) =>
     @log.writeln('#{filepath} has #{action}')
