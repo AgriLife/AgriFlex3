@@ -139,7 +139,7 @@ module.exports = (grunt) ->
       if output
         matches = result.stdout.match(/([0-9.]*)\s+([0-9.]*)$/)
         gittags = matches[1] + '..' + matches[2];
-      @config 'gitinfo.commands.lastUpdate.1', gittags
+      grunt.config 'gitinfo.commands.lastUpdate.1', gittags
       done()
       return
     return
