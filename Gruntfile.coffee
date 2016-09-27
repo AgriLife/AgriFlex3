@@ -111,13 +111,12 @@ module.exports = (grunt) ->
   @loadNpmTasks 'grunt-contrib-compress'
   @loadNpmTasks 'grunt-gh-release'
   @loadNpmTasks 'grunt-sass-lint'
-  @loadNpmTasks 'grunt-gitinfo'
 
   @registerTask 'default', ['coffee', 'compass:dist']
   @registerTask 'develop', ['sasslint', 'compass:dev', 'coffee', 'jshint', 'concat']
   @registerTask 'package', ['default', 'jshint', 'concat']
   @registerTask 'release', ['compress', 'releaserange', 'releasemessage', 'gh_release']
-  @registerTask 'releaserange', 'Set release range for release message command', ->
+  @registerTask 'releaserange', 'Set release range for release message task', ->
     done = @async()
     grunt.util.spawn {
       cmd: 'git'

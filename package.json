@@ -1,6 +1,6 @@
 {
   "name": "AgriFlex3",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Genesis child theme for Texas A&M AgriLife",
   "main": "functions.php",
   "dependencies": {
@@ -16,8 +16,7 @@
     "grunt-sass-lint": "~0.2.0",
     "curlrequest": "~0.3.10",
     "underscore": "~1.8.3",
-    "grunt-gh-release": "0.0.2",
-    "grunt-gitinfo": "~0.1.8"
+    "grunt-gh-release": "0.0.2"
   },
   "repository": "https://github.com/agrilife/agriflex3",
   "author": "J. Aaron Eaton, Travis Ward, and Zachary Watkins",
