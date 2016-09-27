@@ -122,9 +122,10 @@ module.exports = (grunt) ->
       cmd: 'git'
       args: [ 'tag' ]
     }, (err, result, code) ->
-      matches = result.stdout.match(/([^\n]+)\n([^\n]+)$/)
-      if(matches[2]!='')
-        releaserange = matches[1] + '..' + matches[2]
+      if(result.stdout!='')
+        matches = result.stdout.match(/([^\n]+)$/)
+        releaserange = matches[1] + '..HEAD'
+        grunt.log.write('Getting commit messages since' + matches[1]);
       else
         releaserange = false
       grunt.config.set 'releaserange', releaserange
