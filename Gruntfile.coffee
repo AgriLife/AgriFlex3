@@ -121,11 +121,11 @@ module.exports = (grunt) ->
     done = @async()
     grunt.util.spawn {
       cmd: 'git'
-      args: [ 'tag', '--sort=-refname', '--column' ]
+      args: [ 'tag' ]
     }, (err, result, code) ->
-      matches = result.stdout.match(/^([0-9.]*)\s*([0-9.]*)/)
+      matches = result.stdout.match(/([^\n]+)\n([^\n]+)$/)
       if(matches[2]!='')
-        releaserange = matches[2] + '..' + matches[1]
+        releaserange = matches[1] + '..' + matches[2]
       else
         releaserange = false
       grunt.config.set 'releaserange', releaserange
