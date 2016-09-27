@@ -86,17 +86,6 @@ module.exports = (grunt) ->
           {src: ['search.php']},
           {src: ['style.css']}
         ]
-    gitinfo:
-      commands:
-        'lastUpdate': [
-          'log',
-          # output from releasetags task
-          '',
-          # message format: "author: commit message"
-          '--pretty=format:"%an: %s"',
-          # exclude merge commits
-          '--no-merges'
-        ]
     gh_release:
       options:
         token: process.env.RELEASE_KEY
@@ -106,7 +95,7 @@ module.exports = (grunt) ->
         tag_name: grunt.file.readJSON('package.json').version
         target_commitish: 'master'
         name: 'Release'
-        body: '<%= gitinfo.lastUpdate %>'
+        body: '...'
         draft: false
         prerelease: false
         asset:
@@ -127,21 +116,34 @@ module.exports = (grunt) ->
   @registerTask 'default', ['coffee', 'compass:dist']
   @registerTask 'develop', ['sasslint', 'compass:dev', 'coffee', 'jshint', 'concat']
   @registerTask 'package', ['default', 'jshint', 'concat']
-  @registerTask 'release', ['releasetags', 'gitinfo', 'compress', 'gh_release']
-  @registerTask 'releasetags', 'Get last two release tags for gh_release', ->
+  @registerTask 'release', ['compress', 'releaserange', 'releasemessage', 'gh_release']
+  @registerTask 'releaserange', 'Set release range for release message command', ->
     done = @async()
     grunt.util.spawn {
       cmd: 'git'
-      args: [ 'tag', '--column' ]
+      args: [ 'tag', '--sort=-refname', '--column' ]
     }, (err, result, code) ->
-      gittags = ''
-      output = result.stdout
-      if output
-        matches = result.stdout.match(/([0-9.]*)\s+([0-9.]*)$/)
-        gittags = matches[1] + '..' + matches[2];
-      grunt.config 'gitinfo.commands.lastUpdate.1', gittags
-      done()
+      matches = result.stdout.match(/^([0-9.]*)\s*([0-9.]*)/)
+      if(matches[2]!='')
+        releaserange = matches[2] + '..' + matches[1]
+      else
+        releaserange = false
+      grunt.config.set 'releaserange', releaserange
+      done(err)
       return
+    return
+  @registerTask 'releasemessage', 'Set release message for gh_release', ->
+    done = @async()
+    if grunt.config.get('releaserange')
+      grunt.util.spawn {
+        cmd: 'git'
+        args: ['shortlog', grunt.config.get('releaserange'), '--no-merges']
+      }, (err, result, code) ->
+        grunt.config 'gh_release.release.body', result.stdout
+        done(err)
+        return
+    else
+      grunt.config 'gh_release.release.body', 'Initial release'
     return
 
   @event.on 'watch', (action, filepath) =>
