@@ -95,7 +95,7 @@ module.exports = (grunt) ->
         tag_name: grunt.file.readJSON('package.json').version
         target_commitish: 'master'
         name: 'Release'
-        body: '...'
+        body: 'First release'
         draft: false
         prerelease: false
         asset:
@@ -115,8 +115,8 @@ module.exports = (grunt) ->
   @registerTask 'default', ['coffee', 'compass:dist']
   @registerTask 'develop', ['sasslint', 'compass:dev', 'coffee', 'jshint', 'concat']
   @registerTask 'package', ['default', 'jshint', 'concat']
-  @registerTask 'release', ['compress', 'releaserange', 'releasemessage', 'gh_release']
-  @registerTask 'releaserange', 'Set release range for release message task', ->
+  @registerTask 'release', ['compress', 'setreleasemsg', 'gh_release']
+  @registerTask 'setreleasemsg', 'Set release message as range of commits', ->
     done = @async()
     grunt.util.spawn {
       cmd: 'git'
@@ -125,25 +125,23 @@ module.exports = (grunt) ->
       if(result.stdout!='')
         matches = result.stdout.match(/([^\n]+)$/)
         releaserange = matches[1] + '..HEAD'
-        grunt.log.write('Getting commit messages since' + matches[1]);
-      else
-        releaserange = false
-      grunt.config.set 'releaserange', releaserange
+        grunt.config.set 'releaserange', releaserange
+        grunt.task.run('shortlog');
       done(err)
       return
     return
-  @registerTask 'releasemessage', 'Set release message for gh_release', ->
+  @registerTask 'shortlog', 'Set gh_release body with commit messages since last release', ->
     done = @async()
-    if grunt.config.get('releaserange')
-      grunt.util.spawn {
-        cmd: 'git'
-        args: ['shortlog', grunt.config.get('releaserange'), '--no-merges']
-      }, (err, result, code) ->
-        grunt.config 'gh_release.release.body', result.stdout
-        done(err)
-        return
-    else
-      grunt.config 'gh_release.release.body', 'Initial release'
+    grunt.util.spawn {
+      cmd: 'git'
+      args: ['shortlog', grunt.config.get('releaserange'), '--no-merges']
+    }, (err, result, code) ->
+      if(result.stdout != '')
+        grunt.config 'gh_release.release.body', result.stdout.replace(/(\n)\s\s+/g, '$1- ')
+      else
+        grunt.config 'gh_release.release.body', 'release'
+      done(err)
+      return
     return
 
   @event.on 'watch', (action, filepath) =>
