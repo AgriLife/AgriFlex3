@@ -90,17 +90,17 @@ module.exports = (grunt) ->
       options:
         token: process.env.RELEASE_KEY
         owner: 'agrilife'
-        repo: grunt.file.readJSON('package.json').name
+        repo: '<%= pkg.name %>'
       release:
-        tag_name: grunt.file.readJSON('package.json').version
+        tag_name: '<%= pkg.version %>'
         target_commitish: 'master'
         name: 'Release'
         body: 'First release'
         draft: false
         prerelease: false
         asset:
-          name: 'AgriFlex3.zip'
-          file: 'AgriFlex3.zip'
+          name: '<%= pkg.name %>.zip'
+          file: '<%= pkg.name %>.zip'
           'Content-Type': 'application/zip'
 
   @loadNpmTasks 'grunt-contrib-coffee'
