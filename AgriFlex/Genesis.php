@@ -9,9 +9,6 @@ class AgriFlex_Genesis {
 
 	public function __construct() {
 
-		// Add Genesis HTML5 support
-		$this->add_html5_support();
-
 		// Add the responsive viewport
 		$this->add_responsive_viewport();
 
@@ -59,17 +56,6 @@ class AgriFlex_Genesis {
 		
 		// Add Read More excerpt link
 		add_filter( 'excerpt_more', array( $this, 'agriflex_auto_excerpt_more' ) );
-
-	}
-
-	/**
-	 * Enables HTML5 support in Genesis
-	 * @since 1.0
-	 * @return void
-	 */
-	private function add_html5_support() {
-
-		add_theme_support( 'html5' );
 
 	}
 
