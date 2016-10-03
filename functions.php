@@ -91,6 +91,8 @@ class AgriFlex {
 	private function __construct() {
 
 		add_action( 'init', array( $this, 'init' ) );
+
+    add_theme_support( 'html5', array() );
     
     // remove_filter( 'genesis_attr_nav-link-wrap', 'genesis_attributes_nav_link_wrap' );
 
