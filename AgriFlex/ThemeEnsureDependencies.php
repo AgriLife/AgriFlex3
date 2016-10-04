@@ -3,7 +3,7 @@
 /**
  * Ensure dependencies are present before allowing theme activation
  * @package AgriFlex3
- * @since 1.1.5
+ * @since 1.1.6
  */
 class AgriFlex_ThemeEnsureDependencies
 {
@@ -18,7 +18,7 @@ class AgriFlex_ThemeEnsureDependencies
 
   /**
    * Returns missing plugin names
-   * @since 1.1.5
+   * @since 1.1.6
    * @param array $neededplugins The required plugins
    * @return array
    */
@@ -68,7 +68,7 @@ class AgriFlex_ThemeEnsureDependencies
 
   /**
    * Revert theme and display error message if dependencies not met
-   * @since 1.1.5
+   * @since 1.1.6
    * @return void
    */
   public function check_theme_dependencies( $oldtheme_name, $oldtheme ) {
@@ -94,7 +94,7 @@ class AgriFlex_ThemeEnsureDependencies
 
   /**
    * Replace success message with error
-   * @since 1.1.5
+   * @since 1.1.6
    * @return void
    */
   public function update_activation_admin_notice( $translated, $original, $domain ) {
@@ -128,7 +128,7 @@ class AgriFlex_ThemeEnsureDependencies
 
   /**
    * Style success message as error
-   * @since 1.1.5
+   * @since 1.1.6
    * @return void
    */
   public function error_activation_admin_notice() {
