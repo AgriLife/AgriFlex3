@@ -19,7 +19,6 @@ class AgriFlex_ThemeEnsureDependencies
   /**
    * Returns missing plugin names
    * @since 1.1.6
-   * @param array $neededplugins The required plugins
    * @return array
    */
   private function get_missing_plugins(){
