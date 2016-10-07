@@ -78,7 +78,7 @@
 	}
 
 	.search-form {
-		width: 50%;
+		width: 100%;
 	}
 }
 
@@ -443,6 +443,15 @@ input[type="submit"] {
 					@include grid-column(4);
 				}
 			}
+		}
+	}
+
+	.entry-content .search-form input {
+		display: inline-block;
+
+		&[type="search"]{
+			width: 50%;
+			margin-right: 1rem;
 		}
 	}
 
