@@ -115,6 +115,19 @@
 	@include break-text();
 }
 
+.widget.widget_nav_menu {
+	ol, ul {
+		padding-left: 1rem;
+		list-style-position: outside;
+	}
+	ol {
+		list-style-type: decimal;
+	}
+	ul {
+		list-style: disc;
+	}
+}
+
 .posts .post {
 	clear: both;
 	font-size: 0.99em;
