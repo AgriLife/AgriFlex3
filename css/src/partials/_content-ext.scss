@@ -120,6 +120,19 @@
 
 }
 
+.widget.widget_nav_menu {
+	ol, ul {
+		padding-left: 1rem;
+		list-style-position: outside;
+	}
+	ol {
+		list-style-type: decimal;
+	}
+	ul {
+		list-style: disc;
+	}
+}
+
 /* Entry Navigation
 --------------------------------------------- */
 
