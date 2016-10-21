@@ -42,15 +42,15 @@
 		font-style: normal;
 		text-rendering: optimizelegibility;
 		background-color: #FFF;
-		padding: 8px 0;
+		padding: 16px 0;
 
 		a {
 			display: inline-block;
 			vertical-align: middle;
-			background-image: url(../img/logo-ext.png)!important;
+			background-image: url(../img/logo-ext-slim.png)!important;
 			background-repeat: no-repeat;
 			background-position: center center;
-			@include reduced-image-dimensions(115px, 380px, 156px, 10px, 10px);
+			@include reduced-image-dimensions(115px, 340px, 125px, 10px, 10px);
 			
 			~ a {
 				margin-left: 16px;
@@ -58,7 +58,7 @@
 
 			&.fourh-logo {
 				background-image: url(../img/logo-4h.png)!important;
-				@include reduced-image-dimensions(115px, 380px, 396px, 10px, 10px);
+				@include reduced-image-dimensions(55px, 380px, 396px, 10px, 10px);
 			}
 
 			&.research-logo {
@@ -68,12 +68,12 @@
 
 			&.seagrant-logo {
 				background-image: url(../img/logo-seagrant.png)!important;
-				@include reduced-image-dimensions(115px, 190px, 151px, 10px, 10px);
+				@include reduced-image-dimensions(91px, 190px, 151px, 10px, 10px);
 			}
 
 			&.txmg-logo {
 				background-image: url(../img/logo-txmg.png)!important;
-				@include reduced-image-dimensions(115px, 190px, 190px, 10px, 10px);
+				@include reduced-image-dimensions(55px, 190px, 190px, 10px, 10px);
 			}
 
 			&.txmn-logo {
@@ -431,7 +431,7 @@
 				text-align: center;
 
 				a {
-					@include reduced-image-dimensions(165px, 380px, 156px);
+					@include reduced-image-dimensions(147px, 340px, 125px);
 					width: 100%;
 
 					~ a {
@@ -440,8 +440,11 @@
 					}
 
 					&.fourh-logo {
-						@include reduced-image-dimensions(147px, 380px, 396px);
-						width: 100%;
+						@include reduced-image-dimensions(68px, 380px, 396px);
+
+						+ .txmg-logo {
+							margin-left: 8px;
+						}
 					}
 
 					&.research-logo {
@@ -450,13 +453,12 @@
 					}
 
 					&.seagrant-logo {
-						@include reduced-image-dimensions(147px, 190px, 151px);
+						@include reduced-image-dimensions(117px, 190px, 151px, 16px);
 						width: 100%;
 					}
 
 					&.txmg-logo {
-						@include reduced-image-dimensions(147px, 190px, 190px);
-						width: 100%;
+						@include reduced-image-dimensions(68px, 190px, 190px);
 					}
 
 					&.txmn-logo {
@@ -510,10 +512,10 @@
 }
 @media only screen and (min-width: 40em) and (max-width: 750px){
 	.site-header .title-area .site-title a {
-		@include reduced-image-dimensions(97px, 380px, 156px);
+		@include reduced-image-dimensions(87px, 340px, 125px);
 
 		&.fourh-logo {
-			@include reduced-image-dimensions(87px, 380px, 396px);
+			@include reduced-image-dimensions(39px, 380px, 396px);
 		}
 
 		&.research-logo {
@@ -521,11 +523,11 @@
 		}
 
 		&.seagrant-logo {
-			@include reduced-image-dimensions(87px, 190px, 151px);
+			@include reduced-image-dimensions(69px, 190px, 151px, 16px);
 		}
 
 		&.txmg-logo {
-			@include reduced-image-dimensions(87px, 190px, 190px);
+			@include reduced-image-dimensions(39px, 190px, 190px);
 		}
 
 		&.txmn-logo {
@@ -539,10 +541,10 @@
 }
 @media only screen and (min-width: 750px) and (max-width: 805px){
 	.site-header .title-area .site-title a {
-		@include reduced-image-dimensions(126px, 380px, 156px);
+		@include reduced-image-dimensions(112px, 340px, 125px);
 
 		&.fourh-logo {
-			@include reduced-image-dimensions(112px, 380px, 396px);
+			@include reduced-image-dimensions(52px, 380px, 396px);
 		}
 
 		&.research-logo {
@@ -550,11 +552,11 @@
 		}
 
 		&.seagrant-logo {
-			@include reduced-image-dimensions(112px, 190px, 151px);
+			@include reduced-image-dimensions(89px, 190px, 151px, 16px);
 		}
 
 		&.txmg-logo {
-			@include reduced-image-dimensions(112px, 190px, 190px);
+			@include reduced-image-dimensions(52px, 190px, 190px);
 		}
 
 		&.txmn-logo {
@@ -568,10 +570,10 @@
 }
 @media only screen and (min-width: 805px) and (max-width: 904px){
 	.site-header .title-area .site-title a {
-		@include reduced-image-dimensions(130px, 380px, 156px);
+		@include reduced-image-dimensions(116px, 340px, 125px);
 
 		&.fourh-logo {
-			@include reduced-image-dimensions(116px, 380px, 396px);
+			@include reduced-image-dimensions(54px, 380px, 396px);
 		}
 
 		&.research-logo {
@@ -579,11 +581,11 @@
 		}
 
 		&.seagrant-logo {
-			@include reduced-image-dimensions(116px, 190px, 151px);
+			@include reduced-image-dimensions(92px, 190px, 151px, 16px);
 		}
 
 		&.txmg-logo {
-			@include reduced-image-dimensions(116px, 190px, 190px);
+			@include reduced-image-dimensions(54px, 190px, 190px);
 		}
 
 		&.txmn-logo {
@@ -597,10 +599,10 @@
 }
 @media only screen and (min-width: 904px) and (max-width: 965px){
 	.site-header .title-area .site-title a {
-		@include reduced-image-dimensions(140px, 380px, 156px);
+		@include reduced-image-dimensions(128px, 340px, 125px);
 
 		&.fourh-logo {
-			@include reduced-image-dimensions(128px, 380px, 396px);
+			@include reduced-image-dimensions(60px, 380px, 396px);
 		}
 
 		&.research-logo {
@@ -608,11 +610,11 @@
 		}
 
 		&.seagrant-logo {
-			@include reduced-image-dimensions(128px, 190px, 151px);
+			@include reduced-image-dimensions(102px, 190px, 151px, 16px);
 		}
 
 		&.txmg-logo {
-			@include reduced-image-dimensions(128px, 190px, 190px);
+			@include reduced-image-dimensions(60px, 190px, 190px);
 		}
 
 		&.txmn-logo {
@@ -626,10 +628,10 @@
 }
 @media only screen and (min-width: 965px) and (max-width: 1035px){
 	.site-header .title-area .site-title a {
-		@include reduced-image-dimensions(146px, 380px, 156px);
+		@include reduced-image-dimensions(134px, 340px, 125px);
 
 		&.fourh-logo {
-			@include reduced-image-dimensions(134px, 380px, 396px);
+			@include reduced-image-dimensions(63px, 380px, 396px);
 		}
 
 		&.research-logo {
@@ -637,11 +639,11 @@
 		}
 
 		&.seagrant-logo {
-			@include reduced-image-dimensions(134px, 190px, 151px);
+			@include reduced-image-dimensions(107px, 190px, 151px, 16px);
 		}
 
 		&.txmg-logo {
-			@include reduced-image-dimensions(134px, 190px, 190px);
+			@include reduced-image-dimensions(63px, 190px, 190px);
 		}
 
 		&.txmn-logo {
