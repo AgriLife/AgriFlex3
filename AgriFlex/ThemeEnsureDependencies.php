@@ -30,9 +30,10 @@ class AgriFlex_ThemeEnsureDependencies
     );
     // Directories of each plugin's main file
     $siteplugins = array_map( 'strtolower', get_option('active_plugins') );
-    $networkplugins = array_map( 'strtolower',
-      str_replace( WP_PLUGIN_DIR . '/', '', wp_get_active_network_plugins())
-    );
+    $networkplugins = array();
+    if(function_exists('wp_get_active_network_plugins')){
+      $networkplugins = array_map( 'strtolower', str_replace( WP_PLUGIN_DIR . '/', '', wp_get_active_network_plugins() ) );
+    }
     $activeplugins = array_merge( $siteplugins, $networkplugins );
 
     // Missing plugins
