@@ -33,6 +33,10 @@ class AgriFlex_RequiredDOM
         //* Reposition the breadcrumbs
         $this->move_genesis_breadcrumbs();
 
+        // Alter header tags for SEO
+        add_filter( 'genesis_seo_title', array($this, 'alter_title_tag'), 10, 3 );
+        add_filter( 'genesis_seo_description', array($this, 'alter_description_tag'), 10, 3 );
+
     }
 
     /**
@@ -44,6 +48,63 @@ class AgriFlex_RequiredDOM
     {
 
         add_action('genesis_before', array($this, 'render_agency_bar'));
+
+    }
+
+    /**
+     * Replace heading tag with div
+     *
+     * @param $title The title text
+     * @param $inside
+     * @param $wrap
+     *
+     * @return string
+     */
+
+    public static function alter_title_tag( $title, $inside, $wrap ) {
+
+        return preg_replace( '/\b'.$wrap.'\b/', 'div', $title );
+
+    }
+
+    /**
+     * Replace description tag with div
+     *
+     * @param $title The title text
+     * @param $inside
+     * @param $wrap
+     *
+     * @return string
+     */
+    public function alter_description_tag( $title, $inside, $wrap ) {
+
+        // $wrap may empty for some reason
+        if(empty($wrap)){
+            preg_match( '/\w+/', $title, $results );
+            $wrap = $results ? $results[0] : 'h2';
+        }
+
+        // $inside may be empty for some reason
+        if(empty($inside)){
+            $results = preg_split('/<\/?'.$wrap.'[^>]*>/', $title);
+            $inside = sizeof($results) > 1 ? $results[1] : esc_attr( get_bloginfo('description'));
+        }
+
+        // Place wildcards where needed
+        $title = preg_replace( '/\b'.$wrap.'\b/', '%s', $title );
+        if(!empty($inside)){
+            $title = str_replace( $inside, '%s', $title );
+        }
+
+        // Add the site title before the description
+        $wrap = 'div';
+        $title = sprintf( $title,
+            $wrap,
+            $inside,
+            $wrap
+        );
+
+        return $title;
 
     }
 
@@ -78,7 +139,7 @@ class AgriFlex_RequiredDOM
     }
     public function unit_title()
     {
-        $wrap = 'h1';
+        $wrap = 'div';
         $inside = sprintf('<a href="%s" title="%s"><span>%s</span></a>', esc_attr(get_bloginfo('url')), esc_attr(get_bloginfo('name')), get_bloginfo('name'));
         $title = sprintf('<%s class="site-unit-title" itemprop="headline">%s</%s>', $wrap, $inside, $wrap);
         echo $title;
