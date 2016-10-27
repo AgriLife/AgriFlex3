@@ -73,16 +73,6 @@
 				@include reduced-image-dimensions(115px, 250px, 68px, 10px, 10px);
 			}
 
-			&.seagrant-logo {
-				background-image: url(../img/logo-seagrant.png)!important;
-				@include reduced-image-dimensions(91px, 190px, 151px, 10px, 10px);
-			}
-
-			&.txmg-logo {
-				background-image: url(../img/logo-txmg.png)!important;
-				@include reduced-image-dimensions(55px, 190px, 190px, 10px, 10px);
-			}
-
 			&.txmn-logo {
 				background-image: url(../img/logo-txmn.png)!important;
 				@include reduced-image-dimensions(115px, 190px, 112px, 10px, 10px);
@@ -112,6 +102,16 @@
 			&.fourh-logo {
 				background-image: url(../img/logo-4h.png)!important;
 				@include reduced-image-dimensions(55px, 380px, 396px, 10px, 10px);
+			}
+
+			&.seagrant-logo {
+				background-image: url(../img/logo-seagrant.png)!important;
+				@include reduced-image-dimensions(91px, 190px, 105px, 10px, 10px);
+			}
+
+			&.txmg-logo {
+				background-image: url(../img/logo-txmg.png)!important;
+				@include reduced-image-dimensions(55px, 190px, 190px, 10px, 10px);
 			}
 
 			span {
@@ -240,7 +240,8 @@
 				line-height: 1.4;
 			}
 
-			.site-secondary-logo {
+			.site-secondary-logo,
+			.site-secondary-logo a + a {
 				margin-left: 16px;
 			}
 
@@ -490,15 +491,6 @@
 						width: 100%;
 					}
 
-					&.seagrant-logo {
-						@include reduced-image-dimensions(117px, 190px, 151px, 16px);
-						width: 100%;
-					}
-
-					&.txmg-logo {
-						@include reduced-image-dimensions(68px, 190px, 190px);
-					}
-
 					&.txmn-logo {
 						@include reduced-image-dimensions(147px, 190px, 112px);
 						width: 100%;
@@ -513,16 +505,40 @@
 			}
 
 			.site-secondary-logo {
-				@include grid-column($columns: 0.5, $collapse: true);
-				padding-top: .5em;
 
+				&.fourh, &.txmg {
+					@include grid-column($columns: 0.5, $collapse: true);
+
+					+ .site-description {
+						@include grid-column($columns: 6.5);
+					}
+				}
+				
+				&.seagrant {
+					@include grid-column($columns: 0.6, $collapse: true);
+					padding-top: 11px;
+
+					+ .site-description {
+						@include grid-column($columns: 6.4);
+					}
+				}
+
+				padding-top: 0.5em;
+				
 				+ .site-description {
-					@include grid-column($columns: 6.5);
 					padding-left: 0.5em;
 				}
 
 				a.fourh-logo {
 					@include reduced-image-dimensions(36px, 380px, 396px);
+				}
+
+				a.seagrant-logo {
+					@include reduced-image-dimensions(46px, 190px, 105px);
+				}
+
+				a.txmg-logo {
+					@include reduced-image-dimensions(36px, 190px, 190px);
 				}
 			}
 
@@ -575,14 +591,6 @@
 				@include reduced-image-dimensions(87px, 250px, 68px);
 			}
 
-			&.seagrant-logo {
-				@include reduced-image-dimensions(69px, 190px, 151px, 16px);
-			}
-
-			&.txmg-logo {
-				@include reduced-image-dimensions(39px, 190px, 190px);
-			}
-
 			&.txmn-logo {
 				@include reduced-image-dimensions(87px, 190px, 112px);
 			}
@@ -592,13 +600,34 @@
 			}
 		}
 		.site-secondary-logo {
-			padding-top: 16px;
+			&.fourh, &.txmg {
+				padding-top: 16px;
+
+				+ .site-description {
+					padding-top: 9px;
+				}
+			}
+
+			&.seagrant {
+				@include grid-column($columns: 0.75, $collapse: true);
+				padding-top: 12px;
+
+				+ .site-description {
+					@include grid-column($columns: 6.25);
+				}
+			}
+
 			a.fourh-logo {
 				@include reduced-image-dimensions(26px, 380px, 396px);
 			}
-		}
-		.site-description {
-			padding-top: 9px;
+
+			a.txmg-logo {
+				@include reduced-image-dimensions(26px, 190px, 190px);
+			}
+
+			a.seagrant-logo {
+				@include reduced-image-dimensions(40px, 190px, 105px);
+			}
 		}
 	}
 }
@@ -615,14 +644,6 @@
 				@include reduced-image-dimensions(112px, 250px, 68px);
 			}
 
-			&.seagrant-logo {
-				@include reduced-image-dimensions(89px, 190px, 151px, 16px);
-			}
-
-			&.txmg-logo {
-				@include reduced-image-dimensions(52px, 190px, 190px);
-			}
-
 			&.txmn-logo {
 				@include reduced-image-dimensions(112px, 190px, 112px);
 			}
@@ -632,13 +653,34 @@
 			}
 		}
 		.site-secondary-logo {
-			padding-top: 16px;
+			&.fourh, &.txmg {
+				padding-top: 16px;
+
+				+ .site-description {
+					padding-top: 11px;
+				}
+			}
+
+			&.seagrant {
+				@include grid-column($columns: 0.7, $collapse: true);
+				padding-top: 12px;
+
+				+ .site-description {
+					@include grid-column($columns: 6.3);
+				}
+			}
+
 			a.fourh-logo {
 				@include reduced-image-dimensions(30px, 380px, 396px);
 			}
-		}
-		.site-description {
-			padding-top: 11px;
+
+			a.txmg-logo {
+				@include reduced-image-dimensions(30px, 190px, 190px);
+			}
+
+			a.seagrant-logo {
+				@include reduced-image-dimensions(40px, 190px, 105px);
+			}
 		}
 	}
 }
@@ -655,14 +697,6 @@
 				@include reduced-image-dimensions(116px, 250px, 68px);
 			}
 
-			&.seagrant-logo {
-				@include reduced-image-dimensions(92px, 190px, 151px, 16px);
-			}
-
-			&.txmg-logo {
-				@include reduced-image-dimensions(54px, 190px, 190px);
-			}
-
 			&.txmn-logo {
 				@include reduced-image-dimensions(116px, 190px, 112px);
 			}
@@ -671,8 +705,18 @@
 				@include reduced-image-dimensions(116px, 190px, 85px);
 			}
 		}
-		.site-secondary-logo a.fourh-logo {
-			@include reduced-image-dimensions(32px, 380px, 396px);
+		.site-secondary-logo {
+			a.fourh-logo {
+				@include reduced-image-dimensions(32px, 380px, 396px);
+			}
+
+			a.txmg-logo {
+				@include reduced-image-dimensions(32px, 190px, 190px);
+			}
+
+			a.seagrant-logo {
+				@include reduced-image-dimensions(40px, 190px, 105px);
+			}
 		}
 	}
 }
@@ -687,14 +731,6 @@
 
 			&.research-extension-logo {
 				@include reduced-image-dimensions(128px, 250px, 68px);
-			}
-
-			&.seagrant-logo {
-				@include reduced-image-dimensions(102px, 190px, 151px, 16px);
-			}
-
-			&.txmg-logo {
-				@include reduced-image-dimensions(60px, 190px, 190px);
 			}
 
 			&.txmn-logo {
@@ -718,14 +754,6 @@
 
 			&.research-extension-logo {
 				@include reduced-image-dimensions(134px, 250px, 68px);
-			}
-
-			&.seagrant-logo {
-				@include reduced-image-dimensions(107px, 190px, 151px, 16px);
-			}
-
-			&.txmg-logo {
-				@include reduced-image-dimensions(63px, 190px, 190px);
 			}
 
 			&.txmn-logo {
