@@ -73,11 +73,6 @@
 				@include reduced-image-dimensions(115px, 250px, 68px, 10px, 10px);
 			}
 
-			&.txmn-logo {
-				background-image: url(../img/logo-txmn.png)!important;
-				@include reduced-image-dimensions(115px, 190px, 112px, 10px, 10px);
-			}
-
 			&.tce-logo {
 				background-image: url(../img/logo-tce.png)!important;
 				@include reduced-image-dimensions(115px, 190px, 85px, 10px, 10px);
@@ -99,23 +94,20 @@
 
 		a {
 
-			&.fourh-logo {
-				background-image: url(../img/logo-4h.png)!important;
-				@include reduced-image-dimensions(55px, 380px, 396px, 10px, 10px);
+			&.fourh-logo img {
+				width: 55px;
 			}
 
-			&.seagrant-logo {
-				background-image: url(../img/logo-seagrant.png)!important;
-				@include reduced-image-dimensions(91px, 190px, 105px, 10px, 10px);
+			&.seagrant-logo img {
+				width: 91px;
 			}
 
-			&.txmg-logo {
-				background-image: url(../img/logo-txmg.png)!important;
-				@include reduced-image-dimensions(55px, 190px, 190px, 10px, 10px);
+			&.txmg-logo img {
+				width: 55px;
 			}
 
-			span {
-				display: none;
+			&.txmn-logo img {
+				width: 115px;
 			}
 		}
 	}
@@ -473,14 +465,6 @@
 						margin-top: 8px;
 					}
 
-					// &.fourh-logo {
-					// 	@include reduced-image-dimensions(68px, 380px, 396px);
-
-					// 	+ .txmg-logo {
-					// 		margin-left: 8px;
-					// 	}
-					// }
-
 					&.research-logo {
 						@include reduced-image-dimensions(147px, 180px, 69px);
 						width: 100%;
@@ -488,11 +472,6 @@
 
 					&.research-extension-logo {
 						@include reduced-image-dimensions(147px, 250px, 68px);
-						width: 100%;
-					}
-
-					&.txmn-logo {
-						@include reduced-image-dimensions(147px, 190px, 112px);
 						width: 100%;
 					}
 
@@ -505,40 +484,46 @@
 			}
 
 			.site-secondary-logo {
+				height: 50px;
+				font-size: 18px;
+				line-height: 39px;
+				padding-top: 0.2em;
+				padding-bottom: 0.2em;
+				vertical-align: middle;
 
-				&.fourh, &.txmg {
-					@include grid-column($columns: 0.5, $collapse: true);
-
-					+ .site-description {
-						@include grid-column($columns: 6.5);
-					}
-				}
-				
-				&.seagrant {
-					@include grid-column($columns: 0.6, $collapse: true);
-					padding-top: 11px;
+				&.fourh {
+					@include grid-column($columns: 0.45, $collapse: true);
 
 					+ .site-description {
-						@include grid-column($columns: 6.4);
+						@include grid-column($columns: 6.55);
 					}
 				}
 
-				padding-top: 0.5em;
-				
-				+ .site-description {
-					padding-left: 0.5em;
+				&.txmg {
+					@include grid-column($columns: 0.55, $collapse: true);
+
+					+ .site-description {
+						@include grid-column($columns: 6.45);
+					}
 				}
 
-				a.fourh-logo {
-					@include reduced-image-dimensions(36px, 380px, 396px);
+				&.seagrant,
+				&.txmn {
+					@include grid-column($columns: 0.8, $collapse: true);
+
+					+ .site-description {
+						@include grid-column($columns: 6.2);
+					}
 				}
 
-				a.seagrant-logo {
-					@include reduced-image-dimensions(46px, 190px, 105px);
+				&, &.fourh, &.txmg, &.seagrant {
+					+ .site-description {
+						padding-left: 0.5em;
+					}
 				}
 
-				a.txmg-logo {
-					@include reduced-image-dimensions(36px, 190px, 190px);
+				img {
+					width: 100%;
 				}
 			}
 
@@ -563,22 +548,20 @@
 		margin: 0 auto;
 	}
 }
-@media only screen and (min-width: 40em) and (max-width: 805px){
+@media #{$medium-up} and (max-width: 805px){
 	.agency-bar ul {
 		left: 0;
 	}
 
-	.site-header .title-area {
+	.site-header .title-area .site-title {
+		margin-top: 0;
+
 		a {
 			height: 72px;
 		}
-
-		.site-title {
-			margin-top: 0;
-		}
 	}
 }
-@media only screen and (min-width: 40em) and (max-width: 750px){
+@media #{$medium-up} and (max-width: 750px){
 	.site-header .title-area {
 		.site-title a {
 			@include reduced-image-dimensions(87px, 340px, 125px);
@@ -591,42 +574,48 @@
 				@include reduced-image-dimensions(87px, 250px, 68px);
 			}
 
-			&.txmn-logo {
-				@include reduced-image-dimensions(87px, 190px, 112px);
-			}
-
 			&.tce-logo {
 				@include reduced-image-dimensions(87px, 190px, 85px);
 			}
 		}
+
 		.site-secondary-logo {
-			&.fourh, &.txmg {
-				padding-top: 16px;
+			&.fourh {
+				@include grid-column($columns: 0.5, $collapse: true);
 
 				+ .site-description {
-					padding-top: 9px;
+					@include grid-column($columns: 6.5);
+				}
+			}
+
+			&.txmg {
+				@include grid-column($columns: 0.7, $collapse: true);
+
+				+ .site-description {
+					@include grid-column($columns: 6.3);
 				}
 			}
 
 			&.seagrant {
-				@include grid-column($columns: 0.75, $collapse: true);
-				padding-top: 12px;
+				@include grid-column($columns: 1.12, $collapse: true);
 
 				+ .site-description {
-					@include grid-column($columns: 6.25);
+					@include grid-column($columns: 5.88);
 				}
 			}
 
-			a.fourh-logo {
-				@include reduced-image-dimensions(26px, 380px, 396px);
+			&.txmn {
+				@include grid-column($columns: 1.2, $collapse: true);
+
+				+ .site-description {
+					@include grid-column($columns: 5.8);
+				}
 			}
 
-			a.txmg-logo {
-				@include reduced-image-dimensions(26px, 190px, 190px);
-			}
-
-			a.seagrant-logo {
-				@include reduced-image-dimensions(40px, 190px, 105px);
+			&, &.fourh, &.txmg, &.txmn, &.seagrant {
+				+ .site-description {
+					padding-left: 0.5em;
+				}
 			}
 		}
 	}
@@ -644,42 +633,48 @@
 				@include reduced-image-dimensions(112px, 250px, 68px);
 			}
 
-			&.txmn-logo {
-				@include reduced-image-dimensions(112px, 190px, 112px);
-			}
-
 			&.tce-logo {
 				@include reduced-image-dimensions(112px, 190px, 85px);
 			}
 		}
+
 		.site-secondary-logo {
-			&.fourh, &.txmg {
-				padding-top: 16px;
+			&.fourh {
+				@include grid-column($columns: 0.5, $collapse: true);
 
 				+ .site-description {
-					padding-top: 11px;
+					@include grid-column($columns: 6.5);
+				}
+			}
+
+			&.txmg {
+				@include grid-column($columns: 0.75, $collapse: true);
+
+				+ .site-description {
+					@include grid-column($columns: 6.25);
 				}
 			}
 
 			&.seagrant {
-				@include grid-column($columns: 0.7, $collapse: true);
-				padding-top: 12px;
+				@include grid-column($columns: 1.1, $collapse: true);
 
 				+ .site-description {
-					@include grid-column($columns: 6.3);
+					@include grid-column($columns: 5.9);
 				}
 			}
 
-			a.fourh-logo {
-				@include reduced-image-dimensions(30px, 380px, 396px);
+			&.txmn {
+				@include grid-column($columns: 1.13, $collapse: true);
+
+				+ .site-description {
+					@include grid-column($columns: 5.87);
+				}
 			}
 
-			a.txmg-logo {
-				@include reduced-image-dimensions(30px, 190px, 190px);
-			}
-
-			a.seagrant-logo {
-				@include reduced-image-dimensions(40px, 190px, 105px);
+			&, &.fourh, &.txmg, &.seagrant {
+				+ .site-description {
+					padding-left: 0.4em;
+				}
 			}
 		}
 	}
@@ -697,25 +692,48 @@
 				@include reduced-image-dimensions(116px, 250px, 68px);
 			}
 
-			&.txmn-logo {
-				@include reduced-image-dimensions(116px, 190px, 112px);
-			}
-
 			&.tce-logo {
 				@include reduced-image-dimensions(116px, 190px, 85px);
 			}
 		}
+
 		.site-secondary-logo {
-			a.fourh-logo {
-				@include reduced-image-dimensions(32px, 380px, 396px);
+			&.fourh {
+				@include grid-column($columns: 0.5, $collapse: true);
+
+				+ .site-description {
+					@include grid-column($columns: 6.5);
+				}
 			}
 
-			a.txmg-logo {
-				@include reduced-image-dimensions(32px, 190px, 190px);
+			&.txmg {
+				@include grid-column($columns: 0.7, $collapse: true);
+
+				+ .site-description {
+					@include grid-column($columns: 6.3);
+				}
 			}
 
-			a.seagrant-logo {
-				@include reduced-image-dimensions(40px, 190px, 105px);
+			&.seagrant {
+				@include grid-column($columns: 1.05, $collapse: true);
+
+				+ .site-description {
+					@include grid-column($columns: 5.95);
+				}
+			}
+
+			&.txmn {
+				@include grid-column($columns: 1.02, $collapse: true);
+
+				+ .site-description {
+					@include grid-column($columns: 5.98);
+				}
+			}
+
+			&, &.fourh, &.txmg, &.seagrant {
+				+ .site-description {
+					padding-left: 0.4em;
+				}
 			}
 		}
 	}
@@ -733,12 +751,48 @@
 				@include reduced-image-dimensions(128px, 250px, 68px);
 			}
 
-			&.txmn-logo {
-				@include reduced-image-dimensions(128px, 190px, 112px);
-			}
-
 			&.tce-logo {
 				@include reduced-image-dimensions(128px, 190px, 85px);
+			}
+		}
+
+		.site-secondary-logo {
+			&.fourh {
+				@include grid-column($columns: 0.49, $collapse: true);
+
+				+ .site-description {
+					@include grid-column($columns: 6.51);
+				}
+			}
+
+			&.txmg {
+				@include grid-column($columns: 0.63, $collapse: true);
+
+				+ .site-description {
+					@include grid-column($columns: 6.37);
+				}
+			}
+
+			&.seagrant {
+				@include grid-column($columns: 0.9, $collapse: true);
+
+				+ .site-description {
+					@include grid-column($columns: 6.1);
+				}
+			}
+
+			&.txmn {
+				@include grid-column($columns: 0.83, $collapse: true);
+
+				+ .site-description {
+					@include grid-column($columns: 6.17);
+				}
+			}
+
+			&, &.fourh, &.txmg, &.seagrant {
+				+ .site-description {
+					padding-left: 0.4em;
+				}
 			}
 		}
 	}
@@ -756,12 +810,48 @@
 				@include reduced-image-dimensions(134px, 250px, 68px);
 			}
 
-			&.txmn-logo {
-				@include reduced-image-dimensions(134px, 190px, 112px);
-			}
-
 			&.tce-logo {
 				@include reduced-image-dimensions(134px, 190px, 85px);
+			}
+		}
+
+		.site-secondary-logo {
+			&.fourh {
+				@include grid-column($columns: 0.48, $collapse: true);
+
+				+ .site-description {
+					@include grid-column($columns: 6.52);
+				}
+			}
+
+			&.txmg {
+				@include grid-column($columns: 0.58, $collapse: true);
+
+				+ .site-description {
+					@include grid-column($columns: 6.42);
+				}
+			}
+
+			&.seagrant {
+				@include grid-column($columns: 0.85, $collapse: true);
+
+				+ .site-description {
+					@include grid-column($columns: 6.15);
+				}
+			}
+
+			&.txmn {
+				@include grid-column($columns: 0.77, $collapse: true);
+
+				+ .site-description {
+					@include grid-column($columns: 6.23);
+				}
+			}
+
+			&, &.fourh, &.txmg, &.seagrant {
+				+ .site-description {
+					padding-left: 0.4em;
+				}
 			}
 		}
 	}
