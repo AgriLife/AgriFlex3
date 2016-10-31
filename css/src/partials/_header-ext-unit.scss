@@ -29,7 +29,7 @@
 
 	.title-area {
 		float: left;
-		background-color: #fff;
+		background-color: #FFF;
 		vertical-align: top;
 	}
 
@@ -89,26 +89,22 @@
 		}
 	}
 
-	.site-secondary-logo {
-		text-align: center;
+	.site-secondary-logo a {
 
-		a {
+		&.fourh-logo img {
+			width: 55px;
+		}
 
-			&.fourh-logo img {
-				width: 55px;
-			}
+		&.seagrant-logo img {
+			width: 91px;
+		}
 
-			&.seagrant-logo img {
-				width: 91px;
-			}
+		&.txmg-logo img {
+			width: 55px;
+		}
 
-			&.txmg-logo img {
-				width: 55px;
-			}
-
-			&.txmn-logo img {
-				width: 115px;
-			}
+		&.txmn-logo img {
+			width: 115px;
 		}
 	}
 
@@ -229,7 +225,13 @@
 			.site-title,
 			.site-secondary-logo {
 				font-size: 2.75rem;
-				line-height: 1.4;
+				height: 96px;
+
+				a {
+					display: inline-block;
+					height: 64px;
+					line-height: 58px;
+				}
 			}
 
 			.site-secondary-logo,
@@ -516,7 +518,7 @@
 					}
 				}
 
-				&, &.fourh, &.txmg, &.seagrant {
+				&, &.fourh, &.txmg, &.txmn, &.seagrant {
 					+ .site-description {
 						padding-left: 0.5em;
 					}
@@ -671,7 +673,7 @@
 				}
 			}
 
-			&, &.fourh, &.txmg, &.seagrant {
+			&, &.fourh, &.txmg, &.txmn, &.seagrant {
 				+ .site-description {
 					padding-left: 0.4em;
 				}
@@ -730,7 +732,7 @@
 				}
 			}
 
-			&, &.fourh, &.txmg, &.seagrant {
+			&, &.fourh, &.txmg, &.txmn, &.seagrant {
 				+ .site-description {
 					padding-left: 0.4em;
 				}
@@ -789,7 +791,7 @@
 				}
 			}
 
-			&, &.fourh, &.txmg, &.seagrant {
+			&, &.fourh, &.txmg, &.txmn, &.seagrant {
 				+ .site-description {
 					padding-left: 0.4em;
 				}
@@ -848,7 +850,7 @@
 				}
 			}
 
-			&, &.fourh, &.txmg, &.seagrant {
+			&, &.fourh, &.txmg, &.txmn, &.seagrant {
 				+ .site-description {
 					padding-left: 0.4em;
 				}
