@@ -473,7 +473,7 @@
 					}
 
 					&.research-extension-logo {
-						@include reduced-image-dimensions(147px, 250px, 68px);
+						@include reduced-image-dimensions(147px, 250px, 68px, 0, 10px);
 						width: 100%;
 					}
 
@@ -691,7 +691,7 @@
 			}
 
 			&.research-extension-logo {
-				@include reduced-image-dimensions(116px, 250px, 68px);
+				@include reduced-image-dimensions(116px, 250px, 68px, 0, 20px);
 			}
 
 			&.tce-logo {
@@ -750,7 +750,7 @@
 			}
 
 			&.research-extension-logo {
-				@include reduced-image-dimensions(128px, 250px, 68px);
+				@include reduced-image-dimensions(128px, 250px, 68px, 0, 17px);
 			}
 
 			&.tce-logo {
@@ -809,7 +809,7 @@
 			}
 
 			&.research-extension-logo {
-				@include reduced-image-dimensions(134px, 250px, 68px);
+				@include reduced-image-dimensions(134px, 250px, 68px, 0, 16px);
 			}
 
 			&.tce-logo {
