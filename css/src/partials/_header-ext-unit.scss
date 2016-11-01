@@ -5,6 +5,14 @@
 	height: $newheight + $extraheight;
 }
 
+@mixin secondary-logo-cols($logo-col-width){
+	@include grid-column($columns: $logo-col-width, $collapse: true);
+
+	+ .site-description {
+		@include grid-column($columns: 7 - $logo-col-width);
+	}
+}
+
 /* Site Header
 ---------------------------------------------------------------------------------------------------- */
 
@@ -493,30 +501,9 @@
 				padding-bottom: 0.2em;
 				vertical-align: middle;
 
-				&.fourh {
-					@include grid-column($columns: 0.45, $collapse: true);
-
-					+ .site-description {
-						@include grid-column($columns: 6.55);
-					}
-				}
-
-				&.txmg {
-					@include grid-column($columns: 0.55, $collapse: true);
-
-					+ .site-description {
-						@include grid-column($columns: 6.45);
-					}
-				}
-
-				&.seagrant,
-				&.txmn {
-					@include grid-column($columns: 0.8, $collapse: true);
-
-					+ .site-description {
-						@include grid-column($columns: 6.2);
-					}
-				}
+				&.fourh             { @include secondary-logo-cols(0.45) }
+				&.txmg              { @include secondary-logo-cols(0.55) }
+				&.seagrant, &.txmn  { @include secondary-logo-cols(0.80) }
 
 				&, &.fourh, &.txmg, &.txmn, &.seagrant {
 					+ .site-description {
@@ -582,37 +569,10 @@
 		}
 
 		.site-secondary-logo {
-			&.fourh {
-				@include grid-column($columns: 0.5, $collapse: true);
-
-				+ .site-description {
-					@include grid-column($columns: 6.5);
-				}
-			}
-
-			&.txmg {
-				@include grid-column($columns: 0.7, $collapse: true);
-
-				+ .site-description {
-					@include grid-column($columns: 6.3);
-				}
-			}
-
-			&.seagrant {
-				@include grid-column($columns: 1.12, $collapse: true);
-
-				+ .site-description {
-					@include grid-column($columns: 5.88);
-				}
-			}
-
-			&.txmn {
-				@include grid-column($columns: 1.2, $collapse: true);
-
-				+ .site-description {
-					@include grid-column($columns: 5.8);
-				}
-			}
+			&.fourh     { @include secondary-logo-cols(0.50) }
+			&.txmg      { @include secondary-logo-cols(0.70) }
+			&.seagrant  { @include secondary-logo-cols(1.12) }
+			&.txmn      { @include secondary-logo-cols(1.20) }
 
 			&, &.fourh, &.txmg, &.txmn, &.seagrant {
 				+ .site-description {
@@ -641,37 +601,10 @@
 		}
 
 		.site-secondary-logo {
-			&.fourh {
-				@include grid-column($columns: 0.5, $collapse: true);
-
-				+ .site-description {
-					@include grid-column($columns: 6.5);
-				}
-			}
-
-			&.txmg {
-				@include grid-column($columns: 0.75, $collapse: true);
-
-				+ .site-description {
-					@include grid-column($columns: 6.25);
-				}
-			}
-
-			&.seagrant {
-				@include grid-column($columns: 1.1, $collapse: true);
-
-				+ .site-description {
-					@include grid-column($columns: 5.9);
-				}
-			}
-
-			&.txmn {
-				@include grid-column($columns: 1.13, $collapse: true);
-
-				+ .site-description {
-					@include grid-column($columns: 5.87);
-				}
-			}
+			&.fourh     { @include secondary-logo-cols(0.50) }
+			&.txmg      { @include secondary-logo-cols(0.75) }
+			&.seagrant  { @include secondary-logo-cols(1.10) }
+			&.txmn      { @include secondary-logo-cols(1.13) }
 
 			&, &.fourh, &.txmg, &.txmn, &.seagrant {
 				+ .site-description {
@@ -700,37 +633,10 @@
 		}
 
 		.site-secondary-logo {
-			&.fourh {
-				@include grid-column($columns: 0.5, $collapse: true);
-
-				+ .site-description {
-					@include grid-column($columns: 6.5);
-				}
-			}
-
-			&.txmg {
-				@include grid-column($columns: 0.7, $collapse: true);
-
-				+ .site-description {
-					@include grid-column($columns: 6.3);
-				}
-			}
-
-			&.seagrant {
-				@include grid-column($columns: 1.05, $collapse: true);
-
-				+ .site-description {
-					@include grid-column($columns: 5.95);
-				}
-			}
-
-			&.txmn {
-				@include grid-column($columns: 1.02, $collapse: true);
-
-				+ .site-description {
-					@include grid-column($columns: 5.98);
-				}
-			}
+			&.fourh     { @include secondary-logo-cols(0.50) }
+			&.txmg      { @include secondary-logo-cols(0.70) }
+			&.seagrant  { @include secondary-logo-cols(1.05) }
+			&.txmn      { @include secondary-logo-cols(1.02) }
 
 			&, &.fourh, &.txmg, &.txmn, &.seagrant {
 				+ .site-description {
@@ -759,37 +665,10 @@
 		}
 
 		.site-secondary-logo {
-			&.fourh {
-				@include grid-column($columns: 0.49, $collapse: true);
-
-				+ .site-description {
-					@include grid-column($columns: 6.51);
-				}
-			}
-
-			&.txmg {
-				@include grid-column($columns: 0.63, $collapse: true);
-
-				+ .site-description {
-					@include grid-column($columns: 6.37);
-				}
-			}
-
-			&.seagrant {
-				@include grid-column($columns: 0.9, $collapse: true);
-
-				+ .site-description {
-					@include grid-column($columns: 6.1);
-				}
-			}
-
-			&.txmn {
-				@include grid-column($columns: 0.83, $collapse: true);
-
-				+ .site-description {
-					@include grid-column($columns: 6.17);
-				}
-			}
+			&.fourh     { @include secondary-logo-cols(0.49) }
+			&.txmg      { @include secondary-logo-cols(0.63) }
+			&.seagrant  { @include secondary-logo-cols(0.90) }
+			&.txmn      { @include secondary-logo-cols(0.83) }
 
 			&, &.fourh, &.txmg, &.txmn, &.seagrant {
 				+ .site-description {
@@ -818,37 +697,10 @@
 		}
 
 		.site-secondary-logo {
-			&.fourh {
-				@include grid-column($columns: 0.48, $collapse: true);
-
-				+ .site-description {
-					@include grid-column($columns: 6.52);
-				}
-			}
-
-			&.txmg {
-				@include grid-column($columns: 0.58, $collapse: true);
-
-				+ .site-description {
-					@include grid-column($columns: 6.42);
-				}
-			}
-
-			&.seagrant {
-				@include grid-column($columns: 0.85, $collapse: true);
-
-				+ .site-description {
-					@include grid-column($columns: 6.15);
-				}
-			}
-
-			&.txmn {
-				@include grid-column($columns: 0.77, $collapse: true);
-
-				+ .site-description {
-					@include grid-column($columns: 6.23);
-				}
-			}
+			&.fourh     { @include secondary-logo-cols(0.48) }
+			&.txmg      { @include secondary-logo-cols(0.58) }
+			&.seagrant  { @include secondary-logo-cols(0.85) }
+			&.txmn      { @include secondary-logo-cols(0.77) }
 
 			&, &.fourh, &.txmg, &.txmn, &.seagrant {
 				+ .site-description {
