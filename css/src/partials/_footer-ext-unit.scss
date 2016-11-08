@@ -35,8 +35,8 @@
 			display: block;
 			padding: 26px 32px;
 			float: right;
-			border-bottom: 1px solid $gray-lighter;
-			border-right: 1px solid $gray-lighter;
+			border-bottom: 1px solid $footer-text;
+			border-right: 1px solid $footer-text;
 		}
 	
 		@media screen and (max-width: 400px){
@@ -60,7 +60,7 @@
 			display: block;
 			padding: 15px 57px;
 			float: left;
-			border-bottom: 1px solid $gray-lighter;
+			border-bottom: 1px solid $footer-text;
 		}
 	
 		@media screen and (max-width: 400px){
@@ -105,7 +105,7 @@
 	.footer-container-required {
 		padding-top: 2em;
 		//@include grid-column($columns: 12);
-		border-top: 1px solid $gray-lighter;
+		border-top: 1px solid $footer-text;
 	}
 
 	p {
