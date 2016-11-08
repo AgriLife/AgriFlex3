@@ -13,7 +13,16 @@
     "grunt-contrib-concat": "~0.3.0",
     "grunt-contrib-watch": "~0.5.3",
     "grunt-contrib-compress": "~1.3.0",
-    "grunt-sass-lint": "0.2.0",
+    "grunt-sass-lint": {
+      "version": "0.2.0",
+      "from": "grunt-sass-lint@0.2.0",
+      "dependencies": {
+        "sass-lint": {
+          "version": "1.9.1",
+          "from": "sass-lint@1.9.1"
+        }
+      }
+    },
     "curlrequest": "~0.3.10",
     "underscore": "~1.8.3",
     "grunt-gh-release": "0.0.2"
