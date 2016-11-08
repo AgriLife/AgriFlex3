@@ -1,4 +1,4 @@
-@mixin reduced-image-dimensions($newwidth, $width, $height, $extrawidth:0, $extraheight:0){
+@mixin reduced-image-dimensions($newwidth, $width, $height, $extrawidth: 0, $extraheight: 0){
 	$newheight: round($newwidth * $height / $width);
 	background-size: $newwidth $newheight;
 	width: $newwidth + $extrawidth;
