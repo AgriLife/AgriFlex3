@@ -327,7 +327,7 @@ $large-up: "#{only screen} and (min-width: #{$breakpoint-large})";
 				border-width: 0 13px 10px;
 				color: #500000;
 				overflow: hidden;
-				*text-indent: -9999px;
+				text-indent: -9999px;
 				background-size: 183px 34px;
 				position: relative;
 				width: 200px + 20px + 20px + 13px + 13px;

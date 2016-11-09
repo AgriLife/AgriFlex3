@@ -18,6 +18,9 @@
     "underscore": "~1.8.3",
     "grunt-gh-release": "0.0.2"
   },
+  "engines": {
+    "node": "4.0.0"
+  },
   "repository": "https://github.com/agrilife/agriflex3",
   "author": "J. Aaron Eaton, Travis Ward, and Zachary Watkins",
   "license": "GPL2+",
