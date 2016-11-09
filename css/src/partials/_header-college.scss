@@ -35,6 +35,9 @@
 		@include adjust-font-size-to(14px);
 		font-weight: 300;
 		margin: 0;
+		font-family: "quatro-slab", serif;
+		font-style: normal;
+		text-rendering: optimizeLegibility;
 	}
 
 

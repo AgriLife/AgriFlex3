@@ -1,14 +1,22 @@
-@function scale-extension-logo($divisor){
-	$logowidth: 380px;
-	$logoheight: 156px;
-	@return ($logowidth / $divisor - $logowidth % $divisor / $divisor) ($logoheight / $divisor - $logoheight % $divisor / $divisor);
+@mixin reduced-image-dimensions($newwidth, $width, $height, $extrawidth: 0, $extraheight: 0){
+	$newheight: round($newwidth * $height / $width);
+	background-size: $newwidth $newheight;
+	width: $newwidth + $extrawidth;
+	height: $newheight + $extraheight;
+}
+
+@mixin secondary-logo-cols($logo-col-width){
+	@include grid-column($columns: $logo-col-width, $collapse: true);
+
+	+ .site-description {
+		@include grid-column($columns: 7 - $logo-col-width);
+	}
 }
 
 /* Site Header
 ---------------------------------------------------------------------------------------------------- */
 
 .site-header {
-	background-color: $header-background;
 	@include grid-row();
 
 	.wrap {
@@ -29,27 +37,54 @@
 
 	.title-area {
 		float: left;
+		background-color: #FFF;
+		vertical-align: top;
+	}
+
+	.site-title,
+	.site-secondary-logo {
+		display: inline-block;
+		font-family: "proxima-nova", sans-serif;
+		font-weight: 100;
+		background-color: #FFF;
+		padding: 16px 0;
+
+		a {
+			display: inline-block;
+			vertical-align: middle;
+			background-repeat: no-repeat;
+			background-position: center center;
+		}
 	}
 
 	.site-title {
 		margin: 0;
-		display: inline-block;
-		float: left;
-		font: 100 2.75rem "proxima-nova", sans-serif;
-		line-height: 1.4;
 		color: #222;
 		font-style: normal;
 		text-rendering: optimizelegibility;
-		padding: 0;
 
 		a {
-			display: block;
-			background-image: url(../img/logo-ext.png)!important;
-			background-repeat: no-repeat;
-			background-color: #FFF;
-			background-size: scale-extension-logo(2);
-			width: 380px / 2;
-			height: 156px / 2;
+			background-image: url(../img/logo-ext-slim.png)!important;
+			@include reduced-image-dimensions(115px, 340px, 125px, 10px, 10px);
+			
+			~ a {
+				margin-left: 16px;
+			}
+
+			&.research-logo {
+				background-image: url(../img/logo-research-maroon.png)!important;
+				@include reduced-image-dimensions(115px, 180px, 69px, 10px, 10px);
+			}
+
+			&.research-extension-logo {
+				background-image: url(../img/logo-research-extension.png)!important;
+				@include reduced-image-dimensions(115px, 250px, 68px, 10px, 10px);
+			}
+
+			&.tce-logo {
+				background-image: url(../img/logo-tce.png)!important;
+				@include reduced-image-dimensions(115px, 190px, 85px, 10px, 10px);
+			}
 
 			span {
 				display: none;
@@ -59,6 +94,25 @@
 		a,
 		a:hover {
 			color: $site-title;
+		}
+	}
+
+	.site-secondary-logo a {
+
+		&.fourh-logo img {
+			width: 55px;
+		}
+
+		&.seagrant-logo img {
+			width: 91px;
+		}
+
+		&.txmg-logo img {
+			width: 55px;
+		}
+
+		&.txmn-logo img {
+			width: 115px;
 		}
 	}
 
@@ -166,34 +220,35 @@
 
 }
 
-@media #{$small-up} {
-	.site-header .site-title a {
-		background-size: scale-extension-logo(3.3);
-	}
-}
-
 @media #{$small-only} {
 	.site-header {
 		.title-area {
 			&,
-			.site-title,
 			.site-description {
 				float: none;
 				width: 100%;
 				text-align: center;
 			}
 
-			.site-title {
-				text-align: left;
-				background: #FFF;
+			.site-title,
+			.site-secondary-logo {
+				font-size: 2.75rem;
+				height: 96px;
+
+				a {
+					display: inline-block;
+					height: 64px;
+					line-height: 58px;
+				}
 			}
 
-			.site-title a {
-				height: 58px;
-				background-position: center center;
+			.site-secondary-logo,
+			.site-secondary-logo a + a {
+				margin-left: 16px;
 			}
 
 			.site-description {
+				background-color: $header-background;
 				padding-bottom: 0.5em;
 
 				span {
@@ -405,17 +460,60 @@
 			@include grid-column($columns: 12, $collapse: true);
 			padding-bottom: 10px;
 
-			a {
-				width: 100%;
-				height: 106px;
-				background-position: center;
-				background-size: scale-extension-logo(2.3);
-			}
-
 			.site-title {
 				@include grid-column($columns: 2, $collapse: true);
 				position: relative;
 				margin-top: -42px;
+				text-align: center;
+
+				a {
+					@include reduced-image-dimensions(147px, 340px, 125px);
+					width: 100%;
+
+					~ a {
+						margin-left: 0;
+						margin-top: 8px;
+					}
+
+					&.research-logo {
+						@include reduced-image-dimensions(147px, 180px, 69px);
+						width: 100%;
+					}
+
+					&.research-extension-logo {
+						@include reduced-image-dimensions(147px, 250px, 68px, 0, 10px);
+						width: 100%;
+					}
+
+					&.tce-logo {
+						@include reduced-image-dimensions(147px, 190px, 85px);
+						width: 100%;
+					}
+
+				}
+			}
+
+			.site-secondary-logo {
+				height: 50px;
+				font-size: 18px;
+				line-height: 39px;
+				padding-top: 0.2em;
+				padding-bottom: 0.2em;
+				vertical-align: middle;
+
+				&.fourh             { @include secondary-logo-cols(0.45) }
+				&.txmg              { @include secondary-logo-cols(0.55) }
+				&.seagrant, &.txmn  { @include secondary-logo-cols(0.80) }
+
+				&, &.fourh, &.txmg, &.txmn, &.seagrant {
+					+ .site-description {
+						padding-left: 0.5em;
+					}
+				}
+
+				img {
+					width: 100%;
+				}
 			}
 
 			.site-description {
@@ -439,44 +537,177 @@
 		margin: 0 auto;
 	}
 }
-@media only screen and (min-width: 40em) and (max-width: 805px){
+@media #{$medium-up} and (max-width: 805px){
 	.agency-bar ul {
 		left: 0;
 	}
 
-	.site-header .title-area {
+	.site-header .title-area .site-title {
+		margin-top: 0;
+
 		a {
 			height: 72px;
 		}
+	}
+}
+@media #{$medium-up} and (max-width: 750px){
+	.site-header .title-area {
+		.site-title a {
+			@include reduced-image-dimensions(87px, 340px, 125px);
 
-		.site-title {
-			margin-top: 0;
+			&.research-logo {
+				@include reduced-image-dimensions(87px, 180px, 69px);
+			}
+
+			&.research-extension-logo {
+				@include reduced-image-dimensions(87px, 250px, 68px);
+			}
+
+			&.tce-logo {
+				@include reduced-image-dimensions(87px, 190px, 85px);
+			}
+		}
+
+		.site-secondary-logo {
+			&.fourh     { @include secondary-logo-cols(0.50) }
+			&.txmg      { @include secondary-logo-cols(0.70) }
+			&.seagrant  { @include secondary-logo-cols(1.12) }
+			&.txmn      { @include secondary-logo-cols(1.20) }
+
+			&, &.fourh, &.txmg, &.txmn, &.seagrant {
+				+ .site-description {
+					padding-left: 0.5em;
+				}
+			}
 		}
 	}
 }
-@media only screen and (min-width: 40em) and (max-width: 750px){
-	.site-header .site-title a {
-		background-size: scale-extension-logo(3.9);
-	}
-}
 @media only screen and (min-width: 750px) and (max-width: 805px){
-	.site-header .site-title a {
-		background-size: scale-extension-logo(3);
+	.site-header .title-area {
+		.site-title a {
+			@include reduced-image-dimensions(112px, 340px, 125px);
+
+			&.research-logo {
+				@include reduced-image-dimensions(112px, 180px, 69px);
+			}
+
+			&.research-extension-logo {
+				@include reduced-image-dimensions(112px, 250px, 68px);
+			}
+
+			&.tce-logo {
+				@include reduced-image-dimensions(112px, 190px, 85px);
+			}
+		}
+
+		.site-secondary-logo {
+			&.fourh     { @include secondary-logo-cols(0.50) }
+			&.txmg      { @include secondary-logo-cols(0.75) }
+			&.seagrant  { @include secondary-logo-cols(1.10) }
+			&.txmn      { @include secondary-logo-cols(1.13) }
+
+			&, &.fourh, &.txmg, &.txmn, &.seagrant {
+				+ .site-description {
+					padding-left: 0.4em;
+				}
+			}
+		}
 	}
 }
 @media only screen and (min-width: 805px) and (max-width: 904px){
-	.site-header .site-title a {
-		background-size: scale-extension-logo(2.92);
+	.site-header .title-area {
+		.site-title a {
+			@include reduced-image-dimensions(116px, 340px, 125px);
+
+			&.research-logo {
+				@include reduced-image-dimensions(116px, 180px, 69px);
+			}
+
+			&.research-extension-logo {
+				@include reduced-image-dimensions(116px, 250px, 68px, 0, 20px);
+			}
+
+			&.tce-logo {
+				@include reduced-image-dimensions(116px, 190px, 85px);
+			}
+		}
+
+		.site-secondary-logo {
+			&.fourh     { @include secondary-logo-cols(0.50) }
+			&.txmg      { @include secondary-logo-cols(0.70) }
+			&.seagrant  { @include secondary-logo-cols(1.05) }
+			&.txmn      { @include secondary-logo-cols(1.02) }
+
+			&, &.fourh, &.txmg, &.txmn, &.seagrant {
+				+ .site-description {
+					padding-left: 0.4em;
+				}
+			}
+		}
 	}
 }
 @media only screen and (min-width: 904px) and (max-width: 965px){
-	.site-header .site-title a {
-		background-size: scale-extension-logo(2.71);
+	.site-header .title-area {
+		.site-title a {
+			@include reduced-image-dimensions(128px, 340px, 125px);
+
+			&.research-logo {
+				@include reduced-image-dimensions(128px, 180px, 69px);
+			}
+
+			&.research-extension-logo {
+				@include reduced-image-dimensions(128px, 250px, 68px, 0, 17px);
+			}
+
+			&.tce-logo {
+				@include reduced-image-dimensions(128px, 190px, 85px);
+			}
+		}
+
+		.site-secondary-logo {
+			&.fourh     { @include secondary-logo-cols(0.49) }
+			&.txmg      { @include secondary-logo-cols(0.63) }
+			&.seagrant  { @include secondary-logo-cols(0.90) }
+			&.txmn      { @include secondary-logo-cols(0.83) }
+
+			&, &.fourh, &.txmg, &.txmn, &.seagrant {
+				+ .site-description {
+					padding-left: 0.4em;
+				}
+			}
+		}
 	}
 }
 @media only screen and (min-width: 965px) and (max-width: 1035px){
-	.site-header .site-title a {
-		background-size: scale-extension-logo(2.59);
+	.site-header .title-area {
+		.site-title a {
+			@include reduced-image-dimensions(134px, 340px, 125px);
+
+			&.research-logo {
+				@include reduced-image-dimensions(134px, 180px, 69px);
+			}
+
+			&.research-extension-logo {
+				@include reduced-image-dimensions(134px, 250px, 68px, 0, 16px);
+			}
+
+			&.tce-logo {
+				@include reduced-image-dimensions(134px, 190px, 85px);
+			}
+		}
+
+		.site-secondary-logo {
+			&.fourh     { @include secondary-logo-cols(0.48) }
+			&.txmg      { @include secondary-logo-cols(0.58) }
+			&.seagrant  { @include secondary-logo-cols(0.85) }
+			&.txmn      { @include secondary-logo-cols(0.77) }
+
+			&, &.fourh, &.txmg, &.txmn, &.seagrant {
+				+ .site-description {
+					padding-left: 0.4em;
+				}
+			}
+		}
 	}
 }
 @media #{$large-up}{
