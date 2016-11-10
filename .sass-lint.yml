@@ -69,7 +69,7 @@ rules:
   quotes:
     - 1
     -
-      style: double_quotes
+      style: double
   no-trailing-whitespace: 0
   empty-line-between-blocks: 0
   no-css-comments: 0
