@@ -1,6 +1,6 @@
 /* Page Template aglifesciences */
 
-$body-font: 'ff-meta-web-pro', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
+$body-font: "ff-meta-web-pro", "Lucida Grande", "Lucida Sans Unicode", sans-serif;
 $ornate-title-font-widgets: "quatro-slab", serif;
 $ornate-title-font-weight-widgets: 700;
 $ornate-title-font-alt: "rosewood-std-fill", sans-serif;
@@ -380,9 +380,6 @@ $large-up: "#{only screen} and (min-width: #{$breakpoint-large})";
 			float: left;
 		}
 		// Secondary Menu
-		// #wrapper #access .menu-secondary {
-		//	 display: none;
-		// }
 		.menu-secondary {
 			display: block;
 			margin: 0 auto;
