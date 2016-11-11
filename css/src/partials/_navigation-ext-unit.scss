@@ -1,5 +1,5 @@
 /* Primary Navigation
---------------------------------------------- */ 
+--------------------------------------------- */
 
 .nav-primary {
 	background: transparent;
@@ -49,7 +49,7 @@
 				&.active:not(.has-form) a:not(.button) {
 					color: #FFF;
 				}
-				
+
 				a:hover,
 				&.hover a,
 				&:not(.has-form) a:not(.button):hover,
@@ -68,13 +68,13 @@
 					text-transform: none;
 					font-size: 0.9rem;
 				}
-				
+
 				li:hover {
 					color: #FFF;
 					background-color: #222;
 				}
 
-				li.active:not(.has-form) > a:not(.button){
+				li.active:not(.has-form) > a:not(.button) {
 					background-color: #500000;
 				}
 			}
@@ -114,8 +114,8 @@
 				}
 			}
 		}
-		
-		ul.menu-search-container .search li input[type="submit"]{
+
+		ul.menu-search-container .search li input[type="submit"] {
 			border-radius: 8px;
 			border: 0 none;
 			font-size: 0.9em;
@@ -128,13 +128,13 @@
 }
 
 /* Scale down navigation menu items */
-@media only screen and (min-width: 40em) and (max-width: 990px){
+@media only screen and (min-width: 40em) and (max-width: 990px) {
 	.nav-primary .top-bar-section .menu {
 		padding-left: 0.35rem;
 		padding-right: 0.35rem;
 
 		> li {
-			a[title="home"]{
+			a[title="home"] {
 				width: rem-calc(21px) + 0.7rem;
 			}
 
@@ -180,7 +180,7 @@
 			left: 50%;
 		}
 
-		.top-bar-section{
+		.top-bar-section {
 			width: 100%;
 			max-width: 71.25rem;
 			margin-left: auto;
@@ -192,7 +192,7 @@
 				float: left !important;
 				min-height: 50px !important;
 			}
-			
+
 			.sub-menu {
 				padding-left: 0;
 				padding-right: 0;
@@ -228,7 +228,7 @@
 						> a:after {
 							top: 1.5rem;
 						}
-						
+
 						li.has-dropdown a:after {
 							top: 0;
 						}
@@ -248,9 +248,9 @@
 				}
 
 				li a[title="home"],
-				li:not(.has-form) a[title='home'],
+				li:not(.has-form) a[title="home"],
 				li:not(.has-form) a[title="home"]:hover:not(.button),
-				li.active:not(.has-form) a[title="home"]{
+				li.active:not(.has-form) a[title="home"] {
 					width: 40px;
 					padding: 0;
 					text-indent: 200%;
@@ -308,29 +308,29 @@
 
 }
 
-@media #{$large-up}{
+@media #{$large-up} {
 	.nav-primary .top-bar-section .menu {
 		max-width: rem-calc(1140);
 	}
 
 }
 
-@media #{$large-only}{
+@media #{$large-only} {
 
 }
 
-@media #{$xlarge-up}{
+@media #{$xlarge-up} {
 
 }
 
-@media #{$xlarge-only}{
+@media #{$xlarge-only} {
 
 }
 
-@media #{$xxlarge-up}{
+@media #{$xxlarge-up} {
 
 }
 
-@media #{$xxlarge-only}{
+@media #{$xxlarge-only} {
 
 }

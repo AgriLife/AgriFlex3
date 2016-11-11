@@ -21,7 +21,7 @@
 	.read-more {
 		display: block;
 		float: right;
-		
+
 		a {
 			padding: .2em 1em;
 			background: #E8E7D5;
@@ -246,7 +246,7 @@
 			padding: 1rem 0 .5rem 0;
 		}
 		.featured-title {
-			color: #000000;
+			color: #000;
 			font-size: 1.8rem;
 			line-height: 1.8rem;
 			padding: 0 0 1rem 0;
@@ -383,7 +383,7 @@
 			@include grid-column(12);
 			&:hover {
 				text-decoration: underline;
-				
+
 				.page-template-landing1.sidebar-content &,
 				.page-template-landing1.content-sidebar &,
 				.page-template-landing1.full-width-content & {
@@ -414,7 +414,7 @@
 	header {
 		margin-bottom: 1.875rem;
 	}
-	
+
 	.row {
 		padding-bottom: 1.875rem;
 
@@ -459,7 +459,7 @@
 
 }
 
-@media #{$large-up}{
+@media #{$large-up} {
 	.home {
 		.site-inner .wrap .content-sidebar-wrap {
 			width: 1140px;
@@ -501,22 +501,22 @@
 
 }
 
-@media #{$large-only}{
+@media #{$large-only} {
 
 }
 
-@media #{$xlarge-up}{
+@media #{$xlarge-up} {
 
 }
 
-@media #{$xlarge-only}{
+@media #{$xlarge-only} {
 
 }
 
-@media #{$xxlarge-up}{
+@media #{$xxlarge-up} {
 
 }
 
-@media #{$xxlarge-only}{
+@media #{$xxlarge-only} {
 
 }

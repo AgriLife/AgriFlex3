@@ -110,8 +110,8 @@ input[type="submit"] {
 		background-color: #500000;
 		@include background-image(linear-gradient(#833333, #500000));
 	}
-	-webkit-background-clip: padding-box; 
-	-moz-background-clip:		padding; 
+	-webkit-background-clip: padding-box;
+	-moz-background-clip:		padding;
 	background-clip:				 padding-box;
 }
 
@@ -156,7 +156,7 @@ input[type="submit"] {
 	header {
 		margin-bottom: 1.875rem;
 	}
-	
+
 	.columns {
 		padding-bottom: 1.875rem;
 
@@ -182,26 +182,26 @@ input[type="submit"] {
 
 }
 
-@media #{$large-up}{
+@media #{$large-up} {
 
 }
 
-@media #{$large-only}{
+@media #{$large-only} {
 
 }
 
-@media #{$xlarge-up}{
+@media #{$xlarge-up} {
 
 }
 
-@media #{$xlarge-only}{
+@media #{$xlarge-only} {
 
 }
 
-@media #{$xxlarge-up}{
+@media #{$xxlarge-up} {
 
 }
 
-@media #{$xxlarge-only}{
+@media #{$xxlarge-only} {
 
 }

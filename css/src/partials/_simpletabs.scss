@@ -8,7 +8,7 @@
  
 div.simpleTabs { padding: 1.5em 10px;}
 #content-wrap ul.simpleTabsNavigation { margin: 0 10px 0 30px; padding: 0; text-align: left; }
-ul.simpleTabsNavigation li { 
+ul.simpleTabsNavigation li {
 	list-style: none;
 	display: inline;
 	margin: 0;
@@ -22,14 +22,14 @@ ul.simpleTabsNavigation li {
 	&.l4 a { z-index: 96; @include box-shadow(#333 68px 0 44px -50px inset);}
 	&.l5 a { z-index: 95; @include box-shadow(#333 68px 0 44px -50px inset);}
 
-	a { 
+	a {
 		padding: 10px 30px 10px 30px;
-		margin-left: -27px; 
-		background: url('images/bg-titles.png') top right no-repeat transparent;
+		margin-left: -27px;
+		background: url("images/bg-titles.png") top right no-repeat transparent;
 		background-position-y: -360px;
 		color: #FFF;
-		font-size: 14px; 
-		text-decoration: none; 
+		font-size: 14px;
+		text-decoration: none;
 		font-family: Georgia, "Times New Roman", Times, serif;
 		position: relative;
 		white-space: nowrap;

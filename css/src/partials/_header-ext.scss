@@ -1,4 +1,4 @@
-@function scale-extension-logo($divisor){
+@function scale-extension-logo($divisor) {
 	$logowidth: 380px;
 	$logoheight: 156px;
 	@return ($logowidth / $divisor - $logowidth % $divisor / $divisor) ($logoheight / $divisor - $logoheight % $divisor / $divisor);
@@ -73,8 +73,8 @@
 				padding: 8px;
 
 				&:hover {
-					background-color: #666666 !important;
-					color: #FFFFFF !important;
+					background-color: #666 !important;
+					color: #FFF !important;
 				}
 			}
 		}
@@ -83,15 +83,15 @@
 			float: right;
 			margin-right: rem-calc(30);
 
-			input[type="submit"]{
+			input[type="submit"] {
 				@include visuallyhidden;
 			}
 
-			input[type="search"]{
+			input[type="search"] {
 				width: 260px;
 				border: 1px solid #D5D6DA;
 				padding: 0.1em .3em;
-				background: #FFF url('../img/search.png') no-repeat 230px 45%;
+				background: #FFF url("../img/search.png") no-repeat 230px 45%;
 				@include placeholder {
 					font-style: italic;
 					color: #C7C8CA;
@@ -207,7 +207,7 @@
 
 				a {
 					height: 42px;
-					background: url('../img/agency-nav.png');
+					background: url("../img/agency-nav.png");
 					text-indent: -9999em;
 					display: block;
 					position: absolute;
@@ -291,7 +291,7 @@
 	}
 }
 
-@media #{$large-up}{
+@media #{$large-up} {
 	.agency-bar {
 		position: absolute;
 		z-index: 99;
@@ -359,22 +359,22 @@
 
 }
 
-@media #{$large-only}{
+@media #{$large-only} {
 
 }
 
-@media #{$xlarge-up}{
+@media #{$xlarge-up} {
 
 }
 
-@media #{$xlarge-only}{
+@media #{$xlarge-only} {
 
 }
 
-@media #{$xxlarge-up}{
+@media #{$xxlarge-up} {
 
 }
 
-@media #{$xxlarge-only}{
+@media #{$xxlarge-only} {
 
 }

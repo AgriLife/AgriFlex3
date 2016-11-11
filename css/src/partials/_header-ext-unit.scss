@@ -1,11 +1,11 @@
-@mixin reduced-image-dimensions($newwidth, $width, $height, $extrawidth: 0, $extraheight: 0){
+@mixin reduced-image-dimensions($newwidth, $width, $height, $extrawidth: 0, $extraheight: 0) {
 	$newheight: round($newwidth * $height / $width);
 	background-size: $newwidth $newheight;
 	width: $newwidth + $extrawidth;
 	height: $newheight + $extraheight;
 }
 
-@mixin secondary-logo-cols($logo-col-width){
+@mixin secondary-logo-cols($logo-col-width) {
 	@include grid-column($columns: $logo-col-width, $collapse: true);
 
 	+ .site-description {
@@ -66,7 +66,7 @@
 		a {
 			background-image: url(../img/logo-ext-slim.png)!important;
 			@include reduced-image-dimensions(115px, 340px, 125px, 10px, 10px);
-			
+
 			~ a {
 				margin-left: 16px;
 			}
@@ -142,8 +142,8 @@
 				padding: 8px;
 
 				&:hover {
-					background-color: #666666 !important;
-					color: #FFFFFF !important;
+					background-color: #666 !important;
+					color: #FFF !important;
 				}
 			}
 		}
@@ -152,15 +152,15 @@
 			float: right;
 			margin-right: rem-calc(30);
 
-			input[type="submit"]{
+			input[type="submit"] {
 				@include visuallyhidden;
 			}
 
-			input[type="search"]{
+			input[type="search"] {
 				width: 210px;
 				border: 1px solid #D5D6DA;
 				padding: 0.1em .3em;
-				background: #FFF url('../img/search.png') no-repeat 180px 45%;
+				background: #FFF url("../img/search.png") no-repeat 180px 45%;
 				@include placeholder {
 					font-style: italic;
 					color: #C7C8CA;
@@ -270,7 +270,7 @@
 				margin-right: 0;
 			}
 
-			input[type="search"]{
+			input[type="search"] {
 				margin: 0;
 			}
 
@@ -312,7 +312,7 @@
 	}
 }
 
-@media #{$medium-up}{
+@media #{$medium-up} {
 
 	#imageView {
 		position: absolute;
@@ -355,7 +355,7 @@
 
 				a {
 					height: 42px;
-					background: url('../img/agency-nav.png');
+					background: url("../img/agency-nav.png");
 					text-indent: -9999em;
 					display: block;
 					position: absolute;
@@ -450,7 +450,7 @@
 			.search-form {
 				margin-right: 0;
 
-				input[type="search"]{
+				input[type="search"] {
 					margin-bottom: 0;
 				}
 			}
@@ -537,7 +537,7 @@
 		margin: 0 auto;
 	}
 }
-@media #{$medium-up} and (max-width: 805px){
+@media #{$medium-up} and (max-width: 805px) {
 	.agency-bar ul {
 		left: 0;
 	}
@@ -550,7 +550,7 @@
 		}
 	}
 }
-@media #{$medium-up} and (max-width: 750px){
+@media #{$medium-up} and (max-width: 750px) {
 	.site-header .title-area {
 		.site-title a {
 			@include reduced-image-dimensions(87px, 340px, 125px);
@@ -582,7 +582,7 @@
 		}
 	}
 }
-@media only screen and (min-width: 750px) and (max-width: 805px){
+@media only screen and (min-width: 750px) and (max-width: 805px) {
 	.site-header .title-area {
 		.site-title a {
 			@include reduced-image-dimensions(112px, 340px, 125px);
@@ -614,7 +614,7 @@
 		}
 	}
 }
-@media only screen and (min-width: 805px) and (max-width: 904px){
+@media only screen and (min-width: 805px) and (max-width: 904px) {
 	.site-header .title-area {
 		.site-title a {
 			@include reduced-image-dimensions(116px, 340px, 125px);
@@ -646,7 +646,7 @@
 		}
 	}
 }
-@media only screen and (min-width: 904px) and (max-width: 965px){
+@media only screen and (min-width: 904px) and (max-width: 965px) {
 	.site-header .title-area {
 		.site-title a {
 			@include reduced-image-dimensions(128px, 340px, 125px);
@@ -678,7 +678,7 @@
 		}
 	}
 }
-@media only screen and (min-width: 965px) and (max-width: 1035px){
+@media only screen and (min-width: 965px) and (max-width: 1035px) {
 	.site-header .title-area {
 		.site-title a {
 			@include reduced-image-dimensions(134px, 340px, 125px);
@@ -710,7 +710,7 @@
 		}
 	}
 }
-@media #{$large-up}{
+@media #{$large-up} {
 	.site-header {
 		.widget-area {
 			padding: .7em 0;
@@ -728,22 +728,22 @@
 	}
 }
 
-@media #{$large-only}{
+@media #{$large-only} {
 
 }
 
-@media #{$xlarge-up}{
+@media #{$xlarge-up} {
 
 }
 
-@media #{$xlarge-only}{
+@media #{$xlarge-only} {
 
 }
 
-@media #{$xxlarge-up}{
+@media #{$xxlarge-up} {
 
 }
 
-@media #{$xxlarge-only}{
+@media #{$xxlarge-only} {
 
 }

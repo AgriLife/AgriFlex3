@@ -60,7 +60,7 @@
 
 	.site-description,
 	.title-area,
-	.search-form{
+	.search-form {
 		text-align: center;
 	}
 
@@ -120,7 +120,7 @@
 		.site-title {
 			margin: 2em 0 0 0;
 		}
-		
+
 		.college-title {
 			margin: -20px 0 0 0;
 
@@ -262,13 +262,13 @@
 					box-shadow: 0 0 10px #222;
 					background: $nav-item-bgcolor;
 				}
-				
+
 				&:hover:after {
 					background-color: #4F5628;
 				}
 
 				a {
-					background: url('../img/college/agency-nav.png') no-repeat #{$nav-item-bgoffset-x}px 0;
+					background: url("../img/college/agency-nav.png") no-repeat #{$nav-item-bgoffset-x}px 0;
 					cursor: pointer;
 					display: block;
 					height: #{$nav-item-height}px;
@@ -336,7 +336,7 @@
 
 }
 
-@media #{$medium-up-common}{
+@media #{$medium-up-common} {
 	$nav-item-width: 116;
 	$nav-item-pipe-width: 28;
 	$nav-item-bgoffset-x: 12;
@@ -382,10 +382,10 @@
 
 }
 
-@media #{$large-up}{
+@media #{$large-up} {
 
 	.agency-bar {
-		
+
 		.agency-wrap {
 			width: $row-width;
 		}
@@ -406,18 +406,18 @@
 
 }
 
-@media #{$xlarge-up}{
+@media #{$xlarge-up} {
 
 }
 
-@media #{$xlarge-only}{
+@media #{$xlarge-only} {
 
 }
 
-@media #{$xxlarge-up}{
+@media #{$xxlarge-up} {
 
 }
 
-@media #{$xxlarge-only}{
+@media #{$xxlarge-only} {
 
 }

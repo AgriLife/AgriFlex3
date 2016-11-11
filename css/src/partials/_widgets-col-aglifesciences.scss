@@ -232,13 +232,13 @@
 
 	#aside .srp-post-content-container {
 		display: block;
-		
+
 		.srp-thumbnail-box {
 			width: 30%;
 			max-width: 100px;
 			margin-right: 15px;
 		}
-		
+
 		.srp-content-box {
 			width: 100%;
 			float: none;
@@ -263,7 +263,7 @@
 	}
 }
 
-@media #{$medium-up}{
+@media #{$medium-up} {
 	.home {
 
 		.home-widgets {
@@ -296,14 +296,14 @@
 	}
 }
 
-@media #{$large-up}{
+@media #{$large-up} {
 	.home #aside,
 	.home .home-widgets {
 		clear: none;
 	}
 }
 
-@media all and (max-width: 839px){
+@media all and (max-width: 839px) {
 	.home .header-widget-area {
 		display: none;
 	}

@@ -8,6 +8,8 @@ files:
   include: 'css/src/**/*.s+(a|c)ss'
   ignore:
     - 'sass/vendor/**/*.*'
+    - 'css/src/partials/_simpletabs.scss'
+    - 'css/src/lib/_grid.scss'
 # Rule Configuration
 rules:
   brace-style:
@@ -26,7 +28,7 @@ rules:
   no-mergeable-selectors: 2
   no-misspelled-properties:
     - 2
-    - 
+    -
       'extra-properties':
         - 'ms-filter'
         - '*text-indent'
@@ -35,20 +37,8 @@ rules:
   space-after-comma: true
   trailing-semicolon: true
   extends-before-mixins: 2
-  # extends-before-declarations: 2
-  # placeholder-in-extend: 2
-  # mixins-before-declarations:
-  #   - 2
-  #   -
-  #     exclude:
-  #       - breakpoint
-  #       - mq
-  #       - clearfix
-  #       - appearance
-
   no-warn: 1
   no-debug: 1
-  # no-ids: 1
   no-important: 1
   hex-notation:
     - 2
@@ -58,35 +48,27 @@ rules:
     - 1
     -
       size: tab
-  # property-sort-order:
-  #   - 1
-  #   -
-  #     order:
-  #       - display
-  #       - margin
-  #       - padding
-  #     ignore-custom-properties: true
   quotes:
     - 1
     -
       style: double
-  no-trailing-whitespace: 0
-  empty-line-between-blocks: 0
-  no-css-comments: 0
-  final-newline: 0
-  property-sort-order: 0
-  no-vendor-prefixes: 0
-  no-ids: 0
-  empty-args: 0
   border-zero: 0
-  mixins-before-declarations: 0
-  force-pseudo-nesting: 0
-  zero-unit: 0
-  no-qualifying-elements: 0
+  empty-args: 0
+  empty-line-between-blocks: 0
+  final-newline: 1
   force-element-nesting: 0
-  no-empty-rulesets: 0
-  space-before-brace: 0
-  no-color-literals: 0
-  single-line-per-selector: 0
+  force-pseudo-nesting: 0
+  hex-length: 1
+  mixins-before-declarations: 0
   nesting-depth: 0
-  hex-length: 0
+  no-color-literals: 0
+  no-css-comments: 0
+  no-empty-rulesets: 0
+  no-ids: 0
+  no-qualifying-elements: 0
+  no-trailing-whitespace: 1
+  no-vendor-prefixes: 0
+  property-sort-order: 0
+  single-line-per-selector: 0
+  space-before-brace: 1
+  zero-unit: 0

@@ -21,6 +21,7 @@ $total-width: gridsystem-width($columns);
 
 // The micro clearfix http://nicolasgallagher.com/micro-clearfix-hack/
 @mixin clearfix() {
+	*zoom: 1;
 
 	&:before,
 	&:after {

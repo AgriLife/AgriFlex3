@@ -246,7 +246,7 @@
 
 				a {
 					height: 42px;
-					background: url('../img/agency-nav.png');
+					background: url("../img/agency-nav.png");
 					text-indent: -9999em;
 					display: block;
 					position: absolute;
@@ -321,7 +321,7 @@
 			@include visuallyhidden;
 		}
 
-		input[type="search"]{
+		input[type="search"] {
 			width: 100%;
 			border: 1px solid #808080;
 			padding: 0.1em .3em;
@@ -351,7 +351,7 @@
 
 }
 
-@media #{$medium-up-common}{
+@media #{$medium-up-common} {
 	.agency-bar {
 		position: absolute;
 	}
@@ -369,12 +369,12 @@
 
 }
 
-@media #{$large-up}{
+@media #{$large-up} {
 
 }
 
 // $large-up is different in College variation
-@media #{only screen} and (min-width: #{ 1140px }){
+@media #{only screen} and (min-width: #{ 1140px }) {
 	.site-header {
 		.wrap {
 			padding: 16px 0;
@@ -390,22 +390,22 @@
 	}
 }
 
-@media #{$large-only}{
+@media #{$large-only} {
 
 }
 
-@media #{$xlarge-up}{
+@media #{$xlarge-up} {
 
 }
 
-@media #{$xlarge-only}{
+@media #{$xlarge-only} {
 
 }
 
-@media #{$xxlarge-up}{
+@media #{$xxlarge-up} {
 
 }
 
-@media #{$xxlarge-only}{
+@media #{$xxlarge-only} {
 
 }

@@ -43,7 +43,7 @@
 @media #{$small-only} {
 	.nav-primary {
 		background: transparent;
-		
+
 		.top-bar-section {
 
 			ul {
@@ -82,7 +82,7 @@
 					&.active:not(.has-form) a:not(.button) {
 						color: #FFF;
 					}
-					
+
 					a:hover,
 					&.hover a,
 					&:not(.has-form) a:not(.button):hover,
@@ -90,13 +90,13 @@
 						color: #FFF;
 						background-color: rgba(0, 0, 0, 0.2);
 					}
-					
+
 					li:hover {
 						color: #FFF;
 						background-color: #222;
 					}
 
-					li.active:not(.has-form) > a:not(.button){
+					li.active:not(.has-form) > a:not(.button) {
 						background-color: #500000;
 					}
 				}
@@ -128,7 +128,7 @@
 			margin-left: -9px;
 			left: 50%;
 		}
-		.top-bar-section{
+		.top-bar-section {
 			width: 100%;
 			max-width: 100%;
 			overflow: hidden;
@@ -181,9 +181,9 @@
 
 }
 
-@media #{$large-up}{
+@media #{$large-up} {
 	.nav-primary {
-		.top-bar-section{
+		.top-bar-section {
 			ul {
 				@include grid-column($columns: 7, $center: true);
 				float: none !important;
@@ -210,22 +210,22 @@
 
 }
 
-@media #{$large-only}{
+@media #{$large-only} {
 
 }
 
-@media #{$xlarge-up}{
+@media #{$xlarge-up} {
 
 }
 
-@media #{$xlarge-only}{
+@media #{$xlarge-only} {
 
 }
 
-@media #{$xxlarge-up}{
+@media #{$xxlarge-up} {
 
 }
 
-@media #{$xxlarge-only}{
+@media #{$xxlarge-only} {
 
 }
