@@ -128,7 +128,7 @@
 	}
 }
 
-.posts .post {
+body.posts:not(.search-results) .post {
 	clear: both;
 	font-size: 0.99em;
 	margin-bottom: 23px;

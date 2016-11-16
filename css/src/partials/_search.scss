@@ -1,4 +1,4 @@
-/* Google Custom Search Results
+/* Default and Google Custom Search Results
 --------------------------------------------- */
 
 .gsc-results-wrapper-visible {
@@ -10,4 +10,8 @@
 	.gsc-table-cell-snippet-open {
 		padding-left: 1em;
 	}
+}
+
+.search-results .content .entry {
+	clear: both;
 }
