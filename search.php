@@ -20,6 +20,7 @@ add_filter( 'genesis_pre_get_option_content_archive', 'show_excerpts' );
 function show_excerpts() {
 	return 'excerpts';
 }
+remove_action( 'genesis_entry_footer', 'genesis_post_meta' );
 
 // Format search result information
 function filter_function_name( $excerpt ) {
@@ -30,27 +31,27 @@ function filter_function_name( $excerpt ) {
 		// Based on single-people.php from AgriLife People plugin.
 		$parts = array();
 
-		$title = get_field('ag-people-title');
+		$title = get_field( 'ag-people-title' );
 		if($title)
 			$parts[] = 'Title: ' . $title;
 
-		$office = get_field('ag-people-office-location');
+		$office = get_field( 'ag-people-office-location' );
 		if($office)
 			$parts[] = 'Office: ' . $office;
 
-		$email = get_field('ag-people-email');
+		$email = get_field( 'ag-people-email' );
 		if($email)
 			$parts[] = 'Email: ' . $email;
 
-		$phone = get_field('ag-people-phone');
+		$phone = get_field( 'ag-people-phone' );
 		if($phone)
 			$parts[] = 'Phone: ' . $phone;
 
-		$resume = get_field('ag-people-resume');
+		$resume = get_field( 'ag-people-resume' );
 		if($resume)
 			$parts[] = 'Resume/CV: ' . $resume;
 
-		$website = get_field('ag-people-website');
+		$website = get_field( 'ag-people-website' );
 		if($website)
 			$parts[] = $website;
 
@@ -108,21 +109,23 @@ function filter_function_name( $excerpt ) {
             		break;
         }
     endwhile;
-    $content = implode(', ', $content_items);
-		if(!empty($content))
+    $content = implode( ', ', $content_items );
+		if( !empty($content) )
 			$parts[] = $content;
 
 		// Concatenate people data to string
 		$excerpt = implode( '; ', $parts );
 		// Remove HTML
 		$excerpt = wp_strip_all_tags( $excerpt );
-		// Replace special whitespace characters with normal spaces
-		$excerpt = preg_replace( '/[\s\t\r\R\v]+/', ' ', $excerpt );
-		$excerpt = preg_replace( '/[^\w\d,.;"\')]?\h\s/', ' ', $excerpt );
 		// Combine all people data for excerpt
 		$excerpt = preg_replace( '/ ;/', ';', $excerpt );
 
 	}
+
+	// Replace special and excess whitespace characters with normal spaces
+	$excerpt = str_replace( '&nbsp;', ' ', $excerpt );
+	$excerpt = preg_replace( '/[\s\t\r\n\v]+/', ' ', $excerpt );
+	$excerpt = preg_replace( '/[^\w\d,.;"\')]?\h\s/', ' ', $excerpt );
 
 	if(strpos($excerpt, 'class="read-more"') === false){
 		// Read more link not included with excerpt
