@@ -127,9 +127,13 @@ function filter_function_name( $excerpt ) {
 	$excerpt = preg_replace( '/[\s\t\r\n\v]+/', ' ', $excerpt );
 	$excerpt = preg_replace( '/[^\w\d,.;"\')]?\h\s/', ' ', $excerpt );
 
-	if(strpos($excerpt, 'class="read-more"') === false){
-		// Read more link not included with excerpt
-		$excerpt .= '<span class="read-more"><a href="' . get_permalink() . '">Read More →</a></span>';
+	// Ensure read more link is present and uses a class name for the anchor tag
+	$hasreadmore = preg_match('/(<span[^>]*class="read-more"[^>]*><a)([^>]*)(>[^<]*<\/a>)<\/span>/', $excerpt, $readmore);
+	if( $hasreadmore ){
+		$readmoreatts = $readmore[1] . ' class="read-more-link"' . $readmore[2] . $readmore[3];
+		$excerpt = str_replace( $readmore[0], $readmoreatts, $excerpt );
+	} else {
+		$excerpt .= '<span class="read-more"><a class="read-more-link" href="' . get_permalink() . '">Read More →</a></span>';
 	}
 
   return $excerpt;
