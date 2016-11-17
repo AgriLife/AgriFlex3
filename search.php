@@ -8,6 +8,8 @@
 
 // Remove search result meta data
 remove_action( 'genesis_entry_header', 'genesis_post_info', 12 );
+remove_action( 'genesis_entry_content', 'genesis_do_post_permalink', 14 );
+remove_action( 'genesis_entry_footer', 'genesis_post_meta' );
 
 // Restrict excerpt length
 add_filter( 'excerpt_length', 'sp_excerpt_length' );
@@ -20,7 +22,17 @@ add_filter( 'genesis_pre_get_option_content_archive', 'show_excerpts' );
 function show_excerpts() {
 	return 'excerpts';
 }
-remove_action( 'genesis_entry_footer', 'genesis_post_meta' );
+
+// Add search results page title
+add_action( 'genesis_before_loop', function() {
+
+  $title = sprintf( '<div class="entry-header"><h1 class="entry-title">Search Results for: %s</h1></div>',
+    get_search_query()
+  );
+
+  echo $title;
+
+});
 
 // Format search result information
 function filter_function_name( $excerpt ) {
@@ -119,6 +131,8 @@ function filter_function_name( $excerpt ) {
 		$excerpt = wp_strip_all_tags( $excerpt );
 		// Combine all people data for excerpt
 		$excerpt = preg_replace( '/ ;/', ';', $excerpt );
+		// Restrict word count
+		$excerpt = wp_trim_words( $excerpt, 50 );
 
 	}
 
@@ -139,16 +153,5 @@ function filter_function_name( $excerpt ) {
   return $excerpt;
 }
 add_filter( 'get_the_excerpt', 'filter_function_name' );
-
-// Add search results page title
-add_action( 'genesis_before_loop', function() {
-
-  $title = sprintf( '<div class="entry-header"><h1 class="entry-title">Search Results for: %s</h1></div>',
-    get_search_query()
-  );
-
-  echo $title;
-
-});
 
 genesis();
