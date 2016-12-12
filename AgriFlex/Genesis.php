@@ -12,6 +12,9 @@ class AgriFlex_Genesis {
 		// Add the responsive viewport
 		$this->add_responsive_viewport();
 
+		// Add the responsive viewport
+		$this->add_accessibility();
+
 		// Keep Genesis from loading any stylesheets
 		$this->remove_stylesheet();
 
@@ -53,7 +56,7 @@ class AgriFlex_Genesis {
 
 		// Remove some Genesis settings metaboxes
 		add_action( 'genesis_theme_settings_metaboxes', array( $this, 'remove_genesis_metaboxes' ) );
-		
+
 		// Add Read More excerpt link
 		add_filter( 'excerpt_more', array( $this, 'agriflex_auto_excerpt_more' ) );
 
@@ -67,6 +70,17 @@ class AgriFlex_Genesis {
 	private function add_responsive_viewport() {
 
 		add_theme_support( 'genesis-responsive-viewport' );
+
+	}
+
+	/**
+	 * Adds the responsive viewport meta tag
+	 * @since 1.0
+	 * @return void
+	 */
+	private function add_accessibility() {
+
+		add_theme_support( 'genesis-accessibility', array( 'search-form' ) );
 
 	}
 
