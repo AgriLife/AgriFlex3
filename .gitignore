@@ -42,8 +42,7 @@ cache
 
 # No need to version control compiled files
 css/*.css
-js/public.min.js
-js/admin.min.js
+js/*.js
 css/*.css.map
 
 # Ignore dependencies using package control
@@ -63,5 +62,5 @@ css/src/ext.css
 css/src/lib/colors-ext.css
 css/src/partials/header-ext.css
 
-# Ignore distribution files
+# Ignore release file
 AgriFlex3.zip
