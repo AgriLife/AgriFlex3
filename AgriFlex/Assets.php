@@ -10,25 +10,19 @@ class AgriFlex_Assets {
 	public function __construct() {
 
 		// Register global scripts used in the theme
-		add_action( 'wp_enqueue_scripts', array( $this, 'register_global_scripts' ) );
+		add_action( 'wp_enqueue_scripts', array( $this, 'register_public_scripts' ) );
 
 		// Enqueue global scripts
-		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_global_scripts' ) );
-		
-		// Register admin scripts used in the theme
-		add_action( 'admin_enqueue_scripts', array( $this, 'register_admin_scripts' ) );
-
-		// Enqueue admin scripts
-		add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_admin_scripts' ) );
+		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_public_scripts' ) );
 
 		// Register global styles used in the theme
-		add_action( 'wp_enqueue_scripts', array( $this, 'register_styles' ) );
+		add_action( 'wp_enqueue_scripts', array( $this, 'register_public_styles' ) );
 
 		// Enqueue global styles
-		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_global_styles' ) );
+		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_public_styles' ) );
 
-        // Bring in typekit
-        add_action( 'wp_head', array( $this, 'add_typekit' ));
+		// Bring in typekit
+		add_action( 'wp_head', array( $this, 'add_typekit' ));
 
 	}
 
@@ -37,13 +31,13 @@ class AgriFlex_Assets {
 	 * @since 1.0
 	 * @return void
 	 */
-	public function register_global_scripts() {
+	public function register_public_scripts() {
 
-    wp_register_script( 'fastclick',
-      AF_THEME_DIRURL . '/bower_components/foundation/js/vendor/fastclick.js',
-      false,
-      true
-    );
+		wp_register_script( 'fastclick',
+			AF_THEME_DIRURL . '/bower_components/foundation/js/vendor/fastclick.js',
+			false,
+			true
+		);
 
 		wp_register_script( 'foundation',
 			AF_THEME_DIRURL . '/bower_components/foundation/js/foundation/foundation.js',
@@ -59,19 +53,19 @@ class AgriFlex_Assets {
 			true
 		);
 
+		wp_register_script( 'modernizr',
+			AF_THEME_DIRURL . '/bower_components/modernizr/modernizr.js',
+			array( 'jquery' ),
+			false,
+			true
+		);
+
 		wp_register_script( 'agriflex-public',
 			AF_THEME_DIRURL . '/js/public.min.js',
 			false,
 			false,
 			true
 		);
-
-        wp_register_script( 'modernizr',
-            AF_THEME_DIRURL . '/bower_components/modernizr/modernizr.js',
-            array( 'jquery' ),
-            false,
-            true
-        );
 
 	}
 
@@ -80,7 +74,7 @@ class AgriFlex_Assets {
 	 * @since 1.0
 	 * @return void
 	 */
-	public function enqueue_global_scripts() {
+	public function enqueue_public_scripts() {
 
     wp_enqueue_script( 'fastclick' );
 		wp_enqueue_script( 'foundation' );
@@ -91,38 +85,11 @@ class AgriFlex_Assets {
 	}
 
 	/**
-	 * Registers scripts for the backend
-	 * @since 1.0
-	 * @return void
-	 */
-	public function register_admin_scripts() {
-
-		wp_register_script( 'agriflex-admin',
-			AF_THEME_DIRURL . '/js/admin.min.js',
-			false,
-			false,
-			true
-		);
-
-	}
-
-	/**
-	 * Enqueues scripts for the backend
-	 * @since 1.0
-	 * @return void
-	 */
-	public function enqueue_admin_scripts() {
-
-		wp_enqueue_script( 'agriflex-admin' );
-
-	}
-
-	/**
 	 * Registers all styles used within the theme
 	 * @since 1.0
 	 * @return void
 	 */
-	public function register_styles() {
+	public function register_public_styles() {
 
 		wp_register_style(
 			'default-styles',
@@ -140,7 +107,7 @@ class AgriFlex_Assets {
 	 * @global $wp_styles
 	 * @return void
 	 */
-	public function enqueue_global_styles() {
+	public function enqueue_public_styles() {
 
 		wp_enqueue_style( 'default-styles' );
 

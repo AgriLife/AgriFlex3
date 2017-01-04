@@ -3,34 +3,11 @@ module.exports = (grunt) ->
     pkg: @file.readJSON('package.json')
     watch:
       files: [
-        'js/src/admin/coffee/**.coffee',
-        'js/src/public/coffee/**.coffee',
-        'js/src/admin/*.js',
-        'js/src/public/*.js',
         'css/src/*.scss'
       ]
       tasks: ['develop']
-    coffee:
-      compileAdmin:
-        options:
-          bare: true
-          sourceMap: true
-        expand: true
-        cwd: 'js/src/admin/coffee'
-        src: ['*.coffee']
-        dest: 'js/src/admin/'
-        ext: '.js'
-      compilePublic:
-        options:
-          bare: true
-          sourceMap: true
-        expand: true
-        cwd: 'js/src/public/coffee'
-        src: ['*.coffee']
-        dest: 'js/src/public/'
-        ext: '.js'
     compass:
-      dist:
+      pkg:
         options:
           config: 'config.rb'
           force: true
@@ -41,26 +18,30 @@ module.exports = (grunt) ->
           outputStyle: 'expanded'
           sourcemap: true
           noLineComments: true
-    jshint:
-      files: ['js/src/admin/*.js', 'js/src/public/*.js']
+    jsvalidate:
       options:
         globals:
           jQuery: true
           console: true
           module: true
           document: true
-        force: true
+      targetName:
+        files:
+          src: [
+            'js/*.js',
+            'bower_components/foundation/js/vendor/fastclick.js',
+            'bower_components/foundation/js/foundation/foundation?(.topbar).js',
+            'bower_components/modernizr/modernizr.js',
+            'bower_components/jquery/{dist,sizzle}/**/*.js',
+            'bower_components/jquery-placeholder/*.js',
+            'bower_components/jquery.cookie/jquery.cookie.js',
+            'bower_components/respond/{cross-domain,dest}/*.js',
+            'bower_components/html5shiv/dist/html5shiv.js'
+          ]
     sasslint:
       options:
         configFile: '.sass-lint.yml'
       target: ['css/src/**/*.s+(a|c)ss']
-    concat:
-      adminjs:
-        src: ['js/src/admin/*.js']
-        dest: 'js/admin.min.js'
-      publicjs:
-        src: ['js/src/public/*.js']
-        dest: 'js/public.min.js'
     compress:
       main:
         options:
@@ -72,12 +53,12 @@ module.exports = (grunt) ->
           {src: ['js/*.js']},
           {src: ['bower_components/fastclick/lib/fastclick.js']},
           {src: ['bower_components/foundation/{css,js}/**']},
-          {src: ['bower_components/html5shiv/dist/html5shiv.js']},
+          {src: ['bower_components/modernizr/modernizr.js']},
           {src: ['bower_components/jquery/{dist,sizzle}/**/*.js']},
           {src: ['bower_components/jquery-placeholder/*.js']},
           {src: ['bower_components/jquery.cookie/jquery.cookie.js']},
-          {src: ['bower_components/modernizr/modernizr.js']},
           {src: ['bower_components/respond/{cross-domain,dest}/*.js']},
+          {src: ['bower_components/html5shiv/dist/html5shiv.js']},
           {src: ['vendor/**', '!vendor/composer/autoload_static.php']},
           {src: ['functions.php']},
           {src: ['README.md']},
@@ -103,18 +84,16 @@ module.exports = (grunt) ->
           file: '<%= pkg.name %>.zip'
           'Content-Type': 'application/zip'
 
-  @loadNpmTasks 'grunt-contrib-coffee'
   @loadNpmTasks 'grunt-contrib-compass'
-  @loadNpmTasks 'grunt-contrib-jshint'
-  @loadNpmTasks 'grunt-contrib-concat'
+  @loadNpmTasks 'grunt-jsvalidate'
   @loadNpmTasks 'grunt-contrib-watch'
   @loadNpmTasks 'grunt-contrib-compress'
   @loadNpmTasks 'grunt-gh-release'
   @loadNpmTasks 'grunt-sass-lint'
 
-  @registerTask 'default', ['coffee', 'compass:dist']
-  @registerTask 'develop', ['sasslint', 'compass:dev', 'coffee', 'jshint', 'concat']
-  @registerTask 'package', ['default', 'jshint', 'concat']
+  @registerTask 'default', ['compass:pkg']
+  @registerTask 'develop', ['sasslint', 'compass:dev', 'jsvalidate']
+  @registerTask 'package', ['compass:pkg', 'jsvalidate']
   @registerTask 'release', ['compress', 'setreleasemsg', 'gh_release']
   @registerTask 'setreleasemsg', 'Set release message as range of commits', ->
     done = @async()
@@ -126,7 +105,7 @@ module.exports = (grunt) ->
         matches = result.stdout.match(/([^\n]+)$/)
         releaserange = matches[1] + '..HEAD'
         grunt.config.set 'releaserange', releaserange
-        grunt.task.run('shortlog');
+        grunt.task.run('shortlog')
       done(err)
       return
     return
