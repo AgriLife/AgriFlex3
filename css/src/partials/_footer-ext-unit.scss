@@ -92,9 +92,9 @@
 			ul li {
 				float: none;
 				a {
-					background-color: #707274 !important;
+					background-color: #707274 !important; // sass-lint:disable-line no-important
 					border-radius: 15px;
-					color: #3F4041 !important;
+					color: #3F4041 !important; // sass-lint:disable-line no-important
 					font-size: 15px;
 					padding: 8px;
 				}

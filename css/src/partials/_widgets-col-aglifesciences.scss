@@ -205,7 +205,7 @@
 		h4 {
 			font-size: 1em;
 			line-height: 1.19em;
-			margin: 0 !important;
+			margin: 0 !important; // sass-lint:disable-line no-important
 
 			a {
 				color: #111;

@@ -35,7 +35,7 @@
 
 		a {
 			display: block;
-			background-image: url(../img/logo-ext.png)!important;
+			background-image: url(../img/logo-ext.png)!important; // sass-lint:disable-line no-important
 			background-repeat: no-repeat;
 			background-color: #FFF;
 			background-size: scale-extension-logo(2);
@@ -66,15 +66,15 @@
 			float: left;
 
 			ul li a {
-				background-color: #BCBEC1 !important;
+				background-color: #BCBEC1 !important; // sass-lint:disable-line no-important
 				border-radius: 15px;
-				color: #E7E7E7 !important;
+				color: #E7E7E7 !important; // sass-lint:disable-line no-important
 				font-size: 15px;
 				padding: 8px;
 
 				&:hover {
-					background-color: #666 !important;
-					color: #FFF !important;
+					background-color: #666 !important; // sass-lint:disable-line no-important
+					color: #FFF !important; // sass-lint:disable-line no-important
 				}
 			}
 		}

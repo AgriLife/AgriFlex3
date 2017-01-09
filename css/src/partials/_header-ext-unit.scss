@@ -64,7 +64,7 @@
 		text-rendering: optimizelegibility;
 
 		a {
-			background-image: url(../img/logo-ext-slim.png)!important;
+			background-image: url(../img/logo-ext-slim.png)!important; // sass-lint:disable-line no-important
 			@include reduced-image-dimensions(115px, 340px, 125px, 10px, 10px);
 
 			~ a {
@@ -72,17 +72,17 @@
 			}
 
 			&.research-logo {
-				background-image: url(../img/logo-research-maroon.png)!important;
+				background-image: url(../img/logo-research-maroon.png)!important; // sass-lint:disable-line no-important
 				@include reduced-image-dimensions(115px, 180px, 69px, 10px, 10px);
 			}
 
 			&.research-extension-logo {
-				background-image: url(../img/logo-research-extension.png)!important;
+				background-image: url(../img/logo-research-extension.png)!important; // sass-lint:disable-line no-important
 				@include reduced-image-dimensions(115px, 250px, 68px, 10px, 10px);
 			}
 
 			&.tce-logo {
-				background-image: url(../img/logo-tce.png)!important;
+				background-image: url(../img/logo-tce.png)!important; // sass-lint:disable-line no-important
 				@include reduced-image-dimensions(115px, 190px, 85px, 10px, 10px);
 			}
 
@@ -135,15 +135,15 @@
 		.simple-social-icons {
 
 			ul li a {
-				background-color: #BCBEC1 !important;
+				background-color: #BCBEC1 !important; // sass-lint:disable-line no-important
 				border-radius: 15px;
-				color: #E7E7E7 !important;
+				color: #E7E7E7 !important; // sass-lint:disable-line no-important
 				font-size: 15px;
 				padding: 8px;
 
 				&:hover {
-					background-color: #666 !important;
-					color: #FFF !important;
+					background-color: #666 !important; // sass-lint:disable-line no-important
+					color: #FFF !important; // sass-lint:disable-line no-important
 				}
 			}
 		}
@@ -307,7 +307,7 @@
 		}
 
 		.simple-social-icons ul li {
-			margin-bottom: 0!important;
+			margin-bottom: 0!important; // sass-lint:disable-line no-important
 		}
 	}
 }

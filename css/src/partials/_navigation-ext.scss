@@ -186,7 +186,7 @@
 		.top-bar-section {
 			ul {
 				@include grid-column($columns: 7, $center: true);
-				float: none !important;
+				float: none !important; // sass-lint:disable-line no-important
 
 				li {
 					& > a {

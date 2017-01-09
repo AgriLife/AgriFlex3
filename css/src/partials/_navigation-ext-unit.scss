@@ -149,7 +149,7 @@
 
 			&.has-dropdown {
 				> a {
-					padding-right: rem-calc(10px) + 0.7rem !important;
+					padding-right: rem-calc(10px) + 0.7rem !important; // sass-lint:disable-line no-important
 
 					&:after {
 						margin-right: 0.35rem;
@@ -189,8 +189,8 @@
 			.menu,
 			.sub-menu,
 			.menu-search-container {
-				float: left !important;
-				min-height: 50px !important;
+				float: left !important; // sass-lint:disable-line no-important
+				min-height: 50px !important; // sass-lint:disable-line no-important
 			}
 
 			.sub-menu {

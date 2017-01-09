@@ -293,7 +293,7 @@ $large-up: "#{only screen} and (min-width: #{$breakpoint-large})";
 		}
 	}
 	.home .soliloquy-container {
-		margin-bottom: 10px!important;
+		margin-bottom: 10px!important; // sass-lint:disable-line no-important
 	}
 }
 @media #{$medium-up-common} {
