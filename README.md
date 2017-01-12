@@ -1,3 +1,7 @@
+![Master branch](https://codeship.com/projects/d0772a40-d81f-0133-7930-2a00185afc36/status?branch=master) on Master branch
+
+![Staging branch](https://codeship.com/projects/d0772a40-d81f-0133-7930-2a00185afc36/status?branch=staging) on Staging branch
+
 ## WordPress Requirements
 
 1. Genesis theme
@@ -8,7 +12,7 @@
 
 * AgriLife College plugin, for sites representing the College of Agriculture and Life Sciences
 * AgriLife Extension Unit plugin, for sites representing an AgriLife Extension Unit
- 
+
 ## Installation
 
 1. Copy this repository to your desktop
@@ -40,7 +44,7 @@
 4. Run 'npm install' to set up the grunt modules
 5. Run 'bower install html5shiv#3.7.0' and 'bower install respond#1.4.1' to install JS dependencies
 6. Run 'grunt watch' and do what you do best
- 
+
 ## Developer Notes
 
 1. If you add Compass or Coffeescript files, be sure to add them to the 'Gruntfile'.
