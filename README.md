@@ -5,8 +5,8 @@
 ## WordPress Requirements
 
 1. Genesis theme
-2. [AgriLife Core plugin](https://github.com/agrilife/agrilife-core)
-3. Advanced Custom Fields plugin
+2. Advanced Custom Fields plugin
+3. [AgriLife Core plugin](https://github.com/agrilife/agrilife-core)
 
 ## Optional Site Requirements
 
@@ -47,8 +47,8 @@
 
 ## Development Notes
 
-1. If you add Compass or Coffeescript files, be sure to add them to the 'Gruntfile'.
-2. Release tasks are included, but should only be used by the repository's owners
+1. If you add Compass files, be sure to add them to the 'Gruntfile'.
+2. Release tasks can only be used by the repository's owners
 
 ## Development Requirements
 
