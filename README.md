@@ -45,17 +45,17 @@
 5. Run 'bower install html5shiv#3.7.0' and 'bower install respond#1.4.1' to install JS dependencies
 6. Run 'grunt watch' and do what you do best
 
-## Developer Notes
+## Development Notes
 
 1. If you add Compass or Coffeescript files, be sure to add them to the 'Gruntfile'.
 2. Release tasks are included, but should only be used by the repository's owners
 
-## System Requirements
+## Development Requirements
 
-* [Node][node]: http://nodejs.org/
-* [NPM][npm]: https://npmjs.org/
-* [Grunt][grunt]: http://gruntjs.com/
-* [Ruby][ruby]: http://www.ruby-lang.org/en/
-* [Ruby Gems][gems]: http://rubygems.org/
-* [Compass][compass]: http://compass-style.org/
-* [Bower][bower]: http://bower.io/
+* Node: http://nodejs.org/
+* NPM: https://npmjs.org/
+* Grunt: http://gruntjs.com/
+* Ruby: http://www.ruby-lang.org/en/
+* Ruby Gems: http://rubygems.org/
+* Compass: http://compass-style.org/
+* Bower: http://bower.io/
