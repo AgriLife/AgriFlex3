@@ -2,10 +2,12 @@
 
 ![Staging branch](https://codeship.com/projects/d0772a40-d81f-0133-7930-2a00185afc36/status?branch=staging) on Staging branch
 
+# AgriFlex3 (WordPress Theme)
+
 ## WordPress Requirements
 
 1. Genesis theme
-2. Advanced Custom Fields plugin
+2. Advanced Custom Fields 5+ plugin
 3. [AgriLife Core plugin](https://github.com/agrilife/agrilife-core)
 
 ## Optional Site Requirements
@@ -15,10 +17,8 @@
 
 ## Installation
 
-1. Copy this repository to your desktop
-2. Do one of the following:
-    a. Compress this repository and upload it to your WordPress site as a new theme
-    b. Use FTP/SFTP to upload your copy to the *themes* folder of your WordPress directory
+1. [Download the latest release](https://github.com/AgriLife/AgriFlex3/releases/latest)
+2. Upload the plugin to your site
 
 ## Features
 
