@@ -117,6 +117,7 @@ module.exports = (grunt) ->
     }, (err, result, code) ->
       if result.stdout isnt ''
         message = result.stdout.replace /(\n)\s\s+/g, '$1- '
+        message = message.replace /\s*\[skip ci\]/g, ''
         grunt.config 'gh_release.release.body', message
       done(err)
       return
