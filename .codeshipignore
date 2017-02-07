@@ -74,9 +74,5 @@ bower_components/html5shiv/
 css/src
 js/src
 
-# Prevent Composer files from being loaded if
-# they are only used for PHP5.6+
-# vendor/composer/autoload_static.php
-
 # Ignore release file
 AgriFlex3.zip
