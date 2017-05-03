@@ -72,12 +72,12 @@
 			li,
 			.type-tribe_events {
 				background-color: #F2F2F2;
-				border-bottom: 1px solid #dddddd;
-				padding: 10px 20px!important;
+				border-bottom: 1px solid #DDD;
+				padding: 10px 20px!important; // sass-lint:disable-line no-important
 				margin: 0;
 
 				&:first-child {
-					border-top: 1px solid #dddddd;
+					border-top: 1px solid #DDD;
 				}
 
 				&:hover {
