@@ -1,0 +1,406 @@
+/* Primary Navigation
+--------------------------------------------- */
+
+.nav-primary {
+	background: transparent;
+
+	.top-bar-section {
+
+		ul {
+			background-color: transparent;
+
+			&.menu-search-container {
+				clear: both;
+				padding: 0.5rem 1rem;
+
+				.search li {
+					@include grid-row($behavior: collapse);
+					background-color: transparent;
+
+					input[type="search"] {
+						@include grid-column(8);
+					}
+
+					input[type="submit"] {
+						@include grid-column($columns: 3, $offset: 1);
+					}
+				}
+			}
+		}
+
+		.menu {
+			@include grid-column($columns: 12, $center: true);
+			position: relative;
+			display: block;
+			background-color: $secondary-color;
+
+			li {
+				&.has-dropdown > a::after {
+					border-top-color: #FFF;
+				}
+
+				&,
+				&:not(.has-form) a:not(.button),
+				&.active:not(.has-form) a:not(.button) {
+					background-color: transparent;
+				}
+
+				a,
+				&.active:not(.has-form) a:not(.button) {
+					color: #FFF;
+				}
+
+				a:hover,
+				&.hover a,
+				&:not(.has-form) a:not(.button):hover,
+				&:not(.has-form):not(.active):hover > a:not(.button):hover {
+					color: #FFF;
+					background-color: rgba(0, 0, 0, 0.2);
+				}
+
+				> a {
+					text-transform: uppercase;
+					font-size: rem-calc(14);
+				}
+
+				li > a,
+				li:not(.has-form) > a:not(.button) {
+					text-transform: none;
+					font-size: 0.9rem;
+				}
+
+				li:hover {
+					color: #FFF;
+					background-color: #222;
+				}
+
+				li.active:not(.has-form) > a:not(.button) {
+					background-color: #500000;
+				}
+			}
+		}
+	}
+}
+
+@media #{$small-up} {
+
+}
+
+@media #{$small-only} {
+	.nav-primary {
+		.top-bar-section ul {
+			padding-bottom: 1rem;
+
+			ul.dropdown li {
+				a {
+					padding: 8px 0.9375rem;
+				}
+				&.parent-link a {
+					color: #FFF;
+					text-transform: uppercase;
+
+					&:hover {
+						background-color: $topbar-link-bg-color-hover;
+						color: $topbar-link-color-hover;
+
+						@if ($topbar-link-bg-hover) {
+							background: $topbar-link-bg-hover;
+						}
+					}
+				}
+				&.title h5 a {
+					color: #FFF;
+					font: bold 1.125rem/22.5px "quatro-slab", serif;
+				}
+			}
+		}
+
+		ul.menu-search-container .search li input[type="submit"] {
+			border-radius: 8px;
+			border: 0 none;
+			font-size: 0.9em;
+			line-height: 1.05rem;
+			text-transform: uppercase;
+			color: #444;
+			background-color: #F0F0F0;
+		}
+	}
+}
+
+/* Scale down navigation menu items */
+// @media only screen and (min-width: 40em) and (max-width: 990px) {
+// 	.nav-primary .top-bar-section .menu {
+// 		padding-left: 0.35rem;
+// 		padding-right: 0.35rem;
+
+// 		> li {
+// 			a[title="home"] {
+// 				width: rem-calc(21px) + 0.7rem;
+// 			}
+
+// 			> a {
+// 				font-size: 1rem;
+// 			}
+
+// 			&:not(.has-form) > a:not(.button) {
+// 				padding-left: 1.25rem;
+// 				padding-right: 1.25rem;
+// 			}
+
+// 			&.has-dropdown {
+// 				> a {
+// 					padding-right: rem-calc(36px) !important; // sass-lint:disable-line no-important
+
+// 					&:after {
+// 						margin-right: 1.25rem;
+// 					}
+// 				}
+
+// 				li.has-dropdown > a:after {
+// 					margin-right: 0.75rem;
+// 				}
+// 			}
+// 		}
+// 	}
+// }
+
+@media #{$medium-up} {
+	.nav-primary {
+		height: 3.125rem;
+		box-shadow: 0 -26px #B7B2AE inset;
+
+		.nav-arrow {
+			content: " ";
+			height: 0;
+			width: 0;
+			pointer-events: none;
+			border-left: 10px solid transparent;
+			border-right: 10px solid transparent;
+			border-bottom: 10px solid #5C0025;
+			position: absolute;
+			top: 37px;
+			margin-left: -9px;
+			left: 50%;
+		}
+
+		.top-bar-section {
+			width: 100%;
+			max-width: 71.25rem;
+			margin-left: auto;
+			margin-right: auto;
+
+			.sub-menu {
+				padding-left: 0;
+				padding-right: 0;
+			}
+
+			.menu-search-container {
+				display: none;
+			}
+
+			.menu {
+				@include grid-column($columns: 12, $center: true);
+				position: relative;
+				display: block;
+				width: auto;
+				background: transparent;
+				/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#b7b2ae+0,b7b2ae+100&0+50,1+51,1+100 */
+				background: -moz-linear-gradient(top,  rgba(183,178,174,0) 0%, rgba(183,178,174,0) 50%, rgba(183,178,174,1) 50%, rgba(183,178,174,1) 100%); /* FF3.6-15 */
+				background: -webkit-linear-gradient(top,  rgba(183,178,174,0) 0%,rgba(183,178,174,0) 50%,rgba(183,178,174,1) 50%,rgba(183,178,174,1) 100%); /* Chrome10-25,Safari5.1-6 */
+				background: linear-gradient(to bottom,  rgba(183,178,174,0) 0%,rgba(183,178,174,0) 50%,rgba(183,178,174,1) 50%,rgba(183,178,174,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+				> li {
+					position: relative;
+					padding-left: 0;
+					padding-right: 0;
+					width: auto;
+					text-align: left;
+					float: left;
+					background-color: #F2F2F2;
+
+					&:hover {
+						background-color: #fff;
+					}
+
+					a {
+						color: #777;
+						padding-left: 1.25rem;
+						padding-right: 1.25rem;
+					}
+
+					&.has-dropdown > a::after {
+						border: 0 none;
+						margin-right: 1.25rem;
+						width: 10px;
+						height: 6px;
+						background: transparent url("../img/down-arrow.png") no-repeat 50% 0;
+					}
+
+					a:hover,
+					&.hover a,
+					&:not(.has-form) a:not(.button):hover,
+					&:not(.has-form):not(.active):hover > a:not(.button):hover {
+						color: #333;
+						background: transparent;
+
+						&::after {
+							background-position: 50% -6px;
+						}
+					}
+
+					&.active:not(.has-form) {
+						background-color: $secondary-color;
+
+						&.has-dropdown > a {
+							padding-right: 2.25rem;
+
+							&::after {
+								border-top-color: #FFF;
+								background-position: 50% -12px;
+							}
+						}
+
+						> a {
+							padding-left: 1.25rem;
+							padding-right: 1.25rem;
+						}
+
+						> a:hover,
+						&.hover > a,
+						&:not(.has-form) > a:not(.button):hover,
+						&:not(.has-form):not(.active):hover > a:not(.button):hover {
+							color: #FFF;
+							background-color: transparent;
+						}
+
+						li:hover a {
+							color: #fff;
+						}
+
+						.sub-menu li:not(.active) a {
+							color: #262626;
+						}
+					}
+
+					.sub-menu {
+						padding: 5px 0;
+						border: 1px solid #262626;
+						border-color: rgba(0, 0, 0, 0.15);
+						background: #FFF;
+
+						a:not(.button) {
+							line-height: 1.2rem;
+							padding: 3px 20px;
+							color: #333;
+							background-color: #fff;
+						}
+
+						li {
+							background-color: #fff;
+
+							&:hover a {
+								background-color: #F2F2F2;
+							}
+						}
+					}
+
+					&.has-dropdown {
+						> a:after {
+							top: 1.5rem;
+						}
+
+						li.has-dropdown a:after {
+							top: 0;
+						}
+					}
+
+					a {
+						line-height: 50px;
+						background-color: transparent;
+						text-transform: none;
+						font-size: 1rem;
+					}
+
+					&.active:not(.has-form) > a:not(.button) {
+						line-height: 50px;
+					}
+				}
+
+				li a[title="home"],
+				li:not(.has-form) a[title="home"],
+				li:not(.has-form) a[title="home"]:hover:not(.button),
+				li.active:not(.has-form) a[title="home"] {
+					width: 40px;
+					padding: 0;
+					text-indent: 200%;
+					overflow: hidden;
+					white-space: nowrap;
+					background-image: url(../img/ext-bg/home-white.png);
+					background-repeat: no-repeat;
+					background-position: center 16px;
+					transition: none;
+
+					&:hover {
+						background-position: center -24px;
+					}
+				}
+			}
+
+			.has-dropdown {
+				.dropdown li.has-dropdown > a:after {
+					top: 0.8rem;
+				}
+
+				&.hover .dropdown li:hover:not(.has-form):not(.active) > a:not(.button) {
+					color: #262626;
+					background: #F5F5F5;
+				}
+			}
+		}
+	}
+	// Arrow for sections under browse
+	.single-extension-solutions .nav-primary li.browse:after,
+	.single-extension-programs .nav-primary li.browse:after,
+	.page-parent-browse .nav-primary li.browse:after,
+	// Arrow for sections under news
+	.single-post .nav-primary li.news:after,
+	.category .nav-primary li.news:after,
+	// Arrow for sections under about
+	.page-parent-about .nav-primary li.about:after,
+	// Arrow for sections under contact
+	.page-parent-contact .nav-primary li.contact:after {
+		@extend .nav-arrow;
+	}
+
+}
+
+@media #{$medium-only} {
+
+}
+
+@media #{$large-up} {
+	.nav-primary .top-bar-section .menu {
+		max-width: rem-calc(1140);
+	}
+
+}
+
+@media #{$large-only} {
+
+}
+
+@media #{$xlarge-up} {
+
+}
+
+@media #{$xlarge-only} {
+
+}
+
+@media #{$xxlarge-up} {
+
+}
+
+@media #{$xxlarge-only} {
+
+}

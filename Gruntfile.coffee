@@ -5,7 +5,7 @@ module.exports = (grunt) ->
       files: [
         'css/src/*.scss'
       ]
-      tasks: ['develop']
+      tasks: ['sasslint', 'compass:dev']
     compass:
       pkg:
         options:

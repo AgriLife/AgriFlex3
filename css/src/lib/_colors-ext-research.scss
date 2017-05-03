@@ -1,0 +1,87 @@
+/* Reusable Colors
+	 Often used to set a color scheme. Change
+	 how you please.
+--------------------------------------------- */
+$gray-dark: #303031;
+$gray-medium: #3F4041;
+$gray-light: #5E564E;
+$gray-lighter: #707274;
+$gray-lightest: #E7E7E7;
+$grey-even-lighter-than-lightest: #F6F6F6;
+$white: #FFF; // Because sometimes white isn't always white
+
+$primary-color: #1B607B;
+$secondary-color: #5C0025;
+$alert-color: #F04124;
+$success-color: #43AC6A;
+$warning-color: #F08A24;
+$info-color: #A0D3E8;
+
+/* Body
+--------------------------------------------- */
+$body-bg: $white;
+$body-font-color: $gray-medium;
+$code-color: $gray-dark;
+$code-border: $gray-lighter;
+$code-background: $gray-lightest;
+$content-bg-color: $white;
+
+
+/* Agency Bar
+--------------------------------------------- */
+$gray-agency-bar: #5E564E;
+
+/* Header
+--------------------------------------------- */
+$header-background: $gray-lightest;
+$site-title: $gray-light;
+$site-description: $white;
+
+/* Navigation
+--------------------------------------------- */
+$nav-text: $secondary-color;
+$nav-link: $secondary-color;
+$nav-sub-border: #EEE;
+
+
+$topbar-bg: $white;
+$topbar-menu-link-color: $secondary-color;
+$topbar-menu-icon-color: $secondary-color;
+$topbar-dropdown-bg: $white;
+$topbar-dropdown-toggle-color: $secondary-color;
+$topbar-dropdown-toggle-alpha: 1.0;
+$topbar-link-bg-hover: $gray-lightest;
+$topbar-link-color-hover: $gray-dark;
+
+$topbar-link-color: $secondary-color;
+$topbar-link-color-active: $secondary-color;
+$topbar-link-bg-active: $white;
+$topbar-link-bg-active-hover: $white;
+
+/* Sidebars
+--------------------------------------------- */
+$sidebar-primary-background: #EBEBEB;
+$sidebar-secondary-background: $white;
+
+/* Pagination
+--------------------------------------------- */
+$pagination-font-color: $white;
+
+/* Comments
+--------------------------------------------- */
+$comment-background: #F5F5F5;
+
+/* Widgets
+--------------------------------------------- */
+$widget-background: $white;
+$widget-entry: #F5F5F5;
+$widget-footer-background: $gray-light;
+$widget-footer-text: $gray-dark;
+$widget-footer-link: $gray-dark;
+$widget-footer-link-hover: #DDD;
+$widget-footer-form-border: #DDD;
+
+/* Footer
+--------------------------------------------- */
+$footer-text: #DBDBDD;
+$footer-background: #F2F2F2;

@@ -1,0 +1,35 @@
+// Set Extension flag
+$agency-type: "extension";
+
+// Import compass parts
+@import "compass";
+@import "compass/reset";
+
+// Import SASS components
+@import "lib/colors-ext-research"; // ext
+@import "lib/variables";
+@import "lib/mixins";
+@import "lib/functions";
+@import "lib/settings-ext-research";
+
+// Import Zurb Foundation
+@import "foundation";
+
+// Site-wide CSS
+@import "partials/typography-ext-research";
+@import "partials/objects";
+@import "partials/forms";
+@import "partials/layout-ext-research";
+@import "partials/wordpress";
+@import "partials/accessibility";
+
+// Section/page-specific CSS
+@import "partials/header-ext-research";
+@import "partials/navigation-ext-research";
+@import "partials/content-ext-research";
+@import "partials/comments";
+@import "partials/sidebars-ext-research";
+@import "partials/widgets-ext-research";
+@import "partials/search";
+@import "partials/plugins";
+@import "partials/footer-ext-research";

@@ -1,0 +1,155 @@
+/* Widgets
+---------------------------------------------------------------------------------------------------- */
+
+h4.widget-title {
+
+	&.contact-blurb {
+		text-align: center;
+	}
+}
+
+/* Featured Content
+--------------------------------------------- */
+
+.featured-content {
+
+	.entry {
+		border-bottom: 2px solid $widget-entry;
+		margin-bottom: 20px;
+		padding: 0 0 24px;
+	}
+
+	.entry-title {
+		border: none;
+		@include adjust-font-size-to(24px);
+
+		a {
+			border: none;
+		}
+	}
+
+}
+
+/* Genesis - Featured Posts Widget
+--------------------------------------------- */
+/*
+.widget.featuredpost {
+	&.featured-content .entry {
+		@include grid-row($behavior: nest);
+		border-bottom: none;
+	}
+	.entry-image {
+		@include grid-column($columns:4, $center:true);
+	}
+	.entry-header {
+		@include grid-column($columns:8, $float:right, $last-column:true, $collapse:true);
+		.entry-title {
+			font-size: 1rem;
+			line-height: 1rem;
+			a {
+				text-decoration: none;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+		.entry-time {
+			text-transform: uppercase;
+		}
+
+	}
+}
+*/
+
+/* Genesis Sandbox Featured Content Widget (home sidebar only)
+--------------------------------------------- */
+.home-sidebar .widget.featured-content {
+	.widgettitle {
+		a {
+			text-decoration: none;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	.entry {
+		@include grid-row();
+		border-bottom: none;
+
+		> .alignleft {
+			@include grid-column($columns: 4, $collapse: true);
+			float: none;
+
+			img.alignleft {
+				margin: 0;
+				float: none;
+				width: 33.333333%;
+				padding-right: 1rem;
+			}
+		}
+	}
+	.byline {
+		font-size: .9rem;
+		text-transform: uppercase;
+		@include grid-column($columns: 8, $float: right, $last-column: true, $collapse: true);
+	}
+	.entry-title {
+		float: right;
+		@include grid-column($columns: 8, $float: right, $last-column: true, $collapse: true);
+		font-size: 1rem;
+		line-height: 1rem;
+		a {
+			text-decoration: none;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	p {
+		margin-bottom: 0;
+	}
+
+}
+
+
+/* Footer Widgets
+---------------------------------------------------------------------------------------------------- */
+
+.footer-widgets {
+	background-color: $widget-footer-background;
+	color: $widget-footer-text;
+	clear: both;
+	padding: 40px 0 16px;
+
+	.widget-area {
+		float: left;
+		padding: 0 20px;
+		width: 33.3333%;
+	}
+
+	a {
+		color: $widget-footer-link;
+
+		&:hover {
+			color: $widget-footer-link-hover;
+		}
+	}
+
+	.widget {
+		margin-bottom: 24px;
+	}
+
+	.widgettitle {
+		color: $white;
+	}
+
+	li {
+		list-style-type: none;
+		margin-bottom: 6px;
+		word-wrap: break-word;
+	}
+
+	.search-form input:focus {
+		border: 1px solid $widget-footer-form-border;
+	}
+}

@@ -1,0 +1,176 @@
+/* Site Footer
+---------------------------------------------------------------------------------------------------- */
+
+.site-footer {
+	background-color: $footer-background;
+	color: $footer-text;
+	font: {
+		family: $footer-font-family;
+		weight: $footer-font-weight;
+		size: $footer-font-size;
+	}
+	line-height: 1.7em;
+	padding: 25px 0;
+
+	.wrap {
+		@include grid-row();
+		padding: 0 15px;
+	}
+
+	ul {
+		font: {
+			family: $footer-font-family;
+			weight: $footer-font-weight;
+		}
+		li {
+			display: inline;
+			padding-right: 10px;
+		}
+	}
+
+	.footer-left {
+		// text-align: center;
+
+		h4.widget-title {
+			margin: 0 0 10px;
+		}
+		.textwidget {
+			white-space: pre;
+		}
+
+		.simple-social-icons {
+			margin-top: 1em;
+			ul li {
+				float: none;
+				a {
+					background-color: #707274 !important; // sass-lint:disable-line no-important
+					border-radius: 15px;
+					color: #3F4041 !important; // sass-lint:disable-line no-important
+					font-size: 15px;
+					padding: 8px;
+				}
+			}
+		}
+	}
+
+	.footer-container-required {
+		ul {
+			margin-left: 0;
+			font-size: 0.9rem;
+		}
+	}
+
+	.footer-container-tamus {
+		text-align: right;
+
+		a {
+			display: block;
+		}
+
+		@media screen and (max-width: 400px) {
+			a {
+				padding-left: 35px;
+				padding-right: 35px;
+			}
+		}
+	}
+
+	.footer-tamus {
+		height: 76px;
+		width: 100px;
+		max-width: 100px;
+	}
+
+	p {
+		margin-bottom: 0;
+	}
+
+	a {
+		color: $footer-text;
+		text-transform: uppercase;
+		text-decoration: underline;
+	}
+
+}
+
+@media #{$small-up} {
+
+}
+
+@media #{$small-only} {
+
+	.footer-left {
+		margin-bottom: 10px;
+	}
+
+}
+
+@media #{$medium-up} {
+
+	.site-footer {
+
+		.footer-left {
+			text-align: left;
+			@include grid-column($columns: 4);
+		}
+
+		.footer-container-required {
+			@include grid-column($columns: 6);
+		}
+
+		.footer-container-tamus {
+			@include grid-column($columns: 2);
+		}
+
+	}
+
+}
+
+@media #{$medium-up} and (max-width: 990px) {
+
+	.site-footer {
+
+		.footer-left {
+			@include grid-row();
+		}
+
+		.footer-container-required {
+			@include grid-row();
+			padding-top: 10px;
+		}
+
+		.footer-container-tamus {
+			@include grid-row();
+		}
+
+	}
+
+}
+
+@media #{$medium-only} {
+
+}
+
+@media #{$large-up} {
+
+}
+
+@media #{$large-only} {
+
+}
+
+@media #{$xlarge-up} {
+
+}
+
+@media #{$xlarge-only} {
+
+}
+
+@media #{$xxlarge-up} {
+
+}
+
+@media #{$xxlarge-only} {
+
+}

@@ -178,7 +178,7 @@ class AgriFlex_RequiredDOM
     private function move_genesis_breadcrumbs()
     {
 
-        if(!defined('AG_EXT_DIRNAME') && !defined('AG_EXTUNIT_DIRNAME') ) {
+        if(!defined('AG_EXT_DIRNAME') && !defined('AG_EXTUNIT_DIRNAME') && !defined('AG_EXTRES_DIRNAME') ) {
             remove_action( 'genesis_before_loop', 'genesis_do_breadcrumbs' );
             add_action( 'genesis_before_content', 'genesis_do_breadcrumbs' );
         }
