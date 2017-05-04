@@ -23,6 +23,9 @@
 
 					input[type="submit"] {
 						@include grid-column($columns: 3, $offset: 1);
+						@include button($padding: 0, $bg: #666, $radius: 10px);
+						background-image: none;
+						margin-bottom: 0;
 					}
 				}
 			}
