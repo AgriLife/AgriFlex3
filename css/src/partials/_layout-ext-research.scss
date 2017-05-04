@@ -16,6 +16,11 @@ $total-columns: 12;
 	@include grid-row();
 	padding: 10px 0 20px;
 }
+
+.home-content {
+	margin-top: 22px;
+}
+
 header .wrap,
 .site-inner .wrap,
 footer .wrap {
