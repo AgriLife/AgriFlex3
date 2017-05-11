@@ -554,6 +554,38 @@ body #fancybox-wrap {
 		}
 	}
 
+	.flexiblecolumns.row {
+
+		.columns.summary .summary-heading {
+			line-height: 1.1em;
+		}
+
+		// Remove leftmost and rightmost padding from columns
+		&:not(.collapse) .columns {
+			$padding: 1.25rem;
+			padding-right: 0;
+			padding-left: $padding * 2;
+
+			&:first-child {
+				padding-left: 0;
+			}
+
+			&.small-12.medium-12.large-12:first-child + .columns {
+				padding-left: 0;
+				padding-right: $padding;
+
+				+ .columns {
+					padding-left: $padding / 2;
+					padding-right: $padding / 2;
+
+					+ .columns {
+						padding-left: $padding;
+					}
+				}
+			}
+		}
+	}
+
 }
 
 @media #{$medium-only} {
