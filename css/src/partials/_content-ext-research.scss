@@ -17,7 +17,7 @@
 	a {
 		text-decoration: underline;
 
-		&:hover {
+		&:hover, &:focus {
 			text-decoration: none;
 		}
 	}
@@ -595,10 +595,10 @@ body #fancybox-wrap {
 	}
 
 	.banner-fields .banner-caption {
-		$width: 90;
-		width: $width * 1%;
-		left: 50%;
-		margin-left: ($width / 2) * -1%;
+		width: 100%;
+		padding-left: 5%;
+		padding-right: 5%;
+		left: 0;
 		top: 0;
 		bottom: 0;
 		overflow: hidden;
