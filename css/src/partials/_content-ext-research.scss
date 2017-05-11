@@ -8,7 +8,7 @@
 	@include margin-trailer(2);
 }
 
-.top-image {
+.banner-fields {
 	display: none;
 }
 
@@ -430,18 +430,9 @@ input[type="submit"] {
 	}
 }
 
-.page-template-flexiblecolumns .site-inner .content {
-	.entry-header {
-		margin-bottom: 1.875rem;
-	}
-
-	.row {
-		padding-bottom: 1.875rem;
-
-		h3 {
-			margin-top: 0;
-		}
-	}
+body #fancybox-wrap {
+	padding-left: 10px;
+	padding-right: 0;
 }
 
 @media #{$small-up} {
@@ -454,11 +445,37 @@ input[type="submit"] {
 
 @media #{$medium-up} {
 
-	.top-image {
+	.banner-fields {
+		position: relative;
 		display: block;
 
 		img {
 			width: 100%;
+		}
+
+		.banner-caption {
+			position: absolute;
+			top: 0;
+			left: 0;
+			margin: 0 auto;
+			width: 100%;
+			color: #FFF;
+			text-shadow: 0 1px 2px #999;
+			text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6); // sass-lint:disable-line no-duplicate-properties
+
+			.banner-caption-inside {
+				text-align: center;
+				width: 750px;
+				margin: 0 auto;
+				padding: 0 15px;
+
+				.title {
+					font-size: 2rem;
+					font-weight: bold;
+					line-height: 1.3em;
+					margin: 0.521em 0 0.2605em;
+				}
+			}
 		}
 	}
 
@@ -573,6 +590,36 @@ input[type="submit"] {
 						line-height: 1.5em;
 					}
 				}
+			}
+		}
+	}
+
+	.banner-fields .banner-caption {
+		$width: 90;
+		width: $width * 1%;
+		left: 50%;
+		margin-left: ($width / 2) * -1%;
+		top: 0;
+		bottom: 0;
+		overflow: hidden;
+
+		.banner-caption-inside {
+			text-align: left;
+			max-width: 400px;
+			background: rgba(80, 0, 0, 0.7);
+			padding: 10px 30px 30px;
+			height: 1000px;
+			overflow: hidden;
+			left: 0;
+			margin: 0;
+
+			.title {
+				font-size: 2.4rem;
+			}
+
+			p {
+				font-size: 1.4rem;
+				line-height: 1.5em;
 			}
 		}
 	}
