@@ -7,6 +7,7 @@
  * @license      GPL-2.0+
  */
 
+
 // Initialize Genesis
 require_once TEMPLATEPATH . '/lib/init.php';
 
@@ -33,7 +34,7 @@ class AgriFlex {
 		add_action( 'init', array( $this, 'init' ) );
 
     add_theme_support( 'html5', array() );
-    
+
     // remove_filter( 'genesis_attr_nav-link-wrap', 'genesis_attributes_nav_link_wrap' );
 
 	}
