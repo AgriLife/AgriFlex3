@@ -2,7 +2,7 @@
 
 ![Staging branch](https://codeship.com/projects/d0772a40-d81f-0133-7930-2a00185afc36/status?branch=staging) on Staging branch
 
-# AgriFlex3 (WordPress Theme)
+# AgriFlex3 (WordPress Theme) by AgriLife Communications
 
 ## WordPress Requirements
 
