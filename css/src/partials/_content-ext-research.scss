@@ -586,10 +586,13 @@ body #fancybox-wrap {
 		}
 	}
 
+	.page-template-people-list .row {
+		max-width: 750px;
+	}
+
 }
 
 @media #{$medium-only} {
-
 }
 
 @media #{$large-up} {
@@ -654,6 +657,10 @@ body #fancybox-wrap {
 				line-height: 1.5em;
 			}
 		}
+	}
+
+	.page-template-people-list .row {
+		max-width: 100%;
 	}
 
 }
