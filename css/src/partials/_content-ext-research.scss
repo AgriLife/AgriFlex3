@@ -593,6 +593,11 @@ body #fancybox-wrap {
 }
 
 @media #{$medium-only} {
+	.page-template-people-list .row {
+	  display: flex;
+	  flex-direction: row;
+	  flex-wrap: wrap;
+	}
 }
 
 @media #{$large-up} {
