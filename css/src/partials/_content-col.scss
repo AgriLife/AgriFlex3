@@ -351,12 +351,45 @@ body.page-template-landing-aglifesciences .home-content a:not(.accordion-title):
 	}
 }
 
+.job-listing-item {
+	.job-listing-link {
+		text-decoration: none;
+	}
+}
+.job_posting .job-posting-details dd.job-posting-dd {
+	word-wrap: break-word;
+}
+
 @media #{$small-up} {
 
 }
 
 @media #{$small-only} {
+	.job-posting-dl {
+		dd.job-posting-dd {
+			margin-top: -3.19em;
+		}
 
+		dt.job-posting-dt.job-posting-website,
+		dt.job-posting-dt.job-posting-description,
+		dt.job-posting-dt.job-posting-qualifications {
+			line-height: 1.6em;
+
+			&, & + dd {
+				padding: 0;
+				margin: 0;
+			}
+
+			& + dd {
+				padding-bottom: 1em;
+				margin-bottom: 0.7em;
+			}
+		}
+
+		dt.job-posting-dt.job-posting-website {
+			margin-top: 0.6em;
+		}
+	}
 }
 
 @media #{$medium-up} {
