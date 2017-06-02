@@ -360,16 +360,18 @@ body.page-template-landing-aglifesciences .home-content a:not(.accordion-title):
 	word-wrap: break-word;
 }
 
+.job-posting-dl {
+	dd.job-posting-dd {
+		margin-top: -3.19em;
+	}
+}
+
 @media #{$small-up} {
 
 }
 
 @media #{$small-only} {
 	.job-posting-dl {
-		dd.job-posting-dd {
-			margin-top: -3.19em;
-		}
-
 		dt.job-posting-dt.job-posting-website,
 		dt.job-posting-dt.job-posting-description,
 		dt.job-posting-dt.job-posting-qualifications {
