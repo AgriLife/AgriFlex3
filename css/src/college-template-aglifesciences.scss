@@ -17,6 +17,7 @@ $medium-up-common: "#{only screen} and (min-width:#{ 970px })";
 $medium-up-agriflex3: "#{only screen} and (min-width: #{$breakpoint-medium-agriflex3})";
 $large-up: "#{only screen} and (min-width: #{$breakpoint-large})";
 
+@import "compass/css3/images";
 @import "compass/css3/box-shadow";
 @import "compass/css3/transition";
 @import "lib/colors-college";
@@ -307,6 +308,17 @@ $large-up: "#{only screen} and (min-width: #{$breakpoint-large})";
 			height: 0;
 			min-height: 400px;
 			padding-bottom: 25%;
+
+			&:after {
+				content: "";
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				height: 20%;
+				@include background-image(linear-gradient(top, rgba(212, 212, 212, 0) 0, rgba(212, 212, 212, 100%) 100%));
+				background-repeat: repeat-x;
+			}
 		}
 		.agency-bar {
 			display: block;
