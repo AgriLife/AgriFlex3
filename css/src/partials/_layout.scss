@@ -29,6 +29,7 @@ body {
 		// IE9 SVG, needs conditional override of 'filter' to 'none'
 		$experimental-support-for-svg: true !global;
 		@include background-image(linear-gradient(top, #FFF 0, #FFF 10%, #D4D4D4 29%, #D4D4D4 100%));
+		background-repeat: repeat-x;
 	}
 }
 /* Header
