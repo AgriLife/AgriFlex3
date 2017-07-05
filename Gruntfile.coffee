@@ -59,7 +59,7 @@ module.exports = (grunt) ->
           {src: ['bower_components/jquery.cookie/jquery.cookie.js']},
           {src: ['bower_components/respond/{cross-domain,dest}/*.js']},
           {src: ['bower_components/html5shiv/dist/html5shiv.js']},
-          {src: ['vendor/**', '!vendor/composer/autoload_static.php']},
+          {src: ['vendor/**']},
           {src: ['functions.php']},
           {src: ['README.md']},
           {src: ['rtl.css']},
