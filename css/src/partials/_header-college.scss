@@ -1,6 +1,6 @@
 /* Site Header
 ---------------------------------------------------------------------------------------------------- */
-@mixin header-search-width($breakpoint){
+@mixin header-search-width($breakpoint) {
 	$logo-and-agencies-width: 900px;
 	$search-box-width: $breakpoint - $logo-and-agencies-width;
 	@media all and (min-width: $breakpoint) {
@@ -9,7 +9,7 @@
 	}
 }
 
-@mixin header-audience-button-margin($breakpoint){
+@mixin header-audience-button-margin($breakpoint) {
 	$logo-width: 266px;
 	$button-width: 172px;
 	$left-margin: ($breakpoint - $logo-width - (4 * $button-width)) / 4;
@@ -163,7 +163,7 @@
 			padding: 26px 0;
 			position: relative;
 
-			@media all and (min-width: #{lower-bound($medium-range)}) and (max-width: 837px){
+			@media all and (min-width: #{lower-bound($medium-range)}) and (max-width: 837px) {
 				padding-bottom: 67px;
 			}
 
@@ -195,13 +195,13 @@
 		}
 
 		.widget-area .menu-secondary {
-			@media all and (min-width: 838px){
+			@media all and (min-width: 838px) {
 				li {
 					margin: 0;
 				}
 			}
 
-			@media all and (min-width: 838px) and (max-width: 969px){
+			@media all and (min-width: 838px) and (max-width: 969px) {
 				width: 357px;
 				height: 93px;
 				right: 203px;
@@ -234,7 +234,7 @@
 				}
 			}
 
-			@media all and (min-width: 970px){
+			@media all and (min-width: 970px) {
 				width: 100%;
 				height: auto;
 				right: 0;
