@@ -42,7 +42,6 @@ cache
 
 # No need to version control compiled files
 css/*.css
-js/*.js
 css/*.css.map
 
 # Ignore dependencies using package control
