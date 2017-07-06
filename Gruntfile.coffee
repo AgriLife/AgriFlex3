@@ -50,7 +50,7 @@ module.exports = (grunt) ->
           {src: ['AgriFlex/*.php']},
           {src: ['css/*.css']},
           {src: ['img/**']},
-          {src: ['js/*.js']},
+          {src: ['js/public.min.js']},
           {src: ['bower_components/fastclick/lib/fastclick.js']},
           {src: ['bower_components/foundation/{css,js}/**']},
           {src: ['bower_components/modernizr/modernizr.js']},
