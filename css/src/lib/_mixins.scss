@@ -1,5 +1,5 @@
 @mixin break-text() {
-	-ms-word-wrap: break-word;
+	-ms-word-wrap: break-word; // sass-lint:disable-line no-misspelled-properties
 	word-wrap: break-word;
 }
 

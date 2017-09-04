@@ -5,7 +5,7 @@
 .screen-reader-text span,
 .screen-reader-shortcut,
 .widget_search input[type="submit"] {
-	position: absolute !important;
+	position: absolute !important; // sass-lint:disable-line no-important
 	clip: rect(0, 0, 0, 0);
 	height: 1px;
 	width: 1px;
@@ -19,7 +19,7 @@
 .widget_search input[type="submit"] {
 	&:focus,
 	&:active {
-		clip: auto !important;
+		clip: auto !important; // sass-lint:disable-line no-important
 		height: auto;
 		width: auto;
 		display: block;
