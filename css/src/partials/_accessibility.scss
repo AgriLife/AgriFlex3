@@ -4,7 +4,7 @@
 .screen-reader-text,
 .screen-reader-text span,
 .screen-reader-shortcut,
-.widget_search input[type="submit"] {
+.site-header .search-form input[type="submit"] {
 	position: absolute !important; // sass-lint:disable-line no-important
 	clip: rect(0, 0, 0, 0);
 	height: 1px;
@@ -16,7 +16,7 @@
 .screen-reader-text,
 .screen-reader-shortcut,
 .genesis-nav-menu .search input[type="submit"],
-.widget_search input[type="submit"] {
+.site-header .search-form input[type="submit"] {
 	&:focus,
 	&:active {
 		clip: auto !important; // sass-lint:disable-line no-important
