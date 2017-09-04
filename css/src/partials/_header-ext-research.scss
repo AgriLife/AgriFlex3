@@ -106,10 +106,6 @@ $agency-item-bgoffset-x: 12;
 		.search-form {
 			margin-right: rem-calc(30);
 
-			input[type="submit"] {
-				@include visuallyhidden;
-			}
-
 			input[type="search"] {
 				padding: 10px 16px;
 				text-transform: uppercase;

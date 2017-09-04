@@ -80,7 +80,41 @@ class AgriFlex_Genesis {
 	 */
 	private function add_accessibility() {
 
-		add_theme_support( 'genesis-accessibility', array( 'search-form' ) );
+		add_theme_support( 'genesis-accessibility', array( 'search-form', 'skip-links' ) );
+
+		// Move skip links
+		remove_action ( 'genesis_before_header', 'genesis_skip_links', 5 );
+		add_action ( 'genesis_before', 'genesis_skip_links', 1 );
+
+		// Modify primary navigation
+		add_filter( 'genesis_do_nav', array( $this, 'primary_nav_id' ), 12, 5 );
+
+	}
+
+	/**
+	 * Ensure primary navigation menu works with skip link
+	 *
+	 * @param $nav_output The raw menu HTML
+	 *
+	 * @return string
+	*/
+	public function primary_nav_id( $nav_output, $nav, $args ) {
+
+		preg_match_all('/<ul[^>]+>/', $nav_output, $uls);
+
+		foreach ($uls[0] as $value) {
+
+			if( preg_match( '/\bmenu-primary\b/', $value ) === 1 ){
+
+				$newvalue = preg_replace('/id="[^"]+"/', '/id="genesis-nav-primary"/', $value);
+				$nav_output = str_replace( $value, $newvalue, $nav_output );
+				break;
+
+			}
+
+		}
+
+		return $nav_output;
 
 	}
 

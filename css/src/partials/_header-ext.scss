@@ -83,10 +83,6 @@
 			float: right;
 			margin-right: rem-calc(30);
 
-			input[type="submit"] {
-				@include visuallyhidden;
-			}
-
 			input[type="search"] {
 				width: 260px;
 				border: 1px solid #D5D6DA;

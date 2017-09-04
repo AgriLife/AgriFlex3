@@ -342,15 +342,14 @@
 				padding: 0.1em .3em;
 				background: #FFF url("../img/search-college.png") no-repeat 150px 45%;
 			}
-			input[type="submit"] {
-				@include visuallyhidden;
-			}
+
 			fieldset {
 				position: relative;
 				border: 0;
 				padding: 0;
 				margin: 0;
 			}
+
 			.search-submit {
 				background: none;
 				padding: 0.78em 1em;
@@ -367,6 +366,7 @@
 				}
 			}
 		}
+
 		.primary-search {
 			display: block;
 			position: absolute;
