@@ -28,7 +28,7 @@
 		}
 	}
 
-	.footer-container-ext {
+	.footer-container-research {
 		@include grid-column($columns: 6, $float: left, $collapse: true);
 
 		a {
@@ -47,7 +47,7 @@
 		}
 	}
 
-	.footer-ext-logo {
+	.footer-research-logo {
 		width: 149px;
 		height: 54px;
 		max-width: 149px;

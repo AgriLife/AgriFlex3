@@ -64,8 +64,8 @@
 		text-rendering: optimizelegibility;
 
 		a {
-			background-image: url(../img/logo-ext-slim.png)!important; // sass-lint:disable-line no-important
-			@include reduced-image-dimensions(115px, 340px, 125px, 10px, 10px);
+			background-image: url(../img/logo-research-maroon.png)!important; // sass-lint:disable-line no-important
+			@include reduced-image-dimensions(115px, 180px, 69px, 10px, 10px);
 
 			~ a {
 				margin-left: 16px;
@@ -463,7 +463,7 @@
 				text-align: center;
 
 				a {
-					@include reduced-image-dimensions(147px, 340px, 125px);
+					@include reduced-image-dimensions(147px, 180px, 69px);
 					width: 100%;
 
 					~ a {
@@ -549,7 +549,7 @@
 @media #{$medium-up} and (max-width: 750px) {
 	.site-header .title-area {
 		.site-title a {
-			@include reduced-image-dimensions(87px, 340px, 125px);
+			@include reduced-image-dimensions(87px, 180px, 69px);
 
 			&.research-logo {
 				@include reduced-image-dimensions(87px, 180px, 69px);
@@ -581,7 +581,7 @@
 @media only screen and (min-width: 750px) and (max-width: 805px) {
 	.site-header .title-area {
 		.site-title a {
-			@include reduced-image-dimensions(112px, 340px, 125px);
+			@include reduced-image-dimensions(112px, 180px, 69px);
 
 			&.research-logo {
 				@include reduced-image-dimensions(112px, 180px, 69px);
@@ -613,7 +613,7 @@
 @media only screen and (min-width: 805px) and (max-width: 904px) {
 	.site-header .title-area {
 		.site-title a {
-			@include reduced-image-dimensions(116px, 340px, 125px);
+			@include reduced-image-dimensions(116px, 180px, 69px);
 
 			&.research-logo {
 				@include reduced-image-dimensions(116px, 180px, 69px);
@@ -645,7 +645,7 @@
 @media only screen and (min-width: 904px) and (max-width: 965px) {
 	.site-header .title-area {
 		.site-title a {
-			@include reduced-image-dimensions(128px, 340px, 125px);
+			@include reduced-image-dimensions(128px, 180px, 69px);
 
 			&.research-logo {
 				@include reduced-image-dimensions(128px, 180px, 69px);
@@ -677,7 +677,7 @@
 @media only screen and (min-width: 965px) and (max-width: 1035px) {
 	.site-header .title-area {
 		.site-title a {
-			@include reduced-image-dimensions(134px, 340px, 125px);
+			@include reduced-image-dimensions(134px, 180px, 69px);
 
 			&.research-logo {
 				@include reduced-image-dimensions(134px, 180px, 69px);
