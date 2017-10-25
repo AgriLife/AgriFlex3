@@ -1,0 +1,336 @@
+/* Primary Navigation
+--------------------------------------------- */
+
+.nav-primary {
+	background: transparent;
+
+	.top-bar-section {
+
+		ul {
+			background-color: transparent;
+
+			&.menu-search-container {
+				clear: both;
+				padding: 0.5rem 1rem;
+
+				.search li {
+					@include grid-row($behavior: collapse);
+					background-color: transparent;
+
+					input[type="search"] {
+						@include grid-column(8);
+					}
+
+					input[type="submit"] {
+						@include grid-column($columns: 3, $offset: 1);
+					}
+				}
+			}
+		}
+
+		.menu {
+			@include grid-column($columns: 12, $center: true);
+			position: relative;
+			display: block;
+			background-color: $secondary-color;
+
+			li {
+				&.has-dropdown > a::after {
+					border-top-color: #FFF;
+				}
+
+				&,
+				&:not(.has-form) a:not(.button),
+				&.active:not(.has-form) a:not(.button) {
+					background-color: transparent;
+				}
+
+				a,
+				&.active:not(.has-form) a:not(.button) {
+					color: #FFF;
+				}
+
+				a:hover,
+				&.hover a,
+				&:not(.has-form) a:not(.button):hover,
+				&:not(.has-form):not(.active):hover > a:not(.button):hover {
+					color: #FFF;
+					background-color: rgba(0, 0, 0, 0.2);
+				}
+
+				> a {
+					text-transform: uppercase;
+					font-size: rem-calc(14);
+				}
+
+				li > a,
+				li:not(.has-form) > a:not(.button) {
+					text-transform: none;
+					font-size: 0.9rem;
+				}
+
+				li:hover {
+					color: #FFF;
+					background-color: #222;
+				}
+
+				li.active:not(.has-form) > a:not(.button) {
+					background-color: #500000;
+				}
+			}
+		}
+	}
+}
+
+@media #{$small-up} {
+
+}
+
+@media #{$small-only} {
+	.nav-primary {
+		.top-bar-section ul {
+			padding-bottom: 1rem;
+
+			ul.dropdown li {
+				a {
+					padding: 8px 0.9375rem;
+				}
+				&.parent-link a {
+					color: #FFF;
+					text-transform: uppercase;
+
+					&:hover {
+						background-color: $topbar-link-bg-color-hover;
+						color: $topbar-link-color-hover;
+
+						@if ($topbar-link-bg-hover) {
+							background: $topbar-link-bg-hover;
+						}
+					}
+				}
+				&.title h5 a {
+					color: #FFF;
+					font: bold 1.125rem/22.5px "quatro-slab", serif;
+				}
+			}
+		}
+
+		ul.menu-search-container .search li input[type="submit"] {
+			border-radius: 8px;
+			border: 0 none;
+			font-size: 0.9em;
+			line-height: 1.05rem;
+			text-transform: uppercase;
+			color: #444;
+			background-color: #F0F0F0;
+		}
+	}
+}
+
+/* Scale down navigation menu items */
+@media only screen and (min-width: 40em) and (max-width: 990px) {
+	.nav-primary .top-bar-section .menu {
+		padding-left: 0.35rem;
+		padding-right: 0.35rem;
+
+		> li {
+			a[title="home"] {
+				width: rem-calc(21px) + 0.7rem;
+			}
+
+			> a {
+				font-size: 1rem;
+			}
+
+			&:not(.has-form) > a:not(.button) {
+				padding-left: 0.35rem;
+				padding-right: 0.35rem;
+			}
+
+			&.has-dropdown {
+				> a {
+					padding-right: rem-calc(10px) + 0.7rem !important; // sass-lint:disable-line no-important
+
+					&:after {
+						margin-right: 0.35rem;
+					}
+				}
+
+				li.has-dropdown > a:after {
+					margin-right: 0.75rem;
+				}
+			}
+		}
+	}
+}
+
+@media #{$medium-up} {
+	.nav-primary {
+		.nav-arrow {
+			content: " ";
+			height: 0;
+			width: 0;
+			pointer-events: none;
+			border-left: 10px solid transparent;
+			border-right: 10px solid transparent;
+			border-bottom: 10px solid #5C0025;
+			position: absolute;
+			top: 37px;
+			margin-left: -9px;
+			left: 50%;
+		}
+
+		.top-bar-section {
+			width: 100%;
+			max-width: 71.25rem;
+			margin-left: auto;
+			margin-right: auto;
+
+			.menu,
+			.sub-menu,
+			.menu-search-container {
+				float: left !important; // sass-lint:disable-line no-important
+				min-height: 50px !important; // sass-lint:disable-line no-important
+			}
+
+			.sub-menu {
+				padding-left: 0;
+				padding-right: 0;
+			}
+
+			.menu-search-container {
+				display: none;
+			}
+
+			.menu {
+				> li {
+					> a,
+					> a:not(.button),
+					&.active:not(.has-form) > a:not(.button) {
+						line-height: 50px;
+					}
+
+					li a,
+					&.active:not(.has-form) li a:not(.button) {
+						text-transform: none;
+						font-size: 0.9rem;
+					}
+
+					&.current-menu-item:after,
+					&.browse:after,
+					&.news:after,
+					&.about:after,
+					&.contact:after {
+						top: 40px;
+					}
+
+					&.has-dropdown {
+						> a:after {
+							top: 1.5rem;
+						}
+
+						li.has-dropdown a:after {
+							top: 0;
+						}
+					}
+
+					> a {
+						font-size: rem-calc(18);
+					}
+					// &:not(.has-form):not(.active) > a:not(.button),
+					&.hover > a:not(.button) {
+						background-color: #272727;
+					}
+
+					li {
+						background-color: #333;
+					}
+				}
+
+				li a[title="home"],
+				li:not(.has-form) a[title="home"],
+				li:not(.has-form) a[title="home"]:hover:not(.button),
+				li.active:not(.has-form) a[title="home"] {
+					width: 40px;
+					padding: 0;
+					text-indent: 200%;
+					overflow: hidden;
+					white-space: nowrap;
+					background-image: url(../img/ext-bg/home-white.png);
+					background-repeat: no-repeat;
+					background-position: center 16px;
+					transition: none;
+
+					&:hover {
+						background-position: center -24px;
+					}
+				}
+			}
+
+			.menu-primary > .menu-item {
+				position: relative;
+				padding-left: 0;
+				padding-right: 0;
+				width: auto;
+				float: left;
+				text-align: left;
+			}
+
+			.has-dropdown {
+				.dropdown li.has-dropdown > a:after {
+					top: 0.8rem;
+				}
+
+				&.hover .dropdown li:hover:not(.has-form):not(.active) > a:not(.button) {
+					color: #FFF;
+					background: #222;
+				}
+			}
+		}
+	}
+	// Arrow for sections under browse
+	.single-extension-solutions .nav-primary li.browse:after,
+	.single-extension-programs .nav-primary li.browse:after,
+	.page-parent-browse .nav-primary li.browse:after,
+	// Arrow for sections under news
+	.single-post .nav-primary li.news:after,
+	.category .nav-primary li.news:after,
+	// Arrow for sections under about
+	.page-parent-about .nav-primary li.about:after,
+	// Arrow for sections under contact
+	.page-parent-contact .nav-primary li.contact:after {
+		@extend .nav-arrow;
+	}
+
+}
+
+@media #{$medium-only} {
+
+}
+
+@media #{$large-up} {
+	.nav-primary .top-bar-section .menu {
+		max-width: rem-calc(1140);
+	}
+
+}
+
+@media #{$large-only} {
+
+}
+
+@media #{$xlarge-up} {
+
+}
+
+@media #{$xlarge-only} {
+
+}
+
+@media #{$xxlarge-up} {
+
+}
+
+@media #{$xxlarge-only} {
+
+}
