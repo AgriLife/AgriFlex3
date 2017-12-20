@@ -44,6 +44,8 @@ Thumbs.db
 
 # Don't deploy
 package.json
+known-issues.json
+vipscan.json
 bower.json
 .bower.json
 .bowerrc
