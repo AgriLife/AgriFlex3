@@ -164,6 +164,8 @@ module.exports = (grunt) ->
 
       for key,value of obj
         if value != ''
+          if Array.isArray(value)
+            value = value.join(' ')
           grunt.log.writeln(key + ': ' + value)
 
       grunt.log.writeln '------------------'
