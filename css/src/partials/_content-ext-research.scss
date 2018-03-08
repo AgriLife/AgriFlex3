@@ -446,15 +446,23 @@ body #fancybox-wrap {
 @media #{$medium-up} {
 
 	.banner-fields {
+		height: 210px;
+		overflow: hidden;
 		position: relative;
 		display: block;
 
 		img {
-			width: 100%;
+			width: auto;
+			max-width: 9999px;
+			position: absolute;
+			z-index: 1;
+			left: 50%;
+			transform: translate(-50%);
 		}
 
 		.banner-caption {
 			position: absolute;
+			z-index: 2;
 			top: 0;
 			left: 0;
 			margin: 0 auto;
