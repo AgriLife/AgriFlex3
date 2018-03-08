@@ -571,25 +571,42 @@ body #fancybox-wrap {
 		// Remove leftmost and rightmost padding from columns
 		&:not(.collapse) .columns {
 			$padding: 1.25rem;
-			padding-right: 0;
-			padding-left: $padding * 2;
 
 			&:first-child {
 				padding-left: 0;
+				padding-right: $padding;
 			}
 
-			&.small-12.medium-12.large-12:first-child + .columns {
-				padding-left: 0;
-				padding-right: $padding;
+			// Two-column
+			&.medium-3 + .medium-9,
+			&.medium-4 + .medium-8,
+			&.medium-5 + .medium-7,
+			&.medium-6 + .medium-6,
+			&.medium-7 + .medium-5,
+			&.medium-8 + .medium-4,
+			&.medium-9 + .medium-3,
+			&.large-3 + .large-9,
+			&.large-4 + .large-8,
+			&.large-5 + .large-7,
+			&.large-6 + .large-6,
+			&.large-7 + .large-5,
+			&.large-8 + .large-4,
+			&.large-9 + .large-3, {
+				padding-right: 0;
+				padding-left: $padding;
+			}
 
-				+ .columns {
-					padding-left: $padding / 2;
-					padding-right: $padding / 2;
-
-					+ .columns {
-						padding-left: $padding;
-					}
-				}
+			// Three-column
+			&.medium-4:first-child {
+				padding-right: $padding / 3;
+			}
+			&.medium-4:first-child + .medium-4 {
+				padding-left: $padding / 6;
+				padding-right: $padding / 6;
+			}
+			&.medium-4:first-child + .medium-4 + .medium-4 {
+				padding-left: $padding / 3;
+				padding-right: 0;
 			}
 		}
 	}
