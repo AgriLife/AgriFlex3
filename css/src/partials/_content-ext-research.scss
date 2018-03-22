@@ -435,6 +435,16 @@ body #fancybox-wrap {
 	padding-right: 0;
 }
 
+.people-listing-ul {
+	.people-listing-item:hover,
+	.people-listing-item:nth-child(2n){
+		background-color: transparent;
+	}
+	.people-listing-item {
+		border-bottom: 0 none;
+	}
+}
+
 @media #{$small-up} {
 
 }
