@@ -394,14 +394,15 @@ $agency-item-bgoffset-x: 12;
 
 			.site-title,
 			.site-description {
-				display: inline-block;
+				display: table-cell;
 				vertical-align: top;
-				padding: 5px 18px;
+				padding: 5px 0;
 			}
 
 			.site-title {
 				position: relative;
 				text-align: center;
+				padding-right: 18px;
 
 				a {
 					@include reduced-image-dimensions(222px, 250px, 68px, 0, 0);
@@ -416,6 +417,7 @@ $agency-item-bgoffset-x: 12;
 			.site-description {
 				border-left: 1px solid #9B9C9F;
 				min-height: 70px;
+				padding-left: 18px;
 
 				.site-unit-name {
 					font-size: 1.5em;
