@@ -467,7 +467,7 @@ $agency-item-bgoffset-x: 12;
 	.site-header {
 
 		.title-area {
-			@include grid-column($columns: 7);
+			@include grid-column($columns: 8);
 			text-align: center;
 
 			.site-title a {
@@ -480,7 +480,7 @@ $agency-item-bgoffset-x: 12;
 		}
 
 		.widget-area {
-			@include grid-column($columns: 4, $last-column: true, $offset: 1);
+			@include grid-column($columns: 4, $last-column: true);
 
 			.widget {
 				margin-top: 5px;
