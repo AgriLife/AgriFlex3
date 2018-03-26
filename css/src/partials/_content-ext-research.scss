@@ -437,8 +437,11 @@ body #fancybox-wrap {
 
 .people-listing-ul {
 	.people-listing-item:hover,
-	.people-listing-item:nth-child(2n){
+	.people-listing-item:nth-child(2n) {
 		background-color: transparent;
+	}
+	.people-listing-item:nth-child(2n - 1) {
+		clear: left;
 	}
 	.people-listing-item {
 		border-bottom: 0 none;
