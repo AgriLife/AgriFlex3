@@ -1,6 +1,6 @@
 {
   "name": "AgriFlex3",
-  "version": "1.4.12",
+  "version": "1.4.13",
   "description": "Genesis child theme for Texas A&M AgriLife",
   "main": "functions.php",
   "dependencies": {
