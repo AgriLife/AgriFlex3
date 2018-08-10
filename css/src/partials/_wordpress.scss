@@ -26,11 +26,13 @@ img.alignnone {
 .alignleft {
 	float: left;
 	text-align: left;
+	margin-right: 1.5em;
 }
 
 .alignright {
 	float: right;
 	text-align: right;
+	margin-left: 1.5em;
 }
 
 img.alignleft,
@@ -47,6 +49,67 @@ img.alignright,
 	font-size: 14px;
 	font-weight: 700;
 	text-align: center;
+}
+
+.wp-block-column {
+	margin-left: 8px;
+	margin-right: 8px;
+
+	&:first-child {
+		margin-left: 0;
+	}
+
+	.has-2-columns & + &,
+	.has-3-columns & + & + &,
+	.has-4-columns & + & + & + &,
+	.has-5-columns & + & + & + & + &,
+	.has-6-columns & + & + & + & + & + & {
+		margin-right: 0;
+	}
+}
+
+@media #{$small-only} {
+	.wp-block-columns {
+		flex-flow: wrap;
+
+		.wp-block-column {
+			width: 100%;
+			flex: 1 100%;
+			margin: 0;
+		}
+	}
+}
+
+.entry-content ol,
+.entry-content ul {
+	&.wp-block-gallery,
+	&.wp-block-latest-posts.is-grid {
+		margin-left: 0;
+	}
+
+	&.wp-block-latest-posts.is-grid li {
+		list-style-type: none;
+	}
+}
+
+.wp-block-pullquote {
+	&.aligncenter {
+		border-left-width: 0;
+	}
+
+	&.alignleft {
+		margin: 0.5em 1.5em 1.5em 0;
+		padding: 1em;
+	}
+
+	&.alignright {
+		margin: 0.5em 0 1.5em 1.5em;
+		padding: 1em;
+	}
+}
+
+.wp-block-cover-image.aligncenter {
+	clear: both;
 }
 
 .gallery-caption {
