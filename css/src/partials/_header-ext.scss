@@ -140,6 +140,19 @@
 	margin: 0;
 	padding: .7em 3em;
 	text-align: center;
+
+	a {
+		color: #fff;
+		font-weight: bold;
+		text-decoration: underline;
+		white-space: nowrap;
+	}
+
+	.aquo {
+		font-size: 2em;
+		line-height: 1rem;
+		vertical-align: top;
+	}
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
