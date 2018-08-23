@@ -7,7 +7,7 @@ video,
 	max-width: 100%;
 }
 
-img {
+*:not(.wp-block-image) > img {
 	height: auto;
 	width: auto; /* IE8 */
 }

@@ -87,7 +87,6 @@
 		text-decoration: none;
 		background-image: none;
 	}
-
 }
 
 .archive-description,
@@ -316,7 +315,7 @@ body.posts:not(.search-results) .post {
 }
 
 .entry-header .entry-meta a,
-body:not(.page-template-landing1):not(.page-template-landing-aglifesciences) .entry-content a:not(.accordion-title):not(.button):not(.job-listing-link):not(.upcp-catalogue-link):not(.upcp-featherlight):not(.read-more-link):not(.flexible-columns-image-link):not([href$=".jpg"]):not([href$=".png"]):not(.soliloquy-pager-link),
+body:not(.page-template-landing1):not(.page-template-landing-aglifesciences) .entry-content a:not(.accordion-title):not(.button):not(.job-listing-link):not(.upcp-catalogue-link):not(.upcp-featherlight):not(.read-more-link):not(.flexible-columns-image-link):not([href$=".jpg"]):not([href$=".png"]):not(.soliloquy-pager-link):not(.wp-block-button__link),
 body.page-template-landing1 .home-content a:not(.accordion-title):not(.button):not(.soliloquy-next):not(.soliloquy-prev):not(.soliloquy-pager-link),
 body.page-template-landing1 .entry-content ~ *:not(.program-list) a:not(.accordion-title):not(.button):not(.job-listing-link),
 body.page-template-landing-aglifesciences .home-content a:not(.accordion-title):not(.button):not([data-filter=".dcsns-facebook"]):not([data-filter=".dcsns-twitter"]):not([data-filter=".dcsns-instagram"]),
