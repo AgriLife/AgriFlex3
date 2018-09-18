@@ -14,6 +14,7 @@
 
 * AgriLife College plugin, for sites representing the College of Agriculture and Life Sciences
 * AgriLife Extension Unit plugin, for sites representing an AgriLife Extension Unit
+* AgriLife Extension Research plugin, for sites representing an AgriLife Extension Research Unit
 
 ## Installation
 
