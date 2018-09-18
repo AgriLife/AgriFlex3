@@ -18,7 +18,7 @@
 ## Installation
 
 1. [Download the latest release](https://github.com/AgriLife/AgriFlex3/releases/latest)
-2. Upload the plugin to your site
+2. Upload the theme to your site
 
 ## Features
 
