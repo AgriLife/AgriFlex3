@@ -623,10 +623,13 @@ body #fancybox-wrap {
 			}
 
 			// Six-column
-			$padding-6: (0.75rem * 2 * 6) / 5;
+			$width-6: 15%;
+			$padding-6: (100% - ($width-6 * 6)) / 5;
 			&.medium-2 {
 				box-sizing: content-box;
+				width: $width-6;
 				padding-left: $padding-6;
+				padding-right: 0;
 			}
 			&.medium-2:first-child {
 				padding-left: 0;
