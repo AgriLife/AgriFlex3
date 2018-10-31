@@ -448,6 +448,15 @@ body #fancybox-wrap {
 	}
 }
 
+.wp-caption {
+	text-align: center;
+
+	&.alignleft,
+	&.alignright {
+		max-width: 40%;
+	}
+}
+
 @media #{$small-up} {
 
 }
