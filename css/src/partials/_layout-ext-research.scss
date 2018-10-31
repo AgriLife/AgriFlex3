@@ -138,6 +138,16 @@ footer .wrap {
 		}
 	}
 
+	.content-sidebar {
+		.content {
+			@include grid-column($columns: 8, $float: left);
+		}
+
+		.sidebar-primary {
+			@include grid-column($columns: 4, $float: right);
+		}
+	}
+
 	.sidebar-content-wrap .sidebar-primary {
 		@include grid-column($columns: 4, $float: right);
 		position: relative;
