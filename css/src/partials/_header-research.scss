@@ -31,6 +31,16 @@
 		}
 	}
 
+	.agp-header-image & {
+		.site-unit-name,
+		.site-unit-title {
+			@include element-invisible;
+		}
+
+		.headerimage img {
+			max-height: 150px;
+		}
+	}
 
 	/* Title Area
 	--------------------------------------------- */
