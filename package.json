@@ -3,6 +3,9 @@
   "version": "1.4.17",
   "description": "Genesis child theme for Texas A&M AgriLife",
   "main": "functions.php",
+  "scripts": {
+    "start": "composer install && npm install && bower install html5shiv#3.7.0 && bower install respond#1.4.1 && bower install foundation#5.5.3 && grunt"
+  },
   "dependencies": {
     "grunt": "~0.4.0"
   },
