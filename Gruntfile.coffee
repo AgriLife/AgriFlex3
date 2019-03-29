@@ -82,9 +82,8 @@ module.exports = (grunt) ->
   @loadNpmTasks 'grunt-gh-release'
   @loadNpmTasks 'grunt-sass-lint'
 
-  @registerTask 'default', ['compass:pkg']
+  @registerTask 'default', ['compass:pkg', 'jsvalidate']
   @registerTask 'develop', ['sasslint', 'compass:dev', 'jsvalidate']
-  @registerTask 'package', ['compass:pkg', 'jsvalidate']
   @registerTask 'release', ['compress', 'makerelease']
   @registerTask 'makerelease', 'Set release branch for use in the release task', ->
     done = @async()
