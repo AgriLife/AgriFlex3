@@ -483,14 +483,17 @@ input[type="submit"] {
 
 @media #{$large-up} {
 	.home {
-		.site-inner .wrap .content-sidebar-wrap {
-			width: 1140px;
-			.sidebar-primary {
-				width: 370px;
-				margin-top: 58px;
-			}
-			.content {
-				width: 770px;
+		&.content-sidebar,
+		&.sidebar-content {
+			.site-inner .wrap .content-sidebar-wrap {
+				width: 1140px;
+				.sidebar-primary {
+					width: 370px;
+					margin-top: 58px;
+				}
+				.content {
+					width: 770px;
+				}
 			}
 		}
 	}
