@@ -126,10 +126,10 @@ module.exports = (grunt) ->
 
     grunt.util.spawn {
       cmd: 'git'
-      args: [ 'describe', '--tags' ]
+      args: [ 'tag' ]
     }, (err, result, code) ->
       if result.stdout isnt ''
-        matches = result.stdout.match /([^\n]+)/
+        matches = result.stdout.match /([^\n]+)$/
         grunt.config 'release.lasttag', matches[1] + '..'
 
       grunt.task.run 'setmsg'
