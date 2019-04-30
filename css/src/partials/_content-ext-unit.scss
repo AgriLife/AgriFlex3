@@ -203,13 +203,16 @@ input[type="submit"] {
 	}
 
 	@media #{$medium-up} {
-		.site-inner .wrap .content-sidebar-wrap {
-			@include grid-column(12, $collapse: true);
-			.sidebar-primary {
-				@include grid-column(4);
-			}
-			.content {
-				@include grid-column(8);
+		&.content-sidebar,
+		&.sidebar-content {
+			.site-inner .wrap .content-sidebar-wrap {
+				@include grid-column(12, $collapse: true);
+				.sidebar-primary {
+					@include grid-column(4);
+				}
+				.content {
+					@include grid-column(8);
+				}
 			}
 		}
 	}
