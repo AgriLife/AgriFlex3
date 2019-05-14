@@ -86,6 +86,11 @@
 				@include reduced-image-dimensions(115px, 190px, 85px, 10px, 10px);
 			}
 
+			&.mg-logo {
+				background-image: url(../img/logo-txmg.png)!important; // sass-lint:disable-line no-important
+				@include reduced-image-dimensions(115px, 340px, 147px, 10px, 10px);
+			}
+
 			span {
 				display: none;
 			}
@@ -486,6 +491,11 @@
 						width: 100%;
 					}
 
+					&.mg-logo {
+						@include reduced-image-dimensions(147px, 340px, 147px);
+						width: 100%;
+					}
+
 				}
 			}
 
@@ -562,6 +572,10 @@
 			&.tce-logo {
 				@include reduced-image-dimensions(87px, 190px, 85px);
 			}
+
+			&.mg-logo {
+				@include reduced-image-dimensions(87px, 340px, 147px);
+			}
 		}
 
 		.site-secondary-logo {
@@ -593,6 +607,10 @@
 
 			&.tce-logo {
 				@include reduced-image-dimensions(112px, 190px, 85px);
+			}
+
+			&.mg-logo {
+				@include reduced-image-dimensions(112px, 340px, 147px);
 			}
 		}
 
@@ -626,6 +644,10 @@
 			&.tce-logo {
 				@include reduced-image-dimensions(116px, 190px, 85px);
 			}
+
+			&.mg-logo {
+				@include reduced-image-dimensions(116px, 340px, 147px);
+			}
 		}
 
 		.site-secondary-logo {
@@ -658,6 +680,10 @@
 			&.tce-logo {
 				@include reduced-image-dimensions(128px, 190px, 85px);
 			}
+
+			&.mg-logo {
+				@include reduced-image-dimensions(128px, 340px, 147px);
+			}
 		}
 
 		.site-secondary-logo {
@@ -689,6 +715,10 @@
 
 			&.tce-logo {
 				@include reduced-image-dimensions(134px, 190px, 85px);
+			}
+
+			&.mg-logo {
+				@include reduced-image-dimensions(134px, 340px, 147px);
 			}
 		}
 
