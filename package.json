@@ -1,10 +1,10 @@
 {
   "name": "AgriFlex3",
-  "version": "1.5.1",
+  "version": "1.5.2",
   "description": "Genesis child theme for Texas A&M AgriLife",
   "main": "functions.php",
   "scripts": {
-    "start": "composer install && npm install && bower install html5shiv#3.7.0 && bower install respond#1.4.1 && bower install foundation#5.5.3 && grunt"
+    "start": "composer install && npm install && bower install html5shiv#3.7.0 && bower install respond#1.4.1 && && grunt"
   },
   "dependencies": {
     "grunt": "~0.4.0"
