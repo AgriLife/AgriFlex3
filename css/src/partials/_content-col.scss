@@ -348,6 +348,17 @@ body.page-template-landing-aglifesciences .home-content a:not(.accordion-title):
 			margin-top: 0;
 		}
 	}
+
+	.flexiblecolumns .accordion-title {
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			display: inline-block;
+			margin-bottom: 0;
+		}
+	}
 }
 
 .job-listing-item {

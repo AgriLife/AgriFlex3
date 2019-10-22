@@ -586,6 +586,17 @@ body #fancybox-wrap {
 
 	.flexiblecolumns.row {
 
+		.accordion-title {
+			h2,
+			h3,
+			h4,
+			h5,
+			h6 {
+				display: inline-block;
+				margin-bottom: 0;
+			}
+		}
+
 		.columns.summary .summary-heading {
 			line-height: 1.1em;
 		}

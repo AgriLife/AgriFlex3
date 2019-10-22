@@ -416,6 +416,18 @@ input[type="submit"] {
 }
 
 .page-template-flexiblecolumns .site-inner .content {
+
+	.flexiblecolumns .accordion-title {
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			display: inline-block;
+			margin-bottom: 0;
+		}
+	}
+
 	.entry-header {
 		margin-bottom: 1.875rem;
 	}
