@@ -153,3 +153,13 @@ h4.widget-title {
 		border: 1px solid $widget-footer-form-border;
 	}
 }
+
+.widget_rss ul {
+	list-style: disc;
+	margin-left: 1rem;
+
+	li + li {
+		margin-top: .5em;
+	}
+}
+

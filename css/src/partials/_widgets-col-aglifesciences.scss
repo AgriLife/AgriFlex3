@@ -304,3 +304,13 @@
 		display: none;
 	}
 }
+
+.widget_rss ul {
+	list-style: disc;
+	margin-left: 1rem;
+
+	li + li {
+		margin-top: .5em;
+	}
+}
+
