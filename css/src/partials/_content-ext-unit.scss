@@ -1,6 +1,18 @@
 /* Content Area
 ---------------------------------------------------------------------------------------------------- */
 
+// Smooth scroll and highlight anchor link targets inside the page content.
+html {
+	scroll-behavior: smooth;
+}
+
+:not(.no-js) .site-inner *[id]:target {
+	transition: background-color 1.5s ease-in;
+	padding-left: .35em;
+	margin-left: -.35em;
+	background-color: $yellow;
+}
+
 /* Entries
 --------------------------------------------- */
 
