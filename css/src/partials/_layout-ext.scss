@@ -347,3 +347,28 @@ footer .wrap {
 @media #{$xxlarge-only} {
 
 }
+
+@media #{$medium-up-common} {
+	@supports (display: flex) {
+	  .sidebar-secondary,
+	  .sidebar-content-sidebar .site-inner .wrap .content-sidebar-wrap .content,
+	  .sidebar-content-sidebar .site-inner .wrap .content-sidebar-wrap .sidebar-primary {
+	    float: none;
+	  }
+
+	  .sidebar-content-sidebar .site-inner .wrap,
+	  .sidebar-content-sidebar .site-inner .wrap .content-sidebar-wrap {
+	    display: flex;
+	    flex-flow: nowrap;
+	    flex-direction: row;
+	  }
+
+	  .sidebar-secondary {
+	    order: 0;
+	  }
+
+	  .sidebar-content-sidebar .site-inner .wrap .content-sidebar-wrap {
+	    order: 1;
+	  }
+	}
+}
