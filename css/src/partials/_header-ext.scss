@@ -360,7 +360,7 @@
 	.site-description {
 		@include adjust-font-size-to(22px);
 		line-height: 1.7;
-		margin: 33px auto 45px auto;
+		margin: 0 auto 45px auto;
 		width: 1046px;
 		padding: .7em 1em;
 	}

@@ -103,6 +103,7 @@
 			}
 		}
 	}
+
 	.top-bar-section .dropdown li.parent-link a:hover {
 		background-color: $topbar-link-bg-color-hover;
 		color: $topbar-link-color-hover;
@@ -115,6 +116,8 @@
 
 @media #{$medium-up} {
 	.nav-primary {
+		height: 79px;
+
 		.nav-arrow {
 			content: " ";
 			height: 0;
