@@ -151,7 +151,6 @@ footer .wrap {
 
 	.sidebar-primary,
 	.sidebar-secondary {
-
 		.widget {
 			@include grid-column(4);
 		}
@@ -218,56 +217,55 @@ footer .wrap {
 
 @media #{$medium-up-common} {
 
-	.content-sidebar {
-		.site-inner {
-			.wrap {
-				@include grid-row($behavior: nest-collapse);
+	.sidebar-primary {
+		@include grid-column($columns: 4, $collapse: true);
+		margin-top: 104px;
+	}
 
-				.content-sidebar-wrap {
-					@include grid-column($columns: 12, $collapse: true);
+	.sidebar-secondary {
+		@include grid-column($columns: 3, $float: left, $collapse: true);
+		background-color: $sidebar-secondary-background;
+		margin-top: 104px;
 
-					.content {
-						@include grid-column($columns: 8, $float: left);
-						background-color: $content-bg-color;
-					}
+		.widget {
+			@include grid-column($columns: 12, $collapse: true);
+		}
+	}
 
-					.sidebar-primary {
-						@include grid-column($columns: 4, $float: left, $collapse: true);
-						margin-top: 104px;
-					}
+	.content-sidebar,
+	.sidebar-content,
+	.sidebar-content-sidebar {
+		.site-inner .wrap {
+			@include grid-row($behavior: nest-collapse);
 
+			.content-sidebar-wrap {
+				.content {
+					@include grid-column($columns: 8);
+					background-color: $content-bg-color;
 				}
-
 			}
 		}
 	}
 
+	.content-sidebar,
+	.sidebar-content {
+		.site-inner .wrap {
+			.content-sidebar-wrap {
+				@include grid-column($columns: 12, $collapse: true);
+			}
+		}
+	}
+
+	.sidebar-content-sidebar .site-inner .wrap .content-sidebar-wrap {
+		@include grid-column($columns: 9, $float: right, $collapse: true);
+	}
+
+	.content-sidebar,
 	.sidebar-content-sidebar {
-		.site-inner {
-			.wrap {
-				@include grid-row($behavior: nest-collapse);
-
-				.sidebar-secondary {
-					@include grid-column($columns: 3, $float: left, $collapse: true);
-					background-color: $sidebar-secondary-background;
-					margin-top: 104px;
-				}
-
-				.content-sidebar-wrap {
-					@include grid-column($columns: 9, $float: right, $collapse: true);
-
-					.content {
-						@include grid-column($columns: 8, $float: left);
-						background-color: $content-bg-color;
-					}
-
-					.sidebar-primary {
-						@include grid-column($columns: 4, $float: left, $collapse: true);
-						margin-top: 104px;
-					}
-
-				}
-
+		.site-inner .wrap .content-sidebar-wrap {
+			.content,
+			.sidebar-primary {
+				@include grid-column($float: left);
 			}
 		}
 	}
@@ -275,97 +273,62 @@ footer .wrap {
 
 @media #{$large-up} {
 
-	.content-sidebar {
-		.site-inner {
-			.wrap {
-				@include grid-row($behavior: nest-collapse);
-
-				.content-sidebar-wrap {
-					position: relative;
-					padding-left: 0;
-					padding-right: 0;
-					width: 1140px;
-					float: right;
-
-					.content {
-						position: relative;
-						padding-left: 26px;
-						padding-right: 26px;
-						width: 751px;
-						float: left;
-						background-color: $content-bg-color;
-					}
-
-					.sidebar-primary {
-						position: relative;
-						padding-left: 16px;
-						padding-right: 16px;
-						width: 388px;
-						float: left;
-						margin-top: 104px;
-					}
-				}
-			}
-		}
-
-
+	.sidebar-primary {
+		position: relative;
+		padding-left: 16px;
+		padding-right: 16px;
+		width: 388px;
 	}
 
+	.sidebar-secondary {
+		position: relative;
+		padding-left: 0;
+		padding-right: 0;
+		width: 212px;
+	}
+
+	.content-sidebar,
+	.sidebar-content,
 	.sidebar-content-sidebar {
-		.site-inner {
-			.wrap {
-				@include grid-row($behavior: nest-collapse);
+		.site-inner .wrap {
+			@include grid-row($behavior: nest-collapse);
 
+			.content-sidebar-wrap {
+				position: relative;
+				padding-left: 0;
+				padding-right: 0;
 
-				.sidebar-secondary {
+				.content {
 					position: relative;
-					padding-left: 0;
-					padding-right: 0;
-					width: 212px;
-					float: left;
-
-					background-color: $sidebar-secondary-background;
-					margin-top: 104px;
-
-					.widget {
-						@include grid-column($columns: 12, $collapse: true);
-					}
+					padding-left: 26px;
+					padding-right: 26px;
 				}
-
-				.content-sidebar-wrap {
-					position: relative;
-					padding-left: 0;
-					padding-right: 0;
-					width: 928px;
-					float: right;
-
-					.content {
-						position: relative;
-						padding-left: 26px;
-						padding-right: 26px;
-						width: 612px;
-						float: left;
-						background-color: $content-bg-color;
-					}
-
-					.sidebar-primary {
-						position: relative;
-						padding-left: 16px;
-						padding-right: 16px;
-						width: 316px;
-						float: left;
-						margin-top: 104px;
-					}
-
-				}
-
 			}
 		}
-
-
 	}
 
+	.content-sidebar,
+	.sidebar-content {
+		.site-inner .wrap .content-sidebar-wrap {
+			width: 1140px;
 
+			.content {
+				width: 751px;
+			}
+		}
+	}
+
+	.sidebar-content-sidebar .site-inner .wrap .content-sidebar-wrap {
+		width: 928px;
+
+		.content {
+			width: 612px;
+		}
+
+		.sidebar-primary {
+			width: 316px;
+		}
+	}
 }
 
 @media #{$large-only} {
