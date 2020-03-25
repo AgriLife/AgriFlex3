@@ -10,7 +10,7 @@ module.exports = (grunt) ->
       url: ''
     watch:
       files: [
-        'css/src/*.scss'
+        'css/src/**/*.scss'
       ]
       tasks: ['sasslint', 'compass:dev']
     compass:
@@ -25,6 +25,43 @@ module.exports = (grunt) ->
           outputStyle: 'expanded'
           sourcemap: true
           noLineComments: true
+    postcss:
+      pkg:
+        options:
+          processors: [
+            require('autoprefixer')()
+            require('cssnano')()
+          ]
+          failOnError: true
+        files:
+          'css/college-template-aglifesciences.css': 'css/college-template-aglifesciences.css'
+          'css/college.css': 'css/college.css'
+          'css/default.css': 'css/default.css'
+          'css/editor-style.css': 'css/editor-style.css'
+          'css/ext-research.css': 'css/ext-research.css'
+          'css/ext-unit.css': 'css/ext-unit.css'
+          'css/ext.css': 'css/ext.css'
+          'css/ie.css': 'css/ie.css'
+          'css/print.css': 'css/print.css'
+          'css/research.css': 'css/research.css'
+      dev:
+        options:
+          map: true
+          processors: [
+            require('autoprefixer')()
+          ]
+          failOnError: true
+        files:
+          'css/college-template-aglifesciences.css': 'css/college-template-aglifesciences.css'
+          'css/college.css': 'css/college.css'
+          'css/default.css': 'css/default.css'
+          'css/editor-style.css': 'css/editor-style.css'
+          'css/ext-research.css': 'css/ext-research.css'
+          'css/ext-unit.css': 'css/ext-unit.css'
+          'css/ext.css': 'css/ext.css'
+          'css/ie.css': 'css/ie.css'
+          'css/print.css': 'css/print.css'
+          'css/research.css': 'css/research.css'
     jsvalidate:
       options:
         globals:
@@ -81,9 +118,10 @@ module.exports = (grunt) ->
   @loadNpmTasks 'grunt-contrib-compress'
   @loadNpmTasks 'grunt-gh-release'
   @loadNpmTasks 'grunt-sass-lint'
+  @loadNpmTasks 'grunt-postcss'
 
-  @registerTask 'default', ['compass:pkg', 'jsvalidate']
-  @registerTask 'develop', ['sasslint', 'compass:dev', 'jsvalidate']
+  @registerTask 'default', ['sasslint', 'compass:pkg', 'postcss:pkg', 'jsvalidate']
+  @registerTask 'develop', ['sasslint', 'compass:dev', 'postcss:dev', 'jsvalidate']
   @registerTask 'release', ['compress', 'makerelease']
   @registerTask 'makerelease', 'Set release branch for use in the release task', ->
     done = @async()
