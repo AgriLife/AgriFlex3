@@ -116,8 +116,6 @@
 
 @media #{$medium-up} {
 	.nav-primary {
-		height: 79px;
-
 		.nav-arrow {
 			content: " ";
 			height: 0;
@@ -185,6 +183,10 @@
 }
 
 @media #{$large-up} {
+	.top-bar {
+		height: $topbar-height-large;
+	}
+
 	.nav-primary {
 		.top-bar-section {
 			ul {
@@ -197,14 +199,14 @@
 					}
 					a:not(.button),
 					&.active:not(.has-form) a:not(.button) {
-						line-height: 78px;
+						line-height: $topbar-height-large;
 					}
 					&.current-menu-item:after,
 					&.browse:after,
 					&.news:after,
 					&.about:after,
 					&.contact:after {
-						top: 68px;
+						top: $topbar-height-large - .625rem;
 					}
 				}
 			}

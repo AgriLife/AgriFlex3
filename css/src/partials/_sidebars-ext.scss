@@ -1,5 +1,6 @@
 /* Sidebars
 ---------------------------------------------------------------------------------------------------- */
+$sidebar-border: 2px solid #FFF;
 
 .sidebar {
 	padding-top: 3rem;
@@ -116,10 +117,24 @@
 
 @media #{$medium-up} {
 	.sidebar {
-		&.sidebar-primary .widget,
-		&.sidebar-secondary .widget {
-			width: 100%;
-			margin-bottom: 1rem;
+		&.sidebar-primary,
+		&.sidebar-secondary {
+			border-top: $sidebar-border;
+
+			.widget {
+				width: 100%;
+				margin-bottom: 1rem;
+			}
+		}
+
+		.content-sidebar &.sidebar-primary,
+		.sidebar-content-sidebar &.sidebar-primary {
+			border-right: $sidebar-border;
+		}
+
+		.sidebar-content &.sidebar-primary,
+		&.sidebar-secondary {
+			border-left: $sidebar-border;
 		}
 	}
 
@@ -127,7 +142,12 @@
 
 @media #{$medium-up-common} {
 	.sidebar {
-		margin-top: 3rem;
+		margin-top: 6.375rem;
+
+		&.sidebar-secondary {
+			padding-top: 0;
+		}
+
 		.widget {
 			padding-top: 3rem;
 		}

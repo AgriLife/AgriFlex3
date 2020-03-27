@@ -7,6 +7,10 @@ $total-columns: 12;
 /* Site Containers
 --------------------------------------------- */
 
+body {
+	position: static;
+}
+
 .site-container {
 	position: relative;
 }
@@ -216,13 +220,11 @@ footer .wrap {
 
 	.sidebar.sidebar-primary {
 		@include grid-column($columns: 4, $collapse: true);
-		margin-top: 104px;
 	}
 
 	.sidebar.sidebar-secondary {
 		@include grid-column($columns: 3, $float: left, $collapse: true);
 		background-color: $sidebar-secondary-background;
-		margin-top: 104px;
 
 		.widget {
 			@include grid-column($columns: 12, $collapse: true);
@@ -350,25 +352,25 @@ footer .wrap {
 
 @media #{$medium-up-common} {
 	@supports (display: flex) {
-	  .sidebar-secondary,
-	  .sidebar-content-sidebar .site-inner .wrap .content-sidebar-wrap .content,
-	  .sidebar-content-sidebar .site-inner .wrap .content-sidebar-wrap .sidebar-primary {
-	    float: none;
-	  }
+		.sidebar-secondary,
+		.sidebar-content-sidebar .site-inner .wrap .content-sidebar-wrap .content,
+		.sidebar-content-sidebar .site-inner .wrap .content-sidebar-wrap .sidebar-primary {
+			float: none;
+		}
 
-	  .sidebar-content-sidebar .site-inner .wrap,
-	  .sidebar-content-sidebar .site-inner .wrap .content-sidebar-wrap {
-	    display: flex;
-	    flex-flow: nowrap;
-	    flex-direction: row;
-	  }
+		.sidebar-content-sidebar .site-inner .wrap,
+		.sidebar-content-sidebar .site-inner .wrap .content-sidebar-wrap {
+			display: flex;
+			flex-flow: nowrap;
+			flex-direction: row;
+		}
 
-	  .sidebar-secondary {
-	    order: 0;
-	  }
+		.sidebar-secondary {
+			order: 0;
+		}
 
-	  .sidebar-content-sidebar .site-inner .wrap .content-sidebar-wrap {
-	    order: 1;
-	  }
+		.sidebar-content-sidebar .site-inner .wrap .content-sidebar-wrap {
+			order: 1;
+		}
 	}
 }

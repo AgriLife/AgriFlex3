@@ -286,21 +286,26 @@
 }
 
 @media #{$medium-up-common} {
+	$site-header-height: 5.3125rem;
+	$site-description-height: 3.125rem;
+
 	.site-description {
 		margin: 0 auto 2rem auto;
 	}
+
 	.site-container {
-		background-repeat: no-repeat;
-		background-color: #FFF;
-		background-position: center 150px;
-		background-size: contain;
-	}
-	.home .site-container {
-		background-position: center 215px;
+		background: {
+			repeat: no-repeat;
+			color: #FFF;
+			position: center $site-header-height + $topbar-height + $site-description-height;
+			size: contain;
+		}
 	}
 }
 
 @media #{$large-up} {
+	$site-header-height: 6.625rem;
+
 	.agency-bar {
 		position: absolute;
 		z-index: 99;
@@ -312,14 +317,15 @@
 	}
 
 	.site-container {
-		background-position: center 185px;
+		background-position: center $site-header-height + $topbar-height-large;
 	}
+
 	.agriflex-cropped-background {
 		top: 185px;
 	}
 
 	.site-header {
-		height: 106px;
+		height: $site-header-height;
 		@include grid-row();
 		max-width: 100%;
 
