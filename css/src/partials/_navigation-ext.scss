@@ -145,7 +145,7 @@
 					@extend .nav-arrow;
 				}
 				li.active:not(.has-form) a:hover:not(.button) {
-					color: #5C0025;
+					color: $secondary-color;
 				}
 			}
 
