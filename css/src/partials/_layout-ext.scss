@@ -133,7 +133,7 @@ footer .wrap {
 		}
 	}
 
-	.sidebar-secondary {
+	.sidebar.sidebar-secondary {
 		@include grid-column(12);
 	}
 
@@ -352,9 +352,9 @@ footer .wrap {
 
 @media #{$medium-up-common} {
 	@supports (display: flex) {
-		.sidebar-secondary,
+		.sidebar.sidebar-secondary,
 		.sidebar-content-sidebar .site-inner .wrap .content-sidebar-wrap .content,
-		.sidebar-content-sidebar .site-inner .wrap .content-sidebar-wrap .sidebar-primary {
+		.sidebar-content-sidebar .site-inner .wrap .content-sidebar-wrap .sidebar.sidebar-primary {
 			float: none;
 		}
 
@@ -365,7 +365,7 @@ footer .wrap {
 			flex-direction: row;
 		}
 
-		.sidebar-secondary {
+		.sidebar.sidebar-secondary {
 			order: 0;
 		}
 

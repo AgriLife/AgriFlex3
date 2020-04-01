@@ -215,7 +215,7 @@ html {
 	@media #{$medium-up-common} {
 		.site-inner .wrap .content-sidebar-wrap {
 			@include grid-column(12, $collapse: true);
-			.sidebar-primary {
+			.sidebar.sidebar-primary {
 				@include grid-column(4);
 			}
 			.content {
@@ -486,7 +486,7 @@ html {
 	.home {
 		.site-inner .wrap .content-sidebar-wrap {
 			width: 1140px;
-			.sidebar-primary {
+			.sidebar.sidebar-primary {
 				width: 370px;
 				margin-top: 58px;
 			}
