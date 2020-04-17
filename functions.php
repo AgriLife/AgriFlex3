@@ -35,6 +35,9 @@ class AgriFlex {
 
     add_theme_support( 'html5', array() );
 
+		// Speed up rss feed cache refresh.
+		add_filter( 'wp_feed_cache_transient_lifetime', array( $this, 'rss_widget_refresh_interval' ) );
+
     // remove_filter( 'genesis_attr_nav-link-wrap', 'genesis_attributes_nav_link_wrap' );
 
 	}
@@ -60,6 +63,19 @@ class AgriFlex {
 
     // Add AgriFlex theme customization
     $af_customize = new AgriFlex_ThemeCustomizer;
+
+	}
+
+	/**
+	 * Speed up widget refresh interval.
+	 *
+	 * @since 1.6.5
+	 * @param int $seconds The current refresh rate in seconds.
+	 * @return int
+	 */
+	public function rss_widget_refresh_interval( $seconds ) {
+
+		return 600;
 
 	}
 
