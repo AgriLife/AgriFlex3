@@ -8,7 +8,7 @@
   "license": "GPL-2.0+",
   "readmeFilename": "README.md",
   "scripts": {
-    "start": "composer install && npm install && bower install html5shiv#3.7.0 && bower install respond#1.4.1 && && grunt"
+    "start": "composer install && npm install && bower install html5shiv && bower install respond && grunt"
   },
   "dependencies": {
     "autoprefixer": "^~9.7.4",
