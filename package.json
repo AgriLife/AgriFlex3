@@ -24,7 +24,6 @@
   },
   "devDependencies": {
     "curlrequest": "^0.3.10",
-    "sass-lint": "^1.2.1",
     "underscore": "^1.12.1"
   },
   "peerDependencies": {
