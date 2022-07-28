@@ -24,7 +24,6 @@
   },
   "devDependencies": {
     "curlrequest": "^0.3.10",
-    "grunt-jsvalidate": "^0.2.2",
     "sass-lint": "^1.13.1",
     "underscore": "^1.12.1"
   },
