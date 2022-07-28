@@ -25,10 +25,10 @@
   "peerDependencies": {
      "postcss": "^8.0.0"
    }
-  },
+  }
   "engines": {
     "node": "^~6.0.0"
-  },
+  }
   "repository": { "https://github.com/agrilife/agriflex3",
   "author": "J. Aaron Eaton, Travis Ward, Zachary Watkins",
   "license": "GPL-2.0+",
