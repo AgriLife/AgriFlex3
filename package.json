@@ -34,8 +34,5 @@
   "license": "GPL-2.0+",
   "readmeFilename": "README.md",
   "gitHead": "2615a0b03ab69dd760c12a22ba8275021c349605",
-  "browserslist": [
-    "last 2 versions",
-    "ie > 9" ]
   },
 }
