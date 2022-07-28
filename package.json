@@ -29,7 +29,7 @@
     "grunt-contrib-compress": "^2.0.0",
     "grunt-contrib-watch": "^1.1.0",
     "grunt-jsvalidate": "^0.2.2",
-    "sass-lint": "^0.2.4",
+    "sass-lint": "^1.13.1",
     "underscore": "^1.12.1"
   },
   "peerDependencies": {
