@@ -2,7 +2,7 @@
 
 class AgriFlex_CustomNavigationWalker extends Walker_Nav_Menu {
 
-    function start_lvl( &$output, $depth = null, $a = array() ) {
+    function start_lvl( &$output, $depth = 0, $args = null ) {
 
         // depth dependent classes
         $indent = ( $depth > 0  ? str_repeat( "\t", $depth ) : '' ); // code indent
@@ -13,9 +13,9 @@ class AgriFlex_CustomNavigationWalker extends Walker_Nav_Menu {
             ( $display_depth >=2 ? 'sub-sub-menu' : '' ),
             'menu-depth-' . $display_depth,
             'dropdown',
-            );
+        );
         $class_names = implode( ' ', $classes );
-      
+
         // build html
         $output .= "\n" . $indent . '<ul class="' . $class_names . '">' . "\n";
     }
