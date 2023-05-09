@@ -107,7 +107,7 @@ class AgriFlex_ThemeCustomizer {
     // Check for presence of custom background image
     $background_image_url = get_theme_mod('agriflex_background_image');
 
-    if( $background_image_url != '' && 0 < count( strlen( $background_image_url ) ) ){
+    if( $background_image_url != '' && 0 < count( (array) strlen( $background_image_url ) ) ){
       
       $image_id = $wpdb->get_col($wpdb->prepare("SELECT ID FROM $wpdb->posts WHERE guid='%s';", $background_image_url ));
 
