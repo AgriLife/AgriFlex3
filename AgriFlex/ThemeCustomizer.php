@@ -198,18 +198,11 @@ class AgriFlex_ThemeCustomizer {
   }
 
   // Add custom class to denote absence of custom background
-  public function agriflex_background_bodyclass( $classes ){
-
-    $background_image_url = get_theme_mod('agriflex_background_image');
-
-    if( $background_image_url == '' || 0 == count( strlen( $background_image_url ) ) ){
-      
-      $classes[] = 'agriflex-no-custom-bg';
-
+    public function agriflex_background_bodyclass($classes) {
+    if (is_array($classes) || $classes instanceof Countable) { // Add a type check here
+        return $classes;
     }
-
     return $classes;
-
-  }
+}
   
 }
