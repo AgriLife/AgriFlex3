@@ -35,7 +35,7 @@ class AgriFlex_RequiredDOM
 
         // Alter header tags for SEO
         add_filter( 'genesis_seo_title', array($this, 'alter_title_tag'), 10, 3 );
-        add_filter( 'genesis_seo_description', array($this, 'alter_description_tag'), 10, 3 );
+        add_filter( 'genesis_seo_description', array($this, 'alter_description_tag'), 10, 5 );
 
     }
 
@@ -70,42 +70,37 @@ class AgriFlex_RequiredDOM
     /**
      * Replace description tag with div
      *
-     * @param $title The title text
+     * @param $description The description text
      * @param $inside
      * @param $wrap
      *
      * @return string
      */
-    public function alter_description_tag( $title, $inside, $wrap ) {
-
-        // $wrap may empty for some reason
-        if(empty($wrap)){
-            preg_match( '/\w+/', $title, $results );
+    public function alter_description_tag($description, $inside, $wrap)
+    {
+        // $wrap may be empty for some reason
+        if (empty($wrap)) {
+            preg_match('/\w+/', $description, $results);
             $wrap = $results ? $results[0] : 'h2';
         }
 
         // $inside may be empty for some reason
-        if(empty($inside)){
-            $results = preg_split('/<\/?'.$wrap.'[^>]*>/', $title);
-            $inside = sizeof($results) > 1 ? $results[1] : esc_attr( get_bloginfo('description'));
+        if (empty($inside)) {
+            $results = preg_split('/<\/?' . $wrap . '[^>]*>/', $description);
+            $inside = sizeof($results) > 1 ? $results[1] : esc_attr(get_bloginfo('description'));
         }
 
         // Place wildcards where needed
-        $title = preg_replace( '/\b'.$wrap.'\b/', '%s', $title );
-        if(!empty($inside)){
-            $title = str_replace( $inside, '%s', $title );
+        $description = preg_replace('/\b' . $wrap . '\b/', '%1$s', $description);
+        if (!empty($inside)) {
+            $description = str_replace($inside, '%2$s', $description);
         }
 
         // Add the site title before the description
         $wrap = 'div';
-        $title = sprintf( $title,
-            $wrap,
-            $inside,
-            $wrap
-        );
+        $description = sprintf($description, $wrap, $inside);
 
-        return $title;
-
+        return $description;
     }
 
     /**
