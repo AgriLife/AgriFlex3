@@ -11,7 +11,7 @@
     "start": "composer install && npm install && bower install html5shiv && bower install respond && grunt"
   },
   "dependencies": {
-    "autoprefixer": "^9.7.4",
+    "autoprefixer": "^10.4.16",
     "cssnano": "^6.0.0",
     "grunt": "^1.5.3"
   },
